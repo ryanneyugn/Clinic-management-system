@@ -1,0 +1,11 @@
+F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\PHONGKHAM.exe.config
+F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\PHONGKHAM.exe
+F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\PHONGKHAM.pdb
+F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.csprojResolveAssemblyReference.cache
+F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_dangnhap.resources
+F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.Properties.Resources.resources
+F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.csproj.GenerateResource.Cache
+F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.exe
+F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.pdb
+F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_trangchu.resources
+F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_khambenh.resources

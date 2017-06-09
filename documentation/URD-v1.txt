@@ -1,0 +1,8 @@
+Yêu cầu của khách hàng:
+	- Xây dựng hệ thống quản lý phòng khám.
+	- Cần phải đăng nhập hệ thống do có nhiều bác sĩ.
+	- Có chức năng nhận bệnh. (Chức năng dành cho máy tính ở khu nhận bệnh và không cần phải đăng nhập hệ thống).
+	- Chức năng kê đơn thuốc, xem hồ sơ bệnh nhân, thống kê, nhập số liệu thuốc ... đều cần phải đăng nhập (có thể sẽ có điều chỉnh sau khi trao đổi với khách hàng).
+	- Giao diện và chức năng đơn giản dễ sử dụng, k cần cầu kì (xem hình ảnh minh họa đính kèm).
+	- Phải lưu lại lịch sử khám bệnh (bệnh nhân nào khám bởi bác sĩ nào ... lúc mấy giờ... ) để thực hiện chức năng thống kê.
+	- Cơ sở dữ liệu gọn nhẹ.

@@ -10,7 +10,6 @@ F:\Project_Clinic\Project\Project\Project\obj\Debug\Project.pdb
 F:\GIT\ryan-repository\Project\Project\bin\Debug\Project.exe.config
 F:\GIT\ryan-repository\Project\Project\bin\Debug\Project.exe
 F:\GIT\ryan-repository\Project\Project\bin\Debug\Project.pdb
-F:\GIT\ryan-repository\Project\Project\obj\Debug\NHANBENH.csprojResolveAssemblyReference.cache
 F:\GIT\ryan-repository\Project\Project\obj\Debug\Project.GIAODIEN.gd_nhanbenh.resources
 F:\GIT\ryan-repository\Project\Project\obj\Debug\Project.Properties.Resources.resources
 F:\GIT\ryan-repository\Project\Project\obj\Debug\NHANBENH.csproj.GenerateResource.Cache
