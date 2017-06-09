@@ -1,0 +1,9 @@
+F:\Project_Clinic\Project\Project\Project\bin\Debug\Project.exe.config
+F:\Project_Clinic\Project\Project\Project\bin\Debug\Project.exe
+F:\Project_Clinic\Project\Project\Project\bin\Debug\Project.pdb
+F:\Project_Clinic\Project\Project\Project\obj\Debug\NHANBENH.csprojResolveAssemblyReference.cache
+F:\Project_Clinic\Project\Project\Project\obj\Debug\Project.GIAODIEN.gd_nhanbenh.resources
+F:\Project_Clinic\Project\Project\Project\obj\Debug\Project.Properties.Resources.resources
+F:\Project_Clinic\Project\Project\Project\obj\Debug\NHANBENH.csproj.GenerateResource.Cache
+F:\Project_Clinic\Project\Project\Project\obj\Debug\Project.exe
+F:\Project_Clinic\Project\Project\Project\obj\Debug\Project.pdb
