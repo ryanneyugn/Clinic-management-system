@@ -30,10 +30,10 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.txt_tendangnhap = new System.Windows.Forms.TextBox();
+            this.txt_matkhau = new System.Windows.Forms.TextBox();
+            this.btn_ok = new System.Windows.Forms.Button();
+            this.btn_thoat = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -54,47 +54,48 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Mật khẩu:";
             // 
-            // textBox1
+            // txt_tendangnhap
             // 
-            this.textBox1.Location = new System.Drawing.Point(125, 44);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(119, 20);
-            this.textBox1.TabIndex = 2;
+            this.txt_tendangnhap.Location = new System.Drawing.Point(125, 44);
+            this.txt_tendangnhap.Name = "txt_tendangnhap";
+            this.txt_tendangnhap.Size = new System.Drawing.Size(119, 20);
+            this.txt_tendangnhap.TabIndex = 2;
             // 
-            // textBox2
+            // txt_matkhau
             // 
-            this.textBox2.Location = new System.Drawing.Point(125, 95);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(119, 20);
-            this.textBox2.TabIndex = 3;
+            this.txt_matkhau.Location = new System.Drawing.Point(125, 95);
+            this.txt_matkhau.Name = "txt_matkhau";
+            this.txt_matkhau.Size = new System.Drawing.Size(119, 20);
+            this.txt_matkhau.TabIndex = 3;
             // 
-            // button1
+            // btn_ok
             // 
-            this.button1.Location = new System.Drawing.Point(149, 148);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(38, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "OK";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_ok.Location = new System.Drawing.Point(149, 148);
+            this.btn_ok.Name = "btn_ok";
+            this.btn_ok.Size = new System.Drawing.Size(38, 23);
+            this.btn_ok.TabIndex = 4;
+            this.btn_ok.Text = "OK";
+            this.btn_ok.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btn_thoat
             // 
-            this.button2.Location = new System.Drawing.Point(193, 148);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(51, 23);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Thoát";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_thoat.Location = new System.Drawing.Point(193, 148);
+            this.btn_thoat.Name = "btn_thoat";
+            this.btn_thoat.Size = new System.Drawing.Size(51, 23);
+            this.btn_thoat.TabIndex = 5;
+            this.btn_thoat.Text = "Thoát";
+            this.btn_thoat.UseVisualStyleBackColor = true;
+            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
             // 
             // gd_dangnhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 207);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.btn_thoat);
+            this.Controls.Add(this.btn_ok);
+            this.Controls.Add(this.txt_matkhau);
+            this.Controls.Add(this.txt_tendangnhap);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "gd_dangnhap";
@@ -108,9 +109,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox txt_tendangnhap;
+        private System.Windows.Forms.TextBox txt_matkhau;
+        private System.Windows.Forms.Button btn_ok;
+        private System.Windows.Forms.Button btn_thoat;
     }
 }

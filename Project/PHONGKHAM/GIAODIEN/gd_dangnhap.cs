@@ -9,5 +9,9 @@ namespace PHONGKHAM.GIAODIEN
             InitializeComponent();
         }
 
+        private void btn_thoat_Click(object sender, System.EventArgs e)
+        {
+            Close();
+        }
     }
 }

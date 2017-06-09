@@ -7,3 +7,4 @@ F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.Properties.Resource
 F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.csproj.GenerateResource.Cache
 F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.exe
 F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.pdb
+F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_trangchu.resources
