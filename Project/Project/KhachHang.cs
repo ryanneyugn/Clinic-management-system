@@ -8,6 +8,33 @@ namespace Project
 {
     class KhachHang
     {
-        private 
+        String hoten;
+
+        public String Hoten
+        {
+            get { return hoten; }
+            set { hoten = value; }
+        }
+        private String sdt;
+
+        public String Sdt
+        {
+            get { return sdt; }
+            set { sdt = value; }
+        }
+
+        public KhachHang(String hoten, String sdt)
+        {
+            this.hoten = hoten;
+            this.sdt = sdt;
+        }
+
+        public KhachHang()
+        {
+            // TODO: Complete member initialization
+            this.hoten = "";
+            this.sdt = "";
+        }
+
     }
 }

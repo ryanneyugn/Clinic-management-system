@@ -25,6 +25,14 @@ namespace Project.GIAODIEN
         {
             ds_benhnhan.Add(txt_hoten.Text);
             gv_danhsachbenhnhan.DataSource = ds_benhnhan;
+
+            var list = new List<KhachHang>()
+            {
+                new KhachHang {Hoten=txt_hoten.Text, Sdt=txt_sdt.Text}
+            };
+            var bindingList = new BindingList<KhachHang>(list);
+            var source = new BindingSource(bindingList, null);
+            gv_danhsachbenhnhan.DataSource = source;
         }
     }
 }
