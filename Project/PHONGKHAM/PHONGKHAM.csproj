@@ -102,6 +102,10 @@
     <Content Include="dsBenhNhan.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Customer\Customer.csproj">
+      <Project>{7c0a10af-ab73-4c71-9e8d-ef8b0f8b4efa}</Project>
+      <Name>Customer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TXT\TXT.csproj">
       <Project>{ce8a890c-7d56-4811-a78d-edfedd53e5bb}</Project>
       <Name>TXT</Name>

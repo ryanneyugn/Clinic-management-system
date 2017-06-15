@@ -41,11 +41,11 @@ namespace Project.GIAODIEN
 
         private void gv_danhsachbenhnhan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (gv_danhsachbenhnhan.SelectedRows.Count != -1)
-            {
-                DataGridViewRow row = gv_danhsachbenhnhan.SelectedRows[0];
-                txt_hoten.Text = row.Cells[0].Value.ToString();
-            }
+            //if (gv_danhsachbenhnhan.SelectedRows.Count != -1)
+            //{
+            //    DataGridViewRow row = gv_danhsachbenhnhan.SelectedRows[0];
+            //    txt_hoten.Text = row.Cells[0].Value.ToString();
+            //}
         }
 
         private void btn_xoa_Click(object sender, EventArgs e)

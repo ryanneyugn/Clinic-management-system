@@ -1,17 +1,18 @@
 ﻿using System.Windows.Forms;
 using TXT;
+
 namespace PHONGKHAM.GIAODIEN
 {
     public partial class gd_khambenh : Form
     {
         public bool updateGridView(string path) {
             TXTOBJECT a = new TXTOBJECT(path);                  
-            string[] listbn = a.read();
-            //foreach(string str in listbn)
-            //{
-
-            //}            
-            dtgv_dsbn.DataSource = listbn;
+            string[] listbn = a.read();                        
+            foreach(string str in listbn)
+            {
+                string[] row = str.Split('-');
+                dtgv_dsbn.Rows.Add(row);
+            }                        
             return true;
         }
 

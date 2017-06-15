@@ -49,6 +49,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_dsbn)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -68,9 +70,15 @@
             // 
             // dtgv_dsbn
             // 
+            this.dtgv_dsbn.AllowUserToAddRows = false;
+            this.dtgv_dsbn.AllowUserToDeleteRows = false;
             this.dtgv_dsbn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgv_dsbn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.hoten,
+            this.sdt});
             this.dtgv_dsbn.Location = new System.Drawing.Point(6, 19);
             this.dtgv_dsbn.Name = "dtgv_dsbn";
+            this.dtgv_dsbn.ReadOnly = true;
             this.dtgv_dsbn.Size = new System.Drawing.Size(255, 127);
             this.dtgv_dsbn.TabIndex = 0;
             // 
@@ -270,6 +278,25 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "Chẩn đoán:";
             // 
+            // hoten
+            // 
+            this.hoten.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.hoten.Frozen = true;
+            this.hoten.HeaderText = "Họ Tên";
+            this.hoten.MinimumWidth = 100;
+            this.hoten.Name = "hoten";
+            this.hoten.ReadOnly = true;
+            this.hoten.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // sdt
+            // 
+            this.sdt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.sdt.HeaderText = "Số điện thoại";
+            this.sdt.Name = "sdt";
+            this.sdt.ReadOnly = true;
+            this.sdt.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.sdt.Width = 99;
+            // 
             // gd_khambenh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -316,5 +343,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.RichTextBox richTextBox3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hoten;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
     }
 }
