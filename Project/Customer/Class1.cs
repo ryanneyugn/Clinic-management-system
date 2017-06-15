@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project
+namespace Customer
 {
-    class KhachHang
+    public class KhachHang
     {
         String hoten;
 
@@ -52,6 +52,5 @@ namespace Project
             this.hoten = "";
             this.sdt = "";
         }
-
     }
 }

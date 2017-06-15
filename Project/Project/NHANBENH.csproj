@@ -52,7 +52,6 @@
       <DependentUpon>gd_nhanbenh.cs</DependentUpon>
     </Compile>
     <Compile Include="GIAODIEN\List.cs" />
-    <Compile Include="KhachHang.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GIAODIEN\gd_nhanbenh.resx">

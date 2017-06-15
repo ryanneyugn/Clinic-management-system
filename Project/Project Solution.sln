@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26430.12
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NHANBENH", "Project\NHANBENH.csproj", "{99DB1F64-B0E9-4ABD-AA63-770630F0EF79}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PHONGKHAM", "PHONGKHAM\PHONGKHAM.csproj", "{31C58EAA-348B-41E9-8E9C-112AD714ABC2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Customer", "Customer\Customer.csproj", "{7C0A10AF-AB73-4C71-9E8D-EF8B0F8B4EFA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{31C58EAA-348B-41E9-8E9C-112AD714ABC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31C58EAA-348B-41E9-8E9C-112AD714ABC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31C58EAA-348B-41E9-8E9C-112AD714ABC2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C0A10AF-AB73-4C71-9E8D-EF8B0F8B4EFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C0A10AF-AB73-4C71-9E8D-EF8B0F8B4EFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C0A10AF-AB73-4C71-9E8D-EF8B0F8B4EFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C0A10AF-AB73-4C71-9E8D-EF8B0F8B4EFA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
