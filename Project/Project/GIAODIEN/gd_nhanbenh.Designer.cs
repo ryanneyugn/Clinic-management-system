@@ -39,7 +39,6 @@
             this.btn_Tao = new System.Windows.Forms.Button();
             this.txt_sdt = new System.Windows.Forms.TextBox();
             this.txt_diachi = new System.Windows.Forms.TextBox();
-            this.txt_ngaysinh = new System.Windows.Forms.TextBox();
             this.txt_hoten = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -48,6 +47,7 @@
             this.gv_danhsachbenhnhan = new System.Windows.Forms.DataGridView();
             this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dt_ngaysinh = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.gb_ThonTinBenhNhan.SuspendLayout();
@@ -95,6 +95,7 @@
             this.btn_DiChuyenLenTren.TabIndex = 8;
             this.btn_DiChuyenLenTren.Text = "Di chuyển lên trên";
             this.btn_DiChuyenLenTren.UseVisualStyleBackColor = true;
+            this.btn_DiChuyenLenTren.Click += new System.EventHandler(this.btn_DiChuyenLenTren_Click);
             // 
             // btn_xoa
             // 
@@ -108,12 +109,12 @@
             // 
             // gb_ThonTinBenhNhan
             // 
+            this.gb_ThonTinBenhNhan.Controls.Add(this.dt_ngaysinh);
             this.gb_ThonTinBenhNhan.Controls.Add(this.btn_XepVaoHangDoi);
             this.gb_ThonTinBenhNhan.Controls.Add(this.btn_TaoMoi);
             this.gb_ThonTinBenhNhan.Controls.Add(this.btn_Tao);
             this.gb_ThonTinBenhNhan.Controls.Add(this.txt_sdt);
             this.gb_ThonTinBenhNhan.Controls.Add(this.txt_diachi);
-            this.gb_ThonTinBenhNhan.Controls.Add(this.txt_ngaysinh);
             this.gb_ThonTinBenhNhan.Controls.Add(this.txt_hoten);
             this.gb_ThonTinBenhNhan.Controls.Add(this.label4);
             this.gb_ThonTinBenhNhan.Controls.Add(this.label3);
@@ -168,13 +169,6 @@
             this.txt_diachi.Name = "txt_diachi";
             this.txt_diachi.Size = new System.Drawing.Size(111, 20);
             this.txt_diachi.TabIndex = 2;
-            // 
-            // txt_ngaysinh
-            // 
-            this.txt_ngaysinh.Location = new System.Drawing.Point(95, 49);
-            this.txt_ngaysinh.Name = "txt_ngaysinh";
-            this.txt_ngaysinh.Size = new System.Drawing.Size(111, 20);
-            this.txt_ngaysinh.TabIndex = 1;
             // 
             // txt_hoten
             // 
@@ -244,6 +238,13 @@
             this.sdt.Name = "sdt";
             this.sdt.ReadOnly = true;
             // 
+            // dt_ngaysinh
+            // 
+            this.dt_ngaysinh.Location = new System.Drawing.Point(95, 49);
+            this.dt_ngaysinh.Name = "dt_ngaysinh";
+            this.dt_ngaysinh.Size = new System.Drawing.Size(111, 20);
+            this.dt_ngaysinh.TabIndex = 15;
+            // 
             // gd_nhanbenh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -275,7 +276,6 @@
         private System.Windows.Forms.Button btn_Tao;
         private System.Windows.Forms.TextBox txt_sdt;
         private System.Windows.Forms.TextBox txt_diachi;
-        private System.Windows.Forms.TextBox txt_ngaysinh;
         private System.Windows.Forms.TextBox txt_hoten;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -283,5 +283,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoten;
         private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
+        private System.Windows.Forms.DateTimePicker dt_ngaysinh;
     }
 }

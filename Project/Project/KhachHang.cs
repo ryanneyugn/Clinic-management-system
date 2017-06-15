@@ -23,10 +23,27 @@ namespace Project
             set { sdt = value; }
         }
 
-        public KhachHang(String hoten, String sdt)
+        private String diachi;
+
+        public String Diachi
+        {
+            get { return diachi; }
+            set { diachi = value; }
+        }
+        private DateTime ngaysinh;
+
+        public DateTime Ngaysinh
+        {
+            get { return ngaysinh; }
+            set { ngaysinh = value; }
+        }
+
+        public KhachHang(String hoten, String sdt, String diachi, DateTime ngaysinh)
         {
             this.hoten = hoten;
             this.sdt = sdt;
+            this.diachi = diachi;
+            this.ngaysinh = ngaysinh;
         }
 
         public KhachHang()

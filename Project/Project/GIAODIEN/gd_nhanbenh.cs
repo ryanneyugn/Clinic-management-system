@@ -19,12 +19,17 @@ namespace Project.GIAODIEN
         {
             InitializeComponent();
         }
+
+        /// <summary>
+        /// Reset data 
+        /// </summary>
         void ResetAll()
         {
             txt_hoten.Clear();
             txt_diachi.Clear();
-            txt_ngaysinh.Clear();
             txt_sdt.Clear();
+            TimeSpan time = new TimeSpan(0, 00, 0);
+            dt_ngaysinh.Value = dt_ngaysinh.Value.Date + time;
         }
         private void btn_XepVaoHangDoi_Click(object sender, EventArgs e)
         {
@@ -56,6 +61,15 @@ namespace Project.GIAODIEN
                 gv_danhsachbenhnhan.Rows.RemoveAt(gv_danhsachbenhnhan.SelectedRows[0].Index);
                 ResetAll();
             }
+        }
+
+        private void btn_DiChuyenLenTren_Click(object sender, EventArgs e)
+        {
+            //List<MyObj> foo = DGV.DataSource;
+            //int idx = DGV.SelectedRows[0].Index;
+            //int value = foo[idx];
+            //foo.Remove(value);
+            //foo.InsertAt(idx+1, value)
         }
     }
 }
