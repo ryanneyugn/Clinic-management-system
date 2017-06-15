@@ -9,3 +9,5 @@ F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.exe
 F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.pdb
 F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_trangchu.resources
 F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_khambenh.resources
+F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\TXT.dll
+F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\TXT.pdb
