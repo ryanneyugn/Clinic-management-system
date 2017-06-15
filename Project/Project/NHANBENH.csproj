@@ -51,6 +51,7 @@
     <Compile Include="GIAODIEN\gd_nhanbenh.Designer.cs">
       <DependentUpon>gd_nhanbenh.cs</DependentUpon>
     </Compile>
+    <Compile Include="GIAODIEN\List.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GIAODIEN\gd_nhanbenh.resx">

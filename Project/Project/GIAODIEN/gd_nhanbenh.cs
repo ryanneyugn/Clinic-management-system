@@ -12,11 +12,57 @@ namespace Project.GIAODIEN
         {
             InitializeComponent();
         }
-        List<String> ds_benhnhan = new List<String>();
+
+        /// <summary>
+        /// Reset data 
+        /// </summary>
+        void ResetAll()
+        {
+            txt_hoten.Clear();
+            txt_diachi.Clear();
+            txt_sdt.Clear();
+            TimeSpan time = new TimeSpan(0, 00, 0);
+            dt_ngaysinh.Value = dt_ngaysinh.Value.Date + time;
+        }
         private void btn_XepVaoHangDoi_Click(object sender, EventArgs e)
         {
-            ds_benhnhan.Add(txt_hoten.Text);
-            gv_danhsachbenhnhan.DataSource = ds_benhnhan;
+            string hoten = txt_hoten.Text;
+            string sdt = txt_sdt.Text;
+            string[] row = { hoten, sdt };
+            gv_danhsachbenhnhan.Rows.Add(row);
+            ResetAll();
+            gv_danhsachbenhnhan.Visible = true;
+        }
+
+        private void btn_TaoMoi_Click(object sender, EventArgs e)
+        {
+            ResetAll();
+        }
+
+        private void gv_danhsachbenhnhan_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (gv_danhsachbenhnhan.SelectedRows.Count != -1)
+            {
+                DataGridViewRow row = gv_danhsachbenhnhan.SelectedRows[0];
+                txt_hoten.Text = row.Cells[0].Value.ToString();
+            }
+        }
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            if (gv_danhsachbenhnhan.SelectedRows.Count != 0) { 
+                gv_danhsachbenhnhan.Rows.RemoveAt(gv_danhsachbenhnhan.SelectedRows[0].Index);
+                ResetAll();
+            }
+        }
+
+        private void btn_DiChuyenLenTren_Click(object sender, EventArgs e)
+        {
+            //List<MyObj> foo = DGV.DataSource;
+            //int idx = DGV.SelectedRows[0].Index;
+            //int value = foo[idx];
+            //foo.Remove(value);
+            //foo.InsertAt(idx+1, value)
         }
     }
 }
