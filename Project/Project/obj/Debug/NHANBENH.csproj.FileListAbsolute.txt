@@ -27,5 +27,3 @@ F:\Project_Clinic\ryan-repository\Project\Project\obj\Debug\Project.GIAODIEN.gd_
 F:\Project_Clinic\ryan-repository\Project\Project\obj\Debug\Project.Properties.Resources.resources
 F:\Project_Clinic\ryan-repository\Project\Project\obj\Debug\NHANBENH.csproj.GenerateResource.Cache
 >>>>>>> thuan_edit
-F:\Project_Clinic\ryan-repository\Project\Project\bin\Debug\Customer.dll
-F:\Project_Clinic\ryan-repository\Project\Project\bin\Debug\Customer.pdb

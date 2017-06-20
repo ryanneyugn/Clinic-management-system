@@ -11,16 +11,3 @@ F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_trangch
 F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_khambenh.resources
 F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\TXT.dll
 F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\TXT.pdb
-F:\Project_Clinic\ryan-repository\Project\PHONGKHAM\bin\Debug\PHONGKHAM.exe.config
-F:\Project_Clinic\ryan-repository\Project\PHONGKHAM\bin\Debug\PHONGKHAM.exe
-F:\Project_Clinic\ryan-repository\Project\PHONGKHAM\bin\Debug\PHONGKHAM.pdb
-F:\Project_Clinic\ryan-repository\Project\PHONGKHAM\bin\Debug\TXT.dll
-F:\Project_Clinic\ryan-repository\Project\PHONGKHAM\bin\Debug\TXT.pdb
-F:\Project_Clinic\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.csprojResolveAssemblyReference.cache
-F:\Project_Clinic\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_dangnhap.resources
-F:\Project_Clinic\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_khambenh.resources
-F:\Project_Clinic\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_trangchu.resources
-F:\Project_Clinic\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.Properties.Resources.resources
-F:\Project_Clinic\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.csproj.GenerateResource.Cache
-F:\Project_Clinic\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.exe
-F:\Project_Clinic\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.pdb

@@ -45,6 +45,8 @@ namespace Customer
         public KhachHang()
         {
             // TODO: Complete member initialization
+            this.hoten = "";
+            this.sdt = "";
         }
     }
 }

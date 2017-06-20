@@ -51,6 +51,7 @@
     <Compile Include="GIAODIEN\gd_nhanbenh.Designer.cs">
       <DependentUpon>gd_nhanbenh.cs</DependentUpon>
     </Compile>
+    <Compile Include="GIAODIEN\List.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GIAODIEN\gd_nhanbenh.resx">
@@ -77,12 +78,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Customer\Customer.csproj">
-      <Project>{7c0a10af-ab73-4c71-9e8d-ef8b0f8b4efa}</Project>
-      <Name>Customer</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

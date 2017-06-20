@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Customer;
+
 
 
 namespace Project.GIAODIEN
@@ -12,7 +12,7 @@ namespace Project.GIAODIEN
         {
             InitializeComponent();
         }
-        List<KhachHang> lstKH = new List<KhachHang>();
+
         /// <summary>
         /// Reset data 
         /// </summary>
@@ -26,9 +26,10 @@ namespace Project.GIAODIEN
         }
         private void btn_XepVaoHangDoi_Click(object sender, EventArgs e)
         {
-            KhachHang kh = new KhachHang { Hoten = txt_hoten.Text, Diachi = txt_diachi.Text, Sdt = txt_sdt.Text, Ngaysinh = dt_ngaysinh.Value };
-            lstKH.Add(kh);
-            gv_danhsachbenhnhan.DataSource = lstKH;
+            string hoten = txt_hoten.Text;
+            string sdt = txt_sdt.Text;
+            string[] row = { hoten, sdt };
+            gv_danhsachbenhnhan.Rows.Add(row);
             ResetAll();
             gv_danhsachbenhnhan.Visible = true;
         }
