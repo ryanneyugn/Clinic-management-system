@@ -58,7 +58,7 @@ namespace Project.GIAODIEN
             {
                 txt_hoten.Text = gv_danhsachbenhnhan.Rows[e.RowIndex].Cells[0].Value.ToString();
             }
-            catch (Exception ex){
+            catch (Exception){
 
             }
         }
