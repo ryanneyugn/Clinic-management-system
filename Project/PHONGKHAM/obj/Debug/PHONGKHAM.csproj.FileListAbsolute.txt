@@ -13,3 +13,6 @@ F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\TXT.dll
 F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\TXT.pdb
 F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\Customer.dll
 F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\Customer.pdb
+F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_sieuam.resources
+F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_thongtintoathuoc.resources
+F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_thongke.resources

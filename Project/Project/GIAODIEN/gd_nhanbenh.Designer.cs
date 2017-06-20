@@ -34,6 +34,7 @@
             this.btn_DiChuyenLenTren = new System.Windows.Forms.Button();
             this.btn_xoa = new System.Windows.Forms.Button();
             this.gb_ThonTinBenhNhan = new System.Windows.Forms.GroupBox();
+            this.dt_ngaysinh = new System.Windows.Forms.DateTimePicker();
             this.btn_XepVaoHangDoi = new System.Windows.Forms.Button();
             this.btn_TaoMoi = new System.Windows.Forms.Button();
             this.btn_Tao = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@
             this.gv_danhsachbenhnhan = new System.Windows.Forms.DataGridView();
             this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dt_ngaysinh = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.gb_ThonTinBenhNhan.SuspendLayout();
@@ -126,6 +126,13 @@
             this.gb_ThonTinBenhNhan.TabIndex = 1;
             this.gb_ThonTinBenhNhan.TabStop = false;
             this.gb_ThonTinBenhNhan.Text = "Thông tin bệnh nhân";
+            // 
+            // dt_ngaysinh
+            // 
+            this.dt_ngaysinh.Location = new System.Drawing.Point(95, 49);
+            this.dt_ngaysinh.Name = "dt_ngaysinh";
+            this.dt_ngaysinh.Size = new System.Drawing.Size(111, 20);
+            this.dt_ngaysinh.TabIndex = 15;
             // 
             // btn_XepVaoHangDoi
             // 
@@ -237,13 +244,6 @@
             this.sdt.HeaderText = "Số điện thoại";
             this.sdt.Name = "sdt";
             this.sdt.ReadOnly = true;
-            // 
-            // dt_ngaysinh
-            // 
-            this.dt_ngaysinh.Location = new System.Drawing.Point(95, 49);
-            this.dt_ngaysinh.Name = "dt_ngaysinh";
-            this.dt_ngaysinh.Size = new System.Drawing.Size(111, 20);
-            this.dt_ngaysinh.TabIndex = 15;
             // 
             // gd_nhanbenh
             // 

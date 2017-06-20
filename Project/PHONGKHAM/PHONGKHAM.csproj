@@ -58,6 +58,24 @@
     <Compile Include="GIAODIEN\gd_khambenh.Designer.cs">
       <DependentUpon>gd_khambenh.cs</DependentUpon>
     </Compile>
+    <Compile Include="GIAODIEN\gd_sieuam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GIAODIEN\gd_sieuam.Designer.cs">
+      <DependentUpon>gd_sieuam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GIAODIEN\gd_thongke.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GIAODIEN\gd_thongke.Designer.cs">
+      <DependentUpon>gd_thongke.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GIAODIEN\gd_thongtintoathuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GIAODIEN\gd_thongtintoathuoc.Designer.cs">
+      <DependentUpon>gd_thongtintoathuoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="GIAODIEN\gd_trangchu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +89,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GIAODIEN\gd_khambenh.resx">
       <DependentUpon>gd_khambenh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GIAODIEN\gd_sieuam.resx">
+      <DependentUpon>gd_sieuam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GIAODIEN\gd_thongke.resx">
+      <DependentUpon>gd_thongke.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GIAODIEN\gd_thongtintoathuoc.resx">
+      <DependentUpon>gd_thongtintoathuoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GIAODIEN\gd_trangchu.resx">
       <DependentUpon>gd_trangchu.cs</DependentUpon>
