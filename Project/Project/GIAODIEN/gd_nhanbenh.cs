@@ -54,7 +54,13 @@ namespace Project.GIAODIEN
 
         private void gv_danhsachbenhnhan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            txt_hoten.Text = gv_danhsachbenhnhan.Rows[e.RowIndex].Cells[0].Value.ToString();
+            try
+            {
+                txt_hoten.Text = gv_danhsachbenhnhan.Rows[e.RowIndex].Cells[0].Value.ToString();
+            }
+            catch (Exception ex){
+
+            }
         }
 
         private void cbDichVu_SelectedIndexChanged(object sender, EventArgs e)
