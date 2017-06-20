@@ -1,5 +1,5 @@
-S:\Project_Clinic\ryan-repository\Project\Customer\bin\Debug\Customer.dll
-S:\Project_Clinic\ryan-repository\Project\Customer\bin\Debug\Customer.pdb
-S:\Project_Clinic\ryan-repository\Project\Customer\obj\Debug\Customer.csprojResolveAssemblyReference.cache
-S:\Project_Clinic\ryan-repository\Project\Customer\obj\Debug\Customer.dll
-S:\Project_Clinic\ryan-repository\Project\Customer\obj\Debug\Customer.pdb
+F:\GIT\ryan-repository\Project\Customer\bin\Debug\Customer.dll
+F:\GIT\ryan-repository\Project\Customer\bin\Debug\Customer.pdb
+F:\GIT\ryan-repository\Project\Customer\obj\Debug\Customer.csprojResolveAssemblyReference.cache
+F:\GIT\ryan-repository\Project\Customer\obj\Debug\Customer.dll
+F:\GIT\ryan-repository\Project\Customer\obj\Debug\Customer.pdb
