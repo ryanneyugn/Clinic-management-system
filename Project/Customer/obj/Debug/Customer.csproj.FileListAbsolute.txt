@@ -1,0 +1,5 @@
+S:\Project_Clinic\ryan-repository\Project\Customer\bin\Debug\Customer.dll
+S:\Project_Clinic\ryan-repository\Project\Customer\bin\Debug\Customer.pdb
+S:\Project_Clinic\ryan-repository\Project\Customer\obj\Debug\Customer.csprojResolveAssemblyReference.cache
+S:\Project_Clinic\ryan-repository\Project\Customer\obj\Debug\Customer.dll
+S:\Project_Clinic\ryan-repository\Project\Customer\obj\Debug\Customer.pdb
