@@ -36,3 +36,5 @@ S:\Project_Clinic\ryan-repository\Project\Project\obj\Debug\NHANBENH.csproj.Gene
 S:\Project_Clinic\ryan-repository\Project\Project\obj\Debug\Project.exe
 S:\Project_Clinic\ryan-repository\Project\Project\obj\Debug\Project.pdb
 S:\Project_Clinic\ryan-repository\Project\Project\obj\Debug\NHANBENH.csprojResolveAssemblyReference.cache
+S:\Project_Clinic\ryan-repository\Project\Project\bin\Debug\MySql.Data.dll
+S:\Project_Clinic\ryan-repository\Project\Project\bin\Debug\MySql.Data.xml
