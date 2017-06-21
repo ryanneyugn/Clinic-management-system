@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using TXT;
 
 
 
@@ -23,11 +24,16 @@ namespace Project.GIAODIEN
             mtxtSDT.Clear();
             mtxtNamSinh.Clear();
         }
+
         private void btn_XepVaoHangDoi_Click(object sender, EventArgs e)
         {
             string hoten = txt_hoten.Text;
             string sdt = mtxtSDT.Text;
             string[] row = { hoten, sdt };
+            //write file txt
+            TXTOBJECT a = new TXTOBJECT("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsBenhNhan.txt");
+            a.write(hoten, sdt);
+            //display data
             gv_danhsachbenhnhan.Rows.Add(row);
             ResetAll();
             gv_danhsachbenhnhan.Visible = true;
