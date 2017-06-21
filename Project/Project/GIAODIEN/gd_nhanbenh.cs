@@ -29,33 +29,21 @@ namespace Project.GIAODIEN
         {
             string hoten = txt_hoten.Text;
             string sdt = mtxtSDT.Text;
+            if (hoten.Equals("") || sdt.Equals(""))
+                return;
             string[] row = { hoten, sdt };
             //write file txt
             TXTOBJECT a = new TXTOBJECT("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsBenhNhan.txt");
-            a.write(hoten, sdt);
+            a.writeAppend(hoten, sdt);
             //display data
             gv_danhsachbenhnhan.Rows.Add(row);
             ResetAll();
             gv_danhsachbenhnhan.Visible = true;
         }
 
-        
-
-        private void btn_xoa_Click(object sender, EventArgs e)
-        {
-            if (gv_danhsachbenhnhan.SelectedRows.Count != 0) { 
-                gv_danhsachbenhnhan.Rows.RemoveAt(gv_danhsachbenhnhan.SelectedRows[0].Index);
-                ResetAll();
-            }
-        }
-
         private void btn_Reset_Click(object sender, EventArgs e)
         {
-            if (gv_danhsachbenhnhan.SelectedRows.Count != -1)
-            {
-                DataGridViewRow row = gv_danhsachbenhnhan.SelectedRows[0];
-                txt_hoten.Text = row.Cells[0].Value.ToString();
-            }
+            ResetAll();
         }
 
         private void gv_danhsachbenhnhan_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -79,6 +67,31 @@ namespace Project.GIAODIEN
                 chklbSA.Visible = true;
             else
                 chklbSA.Visible = false;
+        }
+        public void deleteLineTxt(int i)
+        {
+            TXTOBJECT a = new TXTOBJECT("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsBenhNhan.txt");
+            string[] listbn = a.read();List<string> ds = new List<string>();
+            foreach (string str in listbn)
+            {
+                ds.Add(str);
+            }
+            ds.RemoveAt(i);
+            //write again
+            a.writeOver(ds);
+        }
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try {
+                int currentRow = gv_danhsachbenhnhan.CurrentCell.RowIndex;
+                gv_danhsachbenhnhan.Rows.RemoveAt(currentRow);
+                deleteLineTxt(currentRow);
+            } catch(Exception)
+            {
+                MessageBox.Show("Vui lòng chọn dòng cần xóa");
+            }
+            
+            ResetAll();
         }
     }
 }

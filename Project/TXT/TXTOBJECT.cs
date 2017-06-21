@@ -1,6 +1,8 @@
 ﻿using System.IO;
 using System;
 using System.Text;
+using System.Collections.Generic;
+
 namespace TXT
 {
     public class TXTOBJECT
@@ -26,7 +28,7 @@ namespace TXT
             }
         }
         
-        public void write(string hoten, string sdt)
+        public void writeAppend(string hoten, string sdt)
         {
             // Compose a string that consists of three lines.
             string lines = hoten + " - " + sdt+"\n";
@@ -38,5 +40,21 @@ namespace TXT
 
             f.Close();
         }
+        public void writeOver(List<string> dsstr)
+        {
+            // Compose a string that consists of three lines.
+            //string lines = str;
+
+            // Write the string to a file.
+            FileStream f = File.Open(path, FileMode.Truncate);
+            foreach(string str in dsstr)
+            {
+                string strs = str + "\n";
+                Byte[] info = new UTF8Encoding(true).GetBytes(strs);
+                f.Write(info, 0, info.Length);               
+            }
+            f.Close();
+        }
+        
     }
 }

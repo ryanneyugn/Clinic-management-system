@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chklbSA = new System.Windows.Forms.CheckedListBox();
             this.chklbXetNghiem = new System.Windows.Forms.CheckedListBox();
             this.cbDichVu = new System.Windows.Forms.ComboBox();
             this.gb_ThonTinBenhNhan = new System.Windows.Forms.GroupBox();
@@ -46,7 +47,7 @@
             this.gv_danhsachbenhnhan = new System.Windows.Forms.DataGridView();
             this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chklbSA = new System.Windows.Forms.CheckedListBox();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.gb_ThonTinBenhNhan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_danhsachbenhnhan)).BeginInit();
@@ -65,6 +66,20 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách bệnh nhân";
+            // 
+            // chklbSA
+            // 
+            this.chklbSA.FormattingEnabled = true;
+            this.chklbSA.Items.AddRange(new object[] {
+            "Thai 2D",
+            "Ngã âm đạo",
+            "Hình thái học",
+            "Màu"});
+            this.chklbSA.Location = new System.Drawing.Point(364, 234);
+            this.chklbSA.Name = "chklbSA";
+            this.chklbSA.Size = new System.Drawing.Size(135, 64);
+            this.chklbSA.TabIndex = 4;
+            this.chklbSA.Visible = false;
             // 
             // chklbXetNghiem
             // 
@@ -96,10 +111,12 @@
             this.cbDichVu.Size = new System.Drawing.Size(79, 21);
             this.cbDichVu.TabIndex = 2;
             this.cbDichVu.Text = "Dịch Vụ";
+            this.cbDichVu.Visible = false;
             this.cbDichVu.SelectedIndexChanged += new System.EventHandler(this.cbDichVu_SelectedIndexChanged);
             // 
             // gb_ThonTinBenhNhan
             // 
+            this.gb_ThonTinBenhNhan.Controls.Add(this.btnXoa);
             this.gb_ThonTinBenhNhan.Controls.Add(this.mtxtSDT);
             this.gb_ThonTinBenhNhan.Controls.Add(this.mtxtNamSinh);
             this.gb_ThonTinBenhNhan.Controls.Add(this.btn_XepVaoHangDoi);
@@ -138,9 +155,9 @@
             // 
             this.btn_XepVaoHangDoi.Location = new System.Drawing.Point(19, 136);
             this.btn_XepVaoHangDoi.Name = "btn_XepVaoHangDoi";
-            this.btn_XepVaoHangDoi.Size = new System.Drawing.Size(187, 23);
+            this.btn_XepVaoHangDoi.Size = new System.Drawing.Size(82, 23);
             this.btn_XepVaoHangDoi.TabIndex = 4;
-            this.btn_XepVaoHangDoi.Text = "Xếp vào hàng đợi";
+            this.btn_XepVaoHangDoi.Text = "Xếp vào hàng ";
             this.btn_XepVaoHangDoi.UseVisualStyleBackColor = true;
             this.btn_XepVaoHangDoi.Click += new System.EventHandler(this.btn_XepVaoHangDoi_Click);
             // 
@@ -241,19 +258,15 @@
             this.sdt.Name = "sdt";
             this.sdt.ReadOnly = true;
             // 
-            // chklbSA
+            // btnXoa
             // 
-            this.chklbSA.FormattingEnabled = true;
-            this.chklbSA.Items.AddRange(new object[] {
-            "Thai 2D",
-            "Ngã âm đạo",
-            "Hình thái học",
-            "Màu"});
-            this.chklbSA.Location = new System.Drawing.Point(364, 234);
-            this.chklbSA.Name = "chklbSA";
-            this.chklbSA.Size = new System.Drawing.Size(135, 64);
-            this.chklbSA.TabIndex = 4;
-            this.chklbSA.Visible = false;
+            this.btnXoa.Location = new System.Drawing.Point(125, 136);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(81, 23);
+            this.btnXoa.TabIndex = 15;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // gd_nhanbenh
             // 
@@ -292,5 +305,6 @@
         private System.Windows.Forms.ComboBox cbDichVu;
         private System.Windows.Forms.CheckedListBox chklbXetNghiem;
         private System.Windows.Forms.CheckedListBox chklbSA;
+        private System.Windows.Forms.Button btnXoa;
     }
 }
