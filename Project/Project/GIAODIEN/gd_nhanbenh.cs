@@ -93,5 +93,14 @@ namespace Project.GIAODIEN
             
             ResetAll();
         }
+
+        private void txt_hoten_TextChanged(object sender, EventArgs e)
+        {
+            if (txt_hoten.Text.Equals(""))
+                cbDichVu.Visible = false;
+            else
+                cbDichVu.Visible = true;
+
+        }
     }
 }

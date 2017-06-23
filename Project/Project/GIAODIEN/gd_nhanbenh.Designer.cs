@@ -33,6 +33,7 @@
             this.chklbXetNghiem = new System.Windows.Forms.CheckedListBox();
             this.cbDichVu = new System.Windows.Forms.ComboBox();
             this.gb_ThonTinBenhNhan = new System.Windows.Forms.GroupBox();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.mtxtSDT = new System.Windows.Forms.MaskedTextBox();
             this.mtxtNamSinh = new System.Windows.Forms.MaskedTextBox();
             this.btn_XepVaoHangDoi = new System.Windows.Forms.Button();
@@ -47,7 +48,6 @@
             this.gv_danhsachbenhnhan = new System.Windows.Forms.DataGridView();
             this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnXoa = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.gb_ThonTinBenhNhan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_danhsachbenhnhan)).BeginInit();
@@ -135,6 +135,16 @@
             this.gb_ThonTinBenhNhan.TabStop = false;
             this.gb_ThonTinBenhNhan.Text = "Thông tin bệnh nhân";
             // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(125, 136);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(81, 23);
+            this.btnXoa.TabIndex = 15;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
             // mtxtSDT
             // 
             this.mtxtSDT.Location = new System.Drawing.Point(95, 101);
@@ -193,6 +203,7 @@
             this.txt_hoten.Name = "txt_hoten";
             this.txt_hoten.Size = new System.Drawing.Size(111, 20);
             this.txt_hoten.TabIndex = 0;
+            this.txt_hoten.TextChanged += new System.EventHandler(this.txt_hoten_TextChanged);
             // 
             // label4
             // 
@@ -257,16 +268,6 @@
             this.sdt.HeaderText = "Số điện thoại";
             this.sdt.Name = "sdt";
             this.sdt.ReadOnly = true;
-            // 
-            // btnXoa
-            // 
-            this.btnXoa.Location = new System.Drawing.Point(125, 136);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(81, 23);
-            this.btnXoa.TabIndex = 15;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // gd_nhanbenh
             // 
