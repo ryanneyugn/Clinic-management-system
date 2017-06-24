@@ -2,7 +2,6 @@
 using System;
 using System.Text;
 using System.Collections.Generic;
-
 namespace TXT
 {
     public class TXTOBJECT
@@ -40,21 +39,21 @@ namespace TXT
 
             f.Close();
         }
-        public void writeOver(List<string> dsstr)
+
+        public void writeOver(List<string> ds)
         {
             // Compose a string that consists of three lines.
-            //string lines = str;
+            //string lines = hoten + " - " + sdt + "\n";
 
             // Write the string to a file.
             FileStream f = File.Open(path, FileMode.Truncate);
-            foreach(string str in dsstr)
+            foreach(string str in ds)
             {
                 string strs = str + "\n";
                 Byte[] info = new UTF8Encoding(true).GetBytes(strs);
-                f.Write(info, 0, info.Length);               
+                f.Write(info, 0, info.Length);
             }
             f.Close();
         }
-        
     }
 }

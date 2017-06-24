@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Windows.Forms;
 using TXT;
 
-
-
 namespace Project.GIAODIEN
 {
     public partial class gd_nhanbenh : Form
@@ -29,8 +27,6 @@ namespace Project.GIAODIEN
         {
             string hoten = txt_hoten.Text;
             string sdt = mtxtSDT.Text;
-            if (hoten.Equals("") || sdt.Equals(""))
-                return;
             string[] row = { hoten, sdt };
             //write file txt
             TXTOBJECT a = new TXTOBJECT("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsBenhNhan.txt");
@@ -41,9 +37,23 @@ namespace Project.GIAODIEN
             gv_danhsachbenhnhan.Visible = true;
         }
 
+        
+
+        private void btn_xoa_Click(object sender, EventArgs e)
+        {
+            if (gv_danhsachbenhnhan.SelectedRows.Count != 0) { 
+                gv_danhsachbenhnhan.Rows.RemoveAt(gv_danhsachbenhnhan.SelectedRows[0].Index);
+                ResetAll();
+            }
+        }
+
         private void btn_Reset_Click(object sender, EventArgs e)
         {
-            ResetAll();
+            if (gv_danhsachbenhnhan.SelectedRows.Count != -1)
+            {
+                DataGridViewRow row = gv_danhsachbenhnhan.SelectedRows[0];
+                txt_hoten.Text = row.Cells[0].Value.ToString();
+            }
         }
 
         private void gv_danhsachbenhnhan_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -68,7 +78,7 @@ namespace Project.GIAODIEN
             else
                 chklbSA.Visible = false;
         }
-        public void deleteLineTxt(int i)
+        private void deleteLineTxt(int i)
         {
             TXTOBJECT a = new TXTOBJECT("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsBenhNhan.txt");
             string[] listbn = a.read();List<string> ds = new List<string>();
@@ -80,19 +90,6 @@ namespace Project.GIAODIEN
             //write again
             a.writeOver(ds);
         }
-        private void btnXoa_Click(object sender, EventArgs e)
-        {
-            try {
-                int currentRow = gv_danhsachbenhnhan.CurrentCell.RowIndex;
-                gv_danhsachbenhnhan.Rows.RemoveAt(currentRow);
-                deleteLineTxt(currentRow);
-            } catch(Exception)
-            {
-                MessageBox.Show("Vui lòng chọn dòng cần xóa");
-            }
-            
-            ResetAll();
-        }
 
         private void txt_hoten_TextChanged(object sender, EventArgs e)
         {
@@ -101,6 +98,40 @@ namespace Project.GIAODIEN
             else
                 cbDichVu.Visible = true;
 
+        }
+
+        private void btn_Tao_Click(object sender, EventArgs e)
+        {
+            //string connetionString = null;
+            //MySqlConnection cnn;
+            //connetionString = "server=localhost;database=qlpk;uid=root;pwd=123456;";
+            //cnn = new MySqlConnection(connetionString);
+            //try
+            //{
+            //    cnn.Open();
+            //    MessageBox.Show("Connection Open ! ");
+            //    cnn.Close();
+            //}
+            //catch (Exception ex)
+            //{
+            //    MessageBox.Show("Can not open connection ! ");
+            //}
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int currentRow = gv_danhsachbenhnhan.CurrentCell.RowIndex;
+                gv_danhsachbenhnhan.Rows.RemoveAt(currentRow);
+                deleteLineTxt(currentRow);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Vui lòng chọn dòng cần xóa");
+            }
+
+            ResetAll();
         }
     }
 }
