@@ -27,3 +27,5 @@ S:\Project_Clinic\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.pdb
 F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_sieuam.resources
 F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_thongke.resources
 F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_thongtintoathuoc.resources
+F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_kedonthuoc.resources
+F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_quanlykho.resources

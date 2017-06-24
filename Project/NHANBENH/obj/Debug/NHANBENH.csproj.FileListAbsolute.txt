@@ -41,3 +41,14 @@ S:\Project_Clinic\ryan-repository\Project\Project\bin\Debug\MySql.Data.xml
 F:\GIT\ryan-repository\Project\Project\bin\Debug\MySql.Data.dll
 F:\GIT\ryan-repository\Project\Project\bin\Debug\MySql.Data.xml
 F:\GIT\ryan-repository\Project\Project\obj\Debug\NHANBENH.csprojResolveAssemblyReference.cache
+F:\GIT\ryan-repository\Project\NHANBENH\bin\Debug\Project.exe.config
+F:\GIT\ryan-repository\Project\NHANBENH\bin\Debug\Project.exe
+F:\GIT\ryan-repository\Project\NHANBENH\bin\Debug\Project.pdb
+F:\GIT\ryan-repository\Project\NHANBENH\bin\Debug\MySql.Data.dll
+F:\GIT\ryan-repository\Project\NHANBENH\bin\Debug\MySql.Data.xml
+F:\GIT\ryan-repository\Project\NHANBENH\obj\Debug\NHANBENH.csprojResolveAssemblyReference.cache
+F:\GIT\ryan-repository\Project\NHANBENH\obj\Debug\Project.GIAODIEN.gd_nhanbenh.resources
+F:\GIT\ryan-repository\Project\NHANBENH\obj\Debug\Project.Properties.Resources.resources
+F:\GIT\ryan-repository\Project\NHANBENH\obj\Debug\NHANBENH.csproj.GenerateResource.Cache
+F:\GIT\ryan-repository\Project\NHANBENH\obj\Debug\Project.exe
+F:\GIT\ryan-repository\Project\NHANBENH\obj\Debug\Project.pdb

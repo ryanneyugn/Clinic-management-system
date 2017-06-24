@@ -16,6 +16,6 @@ namespace PHONGKHAM.GIAODIEN
         {
             InitializeComponent();
         }
-  
+     
     }
 }
