@@ -28,18 +28,33 @@ namespace Project.GIAODIEN
         {
             string hoten = txt_hoten.Text;
             string sdt = mtxtSDT.Text;
-            string[] row = { hoten, sdt };
-            //write file txt
-            TXTOBJECT a = new TXTOBJECT("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsBenhNhan.txt");
-            a.writeAppend(hoten, sdt);
-            //display data
-            gv_danhsachbenhnhan.Rows.Add(row);
-            ResetAll();
-            gv_danhsachbenhnhan.Visible = true;
+            string dv = "null";
+            try
+            {
+                if (!txt_hoten.Text.Equals(""))
+                {
+                    if (cbDichVu.SelectedItem.Equals("Xét nghiệm"))
+                        dv = chklbXetNghiem.SelectedItem.ToString();
+                    else if (cbDichVu.SelectedItem.Equals("Khám + siêu âm"))
+                        dv = chklbSA.SelectedItem.ToString();
+                    else
+                        dv = "null";
+                    string[] row = { hoten, sdt, dv };
+                    //write file txt
+                    TXTOBJECT a = new TXTOBJECT("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsBenhNhan.txt");
+                    a.writeAppend(hoten, sdt, dv);
+                    //display data
+                    gv_danhsachbenhnhan.Rows.Add(row);
+                    ResetAll();
+                    gv_danhsachbenhnhan.Visible = true;
+                }
+                else MessageBox.Show("Vui lòng điền đủ thông tin"); ;
+                }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Vui lòng điền đủ thông tin");
+            }
         }
-
-        
-
         private void btn_xoa_Click(object sender, EventArgs e)
         {
             if (gv_danhsachbenhnhan.SelectedRows.Count != 0) { 
@@ -70,14 +85,23 @@ namespace Project.GIAODIEN
 
         private void cbDichVu_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (cbDichVu.SelectedItem.Equals("Xét nghiệm"))
-                chklbXetNghiem.Visible = true;
+            if(cbDichVu.Visible == true)
+            {
+                if (cbDichVu.SelectedItem.Equals("Xét nghiệm"))
+                    chklbXetNghiem.Visible = true;
+                else
+                    chklbXetNghiem.Visible = false;
+                if (cbDichVu.SelectedItem.Equals("Khám + siêu âm"))
+                    chklbSA.Visible = true;
+                else
+                    chklbSA.Visible = false;
+            }
             else
+            {
                 chklbXetNghiem.Visible = false;
-            if (cbDichVu.SelectedItem.Equals("Khám + siêu âm"))
-                chklbSA.Visible = true;
-            else
                 chklbSA.Visible = false;
+            }
+
         }
         private void deleteLineTxt(int i)
         {
@@ -95,30 +119,20 @@ namespace Project.GIAODIEN
         private void txt_hoten_TextChanged(object sender, EventArgs e)
         {
             if (txt_hoten.Text.Equals(""))
+            {
                 cbDichVu.Visible = false;
+                chklbXetNghiem.Visible = false;
+                chklbSA.Visible = false;
+            }
             else
+            {
                 cbDichVu.Visible = true;
-
+            }   
         }
 
         private void btn_Tao_Click(object sender, EventArgs e)
         {
-            //string connetionString = null;
-            //MySqlConnection cnn;
-            //connetionString = "server=localhost;database=qlpk;uid=root;pwd=123456;";
-            //cnn = new MySqlConnection(connetionString);
-            //try
-            //{
-            //    cnn.Open();
-            //    MessageBox.Show("Connection Open ! ");
-            //    cnn.Close();
-            //}
-            //catch (Exception ex)
-            //{
-            //    MessageBox.Show("Can not open connection ! ");
-            //}
             string connetionString = "server=localhost;database=qlpk;uid=root;pwd=123456;";
-            //ConnDb.ConnData.Connectionstring1 = connetionString;
             ConnData con = new ConnData(connetionString);
             con.OpenConnec();
             string query = "insert into benhnhan (ten, nam_sinh, address, phone_num) values('"+txt_hoten.Text+"', '"+mtxtNamSinh.Text+ "', '" + txt_diachi.Text + "', '" + mtxtSDT.Text + "')";
