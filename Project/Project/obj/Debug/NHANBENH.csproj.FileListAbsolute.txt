@@ -43,3 +43,5 @@ F:\GIT\ryan-repository\Project\Project\bin\Debug\MySql.Data.xml
 F:\GIT\ryan-repository\Project\Project\obj\Debug\NHANBENH.csprojResolveAssemblyReference.cache
 S:\Project_Clinic\ryan-repository\Project\Project\bin\Debug\TXT.dll
 S:\Project_Clinic\ryan-repository\Project\Project\bin\Debug\TXT.pdb
+S:\Project_Clinic\ryan-repository\Project\Project\bin\Debug\ConnDb.dll
+S:\Project_Clinic\ryan-repository\Project\Project\bin\Debug\ConnDb.pdb

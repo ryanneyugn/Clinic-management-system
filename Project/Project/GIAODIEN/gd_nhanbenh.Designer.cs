@@ -137,7 +137,7 @@
             // mtxtSDT
             // 
             this.mtxtSDT.Location = new System.Drawing.Point(95, 101);
-            this.mtxtSDT.Mask = "(99) 000 00000";
+            this.mtxtSDT.Mask = "(99) 0000 0000";
             this.mtxtSDT.Name = "mtxtSDT";
             this.mtxtSDT.Size = new System.Drawing.Size(111, 20);
             this.mtxtSDT.TabIndex = 3;
@@ -277,6 +277,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "gd_nhanbenh";
             this.Text = "Nhận bệnh";
+            this.Load += new System.EventHandler(this.gd_nhanbenh_Load);
             this.groupBox1.ResumeLayout(false);
             this.gb_ThonTinBenhNhan.ResumeLayout(false);
             this.gb_ThonTinBenhNhan.PerformLayout();

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using TXT;
+using ConnDb;
 
 namespace Project.GIAODIEN
 {
@@ -116,6 +117,13 @@ namespace Project.GIAODIEN
             //{
             //    MessageBox.Show("Can not open connection ! ");
             //}
+            string connetionString = "server=localhost;database=qlpk;uid=root;pwd=123456;";
+            //ConnDb.ConnData.Connectionstring1 = connetionString;
+            ConnData con = new ConnData(connetionString);
+            con.OpenConnec();
+            string query = "insert into benhnhan (ten, nam_sinh, address, phone_num) values('"+txt_hoten.Text+"', '"+mtxtNamSinh.Text+ "', '" + txt_diachi.Text + "', '" + mtxtSDT.Text + "')";
+            con.executeNonQuery(query);
+            con.CloseConnec();
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
@@ -132,6 +140,24 @@ namespace Project.GIAODIEN
             }
 
             ResetAll();
+        }
+
+        public bool updateGridView(string path)
+        {
+            TXTOBJECT a = new TXTOBJECT(path);
+            string[] listbn = a.read();
+            foreach (string str in listbn)
+            {
+                string[] row = str.Split('-');
+                gv_danhsachbenhnhan.Rows.Add(row);
+            }
+            gv_danhsachbenhnhan.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            gv_danhsachbenhnhan.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            return true;
+        }
+        private void gd_nhanbenh_Load(object sender, EventArgs e)
+        {
+            updateGridView("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsBenhNhan.txt");
         }
     }
 }

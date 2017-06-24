@@ -80,6 +80,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConnDb\ConnDb.csproj">
+      <Project>{0af7b184-a91f-4707-b2da-476cf951b39b}</Project>
+      <Name>ConnDb</Name>
+    </ProjectReference>
     <ProjectReference Include="..\TXT\TXT.csproj">
       <Project>{ce8a890c-7d56-4811-a78d-edfedd53e5bb}</Project>
       <Name>TXT</Name>

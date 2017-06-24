@@ -6,23 +6,22 @@ using System.Threading.Tasks;
 using System.Data;
 using MySql.Data.MySqlClient;
 
-namespace ConnData
+namespace ConnDb
 {
     public class ConnData
     {
-        private static string Connectionstring;
+        private  string Connectionstring;
         private MySqlCommand command;
         private MySqlConnection connection;
         private MySqlDataAdapter adapter;
 
-        public static string Connectionstring1
+        public ConnData(string connectionString)
         {
-            get { return ConnData.Connectionstring; }
-            set { ConnData.Connectionstring = value; }
+            this.Connectionstring = connectionString;
         }
         public void OpenConnec()
         {
-            connection = new MySqlConnection(Connectionstring1);
+            connection = new MySqlConnection(this.Connectionstring);
             connection.Open();
         }
         public void CloseConnec()
