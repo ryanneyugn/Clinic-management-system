@@ -28,46 +28,47 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_khambenh = new System.Windows.Forms.Button();
+            this.btn_thongke = new System.Windows.Forms.Button();
+            this.btn_quanlykho = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_khambenh
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(153, 148);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Khám bệnh";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btn_khambenh.Location = new System.Drawing.Point(12, 12);
+            this.btn_khambenh.Name = "btn_khambenh";
+            this.btn_khambenh.Size = new System.Drawing.Size(153, 148);
+            this.btn_khambenh.TabIndex = 0;
+            this.btn_khambenh.Text = "Khám bệnh";
+            this.btn_khambenh.UseVisualStyleBackColor = true;
+            this.btn_khambenh.Click += new System.EventHandler(this.btn_khambenh_Click);
             // 
-            // button2
+            // btn_thongke
             // 
-            this.button2.Location = new System.Drawing.Point(171, 12);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(153, 148);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Thống kê";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btn_thongke.Location = new System.Drawing.Point(171, 12);
+            this.btn_thongke.Name = "btn_thongke";
+            this.btn_thongke.Size = new System.Drawing.Size(153, 148);
+            this.btn_thongke.TabIndex = 1;
+            this.btn_thongke.Text = "Thống kê";
+            this.btn_thongke.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btn_quanlykho
             // 
-            this.button3.Location = new System.Drawing.Point(330, 12);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(153, 148);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "Quản lý kho";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btn_quanlykho.Location = new System.Drawing.Point(330, 12);
+            this.btn_quanlykho.Name = "btn_quanlykho";
+            this.btn_quanlykho.Size = new System.Drawing.Size(153, 148);
+            this.btn_quanlykho.TabIndex = 2;
+            this.btn_quanlykho.Text = "Quản lý kho";
+            this.btn_quanlykho.UseVisualStyleBackColor = true;
             // 
             // gd_trangchu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(492, 172);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_quanlykho);
+            this.Controls.Add(this.btn_thongke);
+            this.Controls.Add(this.btn_khambenh);
             this.Name = "gd_trangchu";
             this.Text = "Trang chủ";
             this.ResumeLayout(false);
@@ -76,8 +77,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btn_khambenh;
+        private System.Windows.Forms.Button btn_thongke;
+        private System.Windows.Forms.Button btn_quanlykho;
     }
 }

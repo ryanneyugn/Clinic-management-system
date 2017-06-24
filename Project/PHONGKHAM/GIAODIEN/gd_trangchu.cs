@@ -16,5 +16,17 @@ namespace PHONGKHAM.GIAODIEN
         {
             InitializeComponent();
         }
+
+        public void frmClose()
+        {
+
+        }
+
+        private void btn_khambenh_Click(object sender, EventArgs e)
+        {
+            Hide();
+            Form f = new gd_khambenh();
+            f.Show();
+        }
     }
 }
