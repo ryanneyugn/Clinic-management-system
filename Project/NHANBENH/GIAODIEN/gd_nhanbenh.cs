@@ -32,6 +32,10 @@ namespace Project.GIAODIEN
             string dvXN = "null";
             //file.txt
             TXTOBJECT dsNB = new TXTOBJECT("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsNhanBenh.txt");
+            if (txt_hoten.Text.Equals(""))
+            {
+                return;
+            }
             if (chkSA.Checked)
             {
                 foreach(string tmp in chklbSA.CheckedItems)
@@ -66,7 +70,6 @@ namespace Project.GIAODIEN
             //display data
             gv_danhsachbenhnhan.Rows.Add(row);
             ResetAll();
-            gv_danhsachbenhnhan.Visible = true;
         }
 
         private void btn_Reset_Click(object sender, EventArgs e)
