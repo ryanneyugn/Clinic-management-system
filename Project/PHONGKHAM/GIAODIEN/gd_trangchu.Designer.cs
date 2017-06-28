@@ -51,6 +51,7 @@
             this.btn_thongke.TabIndex = 1;
             this.btn_thongke.Text = "Thống kê";
             this.btn_thongke.UseVisualStyleBackColor = true;
+            this.btn_thongke.Click += new System.EventHandler(this.btn_thongke_Click);
             // 
             // btn_quanlykho
             // 
@@ -60,6 +61,7 @@
             this.btn_quanlykho.TabIndex = 2;
             this.btn_quanlykho.Text = "Quản lý kho";
             this.btn_quanlykho.UseVisualStyleBackColor = true;
+            this.btn_quanlykho.Click += new System.EventHandler(this.btn_quanlykho_Click);
             // 
             // gd_trangchu
             // 
