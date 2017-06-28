@@ -3,3 +3,8 @@ F:\GIT\ryan-repository\Project\TXT\bin\Debug\TXT.pdb
 F:\GIT\ryan-repository\Project\TXT\obj\Debug\TXT.dll
 F:\GIT\ryan-repository\Project\TXT\obj\Debug\TXT.pdb
 F:\GIT\ryan-repository\Project\TXT\obj\Debug\TXT.csprojResolveAssemblyReference.cache
+S:\Project_Clinic\ryan-repository\Project\TXT\bin\Debug\TXT.dll
+S:\Project_Clinic\ryan-repository\Project\TXT\bin\Debug\TXT.pdb
+S:\Project_Clinic\ryan-repository\Project\TXT\obj\Debug\TXT.csprojResolveAssemblyReference.cache
+S:\Project_Clinic\ryan-repository\Project\TXT\obj\Debug\TXT.dll
+S:\Project_Clinic\ryan-repository\Project\TXT\obj\Debug\TXT.pdb
