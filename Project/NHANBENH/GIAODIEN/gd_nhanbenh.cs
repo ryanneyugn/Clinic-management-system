@@ -30,46 +30,30 @@ namespace Project.GIAODIEN
             string sdt = mtxtSDT.Text;
             string dv = "null";
             //file.txt
-            TXTOBJECT dsXN = new TXTOBJECT("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsXetNghiem.txt");
-            TXTOBJECT dsSA = new TXTOBJECT("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsSieuAm.txt");
-            TXTOBJECT dsKT = new TXTOBJECT("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsKhamThuong.txt");
+            TXTOBJECT dsNB = new TXTOBJECT("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsNhanBenh.txt");
             try
             {
                 if (!txt_hoten.Text.Equals(""))
                 {
-                    if (cbDichVu.SelectedItem.Equals("Xét nghiệm"))
-                    {
-                        dv = chklbXetNghiem.SelectedItem.ToString();
-                        string[] row = { hoten, sdt, dv };
-                        //write file txt
-                        dsXN.writeAppend(hoten, sdt, dv);
-                        //display data
-                        gv_danhsachbenhnhan.Rows.Add(row);
-                        ResetAll();
-                        gv_danhsachbenhnhan.Visible = true;
-                    }
-                    else if (cbDichVu.SelectedItem.Equals("Khám + siêu âm"))
-                    {
-                        dv = chklbSA.SelectedItem.ToString();
-                        string[] row = { hoten, sdt, dv };
-                        //write file txt
-                        dsSA.writeAppend(hoten, sdt, dv);
-                        //display data
-                        gv_danhsachbenhnhan.Rows.Add(row);
-                        ResetAll();
-                        gv_danhsachbenhnhan.Visible = true;
-                    }
-                    else
-                    {
-                        dv = "null";
-                        string[] row = { hoten, sdt, dv };
-                        //write file txt
-                        dsKT.writeAppend(hoten, sdt, dv);
-                        //display data
-                        gv_danhsachbenhnhan.Rows.Add(row);
-                        ResetAll();
-                        gv_danhsachbenhnhan.Visible = true;
-                    }      
+                    //if (cbDichVu.SelectedItem.Equals("Xét nghiệm"))
+                    //{
+                    //    dv = chklbXetNghiem.SelectedItem.ToString();
+                    //}
+                    //else if (cbDichVu.SelectedItem.Equals("Khám + siêu âm"))
+                    //{
+                    //    dv = chklbSA.SelectedItem.ToString();
+                    //}
+                    //else
+                    //{
+                    //    dv = "null";
+                    //}
+                    string[] row = { hoten, sdt, dv };
+                    //write file txt
+                    dsNB.writeAppend(hoten, sdt, dv);
+                    //display data
+                    gv_danhsachbenhnhan.Rows.Add(row);
+                    ResetAll();
+                    gv_danhsachbenhnhan.Visible = true;
                 }
                 else MessageBox.Show("Vui lòng điền đủ thông tin"); ;
                 }
@@ -106,26 +90,26 @@ namespace Project.GIAODIEN
             }
         }
 
-        private void cbDichVu_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            if(cbDichVu.Visible == true)
-            {
-                if (cbDichVu.SelectedItem.Equals("Xét nghiệm"))
-                    chklbXetNghiem.Visible = true;
-                else
-                    chklbXetNghiem.Visible = false;
-                if (cbDichVu.SelectedItem.Equals("Khám + siêu âm"))
-                    chklbSA.Visible = true;
-                else
-                    chklbSA.Visible = false;
-            }
-            else
-            {
-                chklbXetNghiem.Visible = false;
-                chklbSA.Visible = false;
-            }
+        //private void cbDichVu_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+        //    if(cbDichVu.Visible == true)
+        //    {
+        //        if (cbDichVu.SelectedItem.Equals("Xét nghiệm"))
+        //            chklbXetNghiem.Visible = true;
+        //        else
+        //            chklbXetNghiem.Visible = false;
+        //        if (cbDichVu.SelectedItem.Equals("Khám + siêu âm"))
+        //            chklbSA.Visible = true;
+        //        else
+        //            chklbSA.Visible = false;
+        //    }
+        //    else
+        //    {
+        //        chklbXetNghiem.Visible = false;
+        //        chklbSA.Visible = false;
+        //    }
 
-        }
+        //}
         private void deleteLineTxt(int i)
         {
             TXTOBJECT a = new TXTOBJECT("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsBenhNhan.txt");
@@ -143,13 +127,13 @@ namespace Project.GIAODIEN
         {
             if (txt_hoten.Text.Equals(""))
             {
-                cbDichVu.Visible = false;
                 chklbXetNghiem.Visible = false;
+                chklbXetNghiem.ClearSelected();
                 chklbSA.Visible = false;
             }
             else
             {
-                cbDichVu.Visible = true;
+                //cbDichVu.Visible = true;
             }   
         }
 
@@ -194,9 +178,17 @@ namespace Project.GIAODIEN
         }
         private void gd_nhanbenh_Load(object sender, EventArgs e)
         {
-            updateGridView("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsXetNghiem.txt");
-            updateGridView("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsSieuAm.txt");
-            updateGridView("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsKhamThuong.txt");
+            updateGridView("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsNhanBenh.txt");
+        }
+
+        private void chkSA_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!chkSA.Checked)
+            {
+                chklbSA.ClearSelected();
+                chklbSA.Refresh();
+            }
+                
         }
     }
 }

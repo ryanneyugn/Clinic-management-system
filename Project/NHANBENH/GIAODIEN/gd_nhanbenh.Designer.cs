@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.chklbSA = new System.Windows.Forms.CheckedListBox();
-            this.chklbXetNghiem = new System.Windows.Forms.CheckedListBox();
-            this.cbDichVu = new System.Windows.Forms.ComboBox();
             this.gb_ThonTinBenhNhan = new System.Windows.Forms.GroupBox();
+            this.btnXoa = new System.Windows.Forms.Button();
             this.mtxtSDT = new System.Windows.Forms.MaskedTextBox();
             this.mtxtNamSinh = new System.Windows.Forms.MaskedTextBox();
             this.btn_XepVaoHangDoi = new System.Windows.Forms.Button();
@@ -47,7 +45,10 @@
             this.gv_danhsachbenhnhan = new System.Windows.Forms.DataGridView();
             this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnXoa = new System.Windows.Forms.Button();
+            this.chklbXetNghiem = new System.Windows.Forms.CheckedListBox();
+            this.chklbSA = new System.Windows.Forms.CheckedListBox();
+            this.chkSA = new System.Windows.Forms.CheckBox();
+            this.chkXN = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.gb_ThonTinBenhNhan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_danhsachbenhnhan)).BeginInit();
@@ -55,9 +56,10 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.chklbSA);
+            this.groupBox1.Controls.Add(this.chkXN);
             this.groupBox1.Controls.Add(this.chklbXetNghiem);
-            this.groupBox1.Controls.Add(this.cbDichVu);
+            this.groupBox1.Controls.Add(this.chkSA);
+            this.groupBox1.Controls.Add(this.chklbSA);
             this.groupBox1.Controls.Add(this.gb_ThonTinBenhNhan);
             this.groupBox1.Controls.Add(this.gv_danhsachbenhnhan);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
@@ -66,52 +68,6 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách bệnh nhân";
-            // 
-            // chklbSA
-            // 
-            this.chklbSA.FormattingEnabled = true;
-            this.chklbSA.Items.AddRange(new object[] {
-            "Thai 2D",
-            "Ngã âm đạo",
-            "Hình thái học",
-            "Màu"});
-            this.chklbSA.Location = new System.Drawing.Point(364, 234);
-            this.chklbSA.Name = "chklbSA";
-            this.chklbSA.Size = new System.Drawing.Size(135, 64);
-            this.chklbSA.TabIndex = 4;
-            this.chklbSA.Visible = false;
-            // 
-            // chklbXetNghiem
-            // 
-            this.chklbXetNghiem.FormattingEnabled = true;
-            this.chklbXetNghiem.Items.AddRange(new object[] {
-            "Quick stick",
-            "Tổng phân tích nước tiểu",
-            "Định lượng BHCG",
-            "Xét nghiệm tổng quát",
-            "Điện tâm đồ",
-            "Rubella",
-            "Viêm gan siêu vi B",
-            "Bilan tiền sản giật"});
-            this.chklbXetNghiem.Location = new System.Drawing.Point(364, 234);
-            this.chklbXetNghiem.Name = "chklbXetNghiem";
-            this.chklbXetNghiem.Size = new System.Drawing.Size(135, 124);
-            this.chklbXetNghiem.TabIndex = 3;
-            this.chklbXetNghiem.Visible = false;
-            // 
-            // cbDichVu
-            // 
-            this.cbDichVu.FormattingEnabled = true;
-            this.cbDichVu.Items.AddRange(new object[] {
-            "Khám thường",
-            "Khám + siêu âm",
-            "Xét nghiệm"});
-            this.cbDichVu.Location = new System.Drawing.Point(269, 234);
-            this.cbDichVu.Name = "cbDichVu";
-            this.cbDichVu.Size = new System.Drawing.Size(79, 21);
-            this.cbDichVu.TabIndex = 2;
-            this.cbDichVu.Text = "Dịch Vụ";
-            this.cbDichVu.SelectedIndexChanged += new System.EventHandler(this.cbDichVu_SelectedIndexChanged);
             // 
             // gb_ThonTinBenhNhan
             // 
@@ -133,6 +89,16 @@
             this.gb_ThonTinBenhNhan.TabIndex = 1;
             this.gb_ThonTinBenhNhan.TabStop = false;
             this.gb_ThonTinBenhNhan.Text = "Thông tin bệnh nhân";
+            // 
+            // btnXoa
+            // 
+            this.btnXoa.Location = new System.Drawing.Point(19, 165);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(82, 23);
+            this.btnXoa.TabIndex = 15;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.UseVisualStyleBackColor = true;
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // mtxtSDT
             // 
@@ -259,26 +225,69 @@
             this.sdt.Name = "sdt";
             this.sdt.ReadOnly = true;
             // 
-            // btnXoa
+            // chklbXetNghiem
             // 
-            this.btnXoa.Location = new System.Drawing.Point(19, 165);
-            this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(82, 23);
-            this.btnXoa.TabIndex = 15;
-            this.btnXoa.Text = "Xóa";
-            this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.chklbXetNghiem.FormattingEnabled = true;
+            this.chklbXetNghiem.Items.AddRange(new object[] {
+            "Quick stick",
+            "Tổng phân tích nước tiểu",
+            "Định lượng BHCG",
+            "Xét nghiệm tổng quát",
+            "Điện tâm đồ",
+            "Rubella",
+            "Viêm gan siêu vi B",
+            "Bilan tiền sản giật"});
+            this.chklbXetNghiem.Location = new System.Drawing.Point(364, 257);
+            this.chklbXetNghiem.Name = "chklbXetNghiem";
+            this.chklbXetNghiem.Size = new System.Drawing.Size(149, 124);
+            this.chklbXetNghiem.TabIndex = 3;
+            this.chklbXetNghiem.Visible = false;
+            // 
+            // chklbSA
+            // 
+            this.chklbSA.FormattingEnabled = true;
+            this.chklbSA.Items.AddRange(new object[] {
+            "Thai 2D",
+            "Ngã âm đạo",
+            "Hình thái học",
+            "Màu"});
+            this.chklbSA.Location = new System.Drawing.Point(269, 257);
+            this.chklbSA.Name = "chklbSA";
+            this.chklbSA.Size = new System.Drawing.Size(89, 64);
+            this.chklbSA.TabIndex = 4;
+            // 
+            // chkSA
+            // 
+            this.chkSA.AutoSize = true;
+            this.chkSA.Location = new System.Drawing.Point(269, 234);
+            this.chkSA.Name = "chkSA";
+            this.chkSA.Size = new System.Drawing.Size(65, 17);
+            this.chkSA.TabIndex = 3;
+            this.chkSA.Text = "Siêu Âm";
+            this.chkSA.UseVisualStyleBackColor = true;
+            this.chkSA.CheckedChanged += new System.EventHandler(this.chkSA_CheckedChanged);
+            // 
+            // chkXN
+            // 
+            this.chkXN.AutoSize = true;
+            this.chkXN.Location = new System.Drawing.Point(364, 234);
+            this.chkXN.Name = "chkXN";
+            this.chkXN.Size = new System.Drawing.Size(81, 17);
+            this.chkXN.TabIndex = 4;
+            this.chkXN.Text = "Xét Nghiệm";
+            this.chkXN.UseVisualStyleBackColor = true;
             // 
             // gd_nhanbenh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(539, 388);
+            this.ClientSize = new System.Drawing.Size(757, 395);
             this.Controls.Add(this.groupBox1);
             this.Name = "gd_nhanbenh";
             this.Text = "Nhận bệnh";
             this.Load += new System.EventHandler(this.gd_nhanbenh_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.gb_ThonTinBenhNhan.ResumeLayout(false);
             this.gb_ThonTinBenhNhan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_danhsachbenhnhan)).EndInit();
@@ -304,9 +313,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
         private System.Windows.Forms.MaskedTextBox mtxtSDT;
         private System.Windows.Forms.MaskedTextBox mtxtNamSinh;
-        private System.Windows.Forms.ComboBox cbDichVu;
-        private System.Windows.Forms.CheckedListBox chklbXetNghiem;
-        private System.Windows.Forms.CheckedListBox chklbSA;
         private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.CheckBox chkXN;
+        private System.Windows.Forms.CheckedListBox chklbXetNghiem;
+        private System.Windows.Forms.CheckBox chkSA;
+        private System.Windows.Forms.CheckedListBox chklbSA;
     }
 }
