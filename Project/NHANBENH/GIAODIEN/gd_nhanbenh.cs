@@ -131,7 +131,7 @@ namespace Project.GIAODIEN
                 gv_danhsachbenhnhan.Rows.RemoveAt(currentRow);
                 deleteLineTxt(currentRow);
             }
-            catch (Exception ee)
+            catch (Exception)
             {
                 MessageBox.Show("Vui lòng chọn dòng cần xóa");
             }
