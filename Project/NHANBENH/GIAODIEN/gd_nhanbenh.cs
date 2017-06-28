@@ -28,55 +28,50 @@ namespace Project.GIAODIEN
         {
             string hoten = txt_hoten.Text;
             string sdt = mtxtSDT.Text;
-            string dv = "null";
+            string dvSA = "null";
+            string dvXN = "null";
             //file.txt
             TXTOBJECT dsNB = new TXTOBJECT("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsNhanBenh.txt");
-            try
+            if (chkSA.Checked)
             {
-                if (!txt_hoten.Text.Equals(""))
+                foreach(string tmp in chklbSA.CheckedItems)
                 {
-                    //if (cbDichVu.SelectedItem.Equals("Xét nghiệm"))
-                    //{
-                    //    dv = chklbXetNghiem.SelectedItem.ToString();
-                    //}
-                    //else if (cbDichVu.SelectedItem.Equals("Khám + siêu âm"))
-                    //{
-                    //    dv = chklbSA.SelectedItem.ToString();
-                    //}
-                    //else
-                    //{
-                    //    dv = "null";
-                    //}
-                    string[] row = { hoten, sdt, dv };
-                    //write file txt
-                    dsNB.writeAppend(hoten, sdt, dv);
-                    //display data
-                    gv_danhsachbenhnhan.Rows.Add(row);
-                    ResetAll();
-                    gv_danhsachbenhnhan.Visible = true;
+                    if(dvSA.Equals("null"))
+                        dvSA = tmp;
+                    else
+                        dvSA += "," + tmp;
                 }
-                else MessageBox.Show("Vui lòng điền đủ thông tin"); ;
-                }
-            catch (Exception ex)
+            }
+            else
             {
-                MessageBox.Show("Vui lòng điền đủ thông tin");
+                dvSA = "null";
             }
-        }
-        private void btn_xoa_Click(object sender, EventArgs e)
-        {
-            if (gv_danhsachbenhnhan.SelectedRows.Count != 0) { 
-                gv_danhsachbenhnhan.Rows.RemoveAt(gv_danhsachbenhnhan.SelectedRows[0].Index);
-                ResetAll();
+            if (chkXN.Checked)
+            {
+                foreach (string tmp in chklbXetNghiem.CheckedItems)
+                {
+                    if (dvXN.Equals("null"))
+                        dvXN = tmp;
+                    else
+                        dvXN += "," + tmp;
+                }
             }
+            else
+            {
+                dvXN = "null";
+            }
+            string[] row = { hoten, sdt, dvSA, dvXN };
+            //write file txt
+            dsNB.writeAppend(hoten, sdt, dvSA, dvXN);
+            //display data
+            gv_danhsachbenhnhan.Rows.Add(row);
+            ResetAll();
+            gv_danhsachbenhnhan.Visible = true;
         }
 
         private void btn_Reset_Click(object sender, EventArgs e)
         {
-            if (gv_danhsachbenhnhan.SelectedRows.Count != -1)
-            {
-                DataGridViewRow row = gv_danhsachbenhnhan.SelectedRows[0];
-                txt_hoten.Text = row.Cells[0].Value.ToString();
-            }
+            ResetAll();
         }
 
         private void gv_danhsachbenhnhan_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -89,30 +84,9 @@ namespace Project.GIAODIEN
 
             }
         }
-
-        //private void cbDichVu_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-        //    if(cbDichVu.Visible == true)
-        //    {
-        //        if (cbDichVu.SelectedItem.Equals("Xét nghiệm"))
-        //            chklbXetNghiem.Visible = true;
-        //        else
-        //            chklbXetNghiem.Visible = false;
-        //        if (cbDichVu.SelectedItem.Equals("Khám + siêu âm"))
-        //            chklbSA.Visible = true;
-        //        else
-        //            chklbSA.Visible = false;
-        //    }
-        //    else
-        //    {
-        //        chklbXetNghiem.Visible = false;
-        //        chklbSA.Visible = false;
-        //    }
-
-        //}
         private void deleteLineTxt(int i)
         {
-            TXTOBJECT a = new TXTOBJECT("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsBenhNhan.txt");
+            TXTOBJECT a = new TXTOBJECT("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsNhanBenh.txt");
             string[] listbn = a.read();List<string> ds = new List<string>();
             foreach (string str in listbn)
             {
@@ -127,13 +101,15 @@ namespace Project.GIAODIEN
         {
             if (txt_hoten.Text.Equals(""))
             {
-                chklbXetNghiem.Visible = false;
-                chklbXetNghiem.ClearSelected();
-                chklbSA.Visible = false;
+                chkSA.Visible = false;
+                chkSA.Checked = false;
+                chkXN.Visible = false;
+                chkXN.Checked = false;
             }
             else
             {
-                //cbDichVu.Visible = true;
+                chkSA.Visible = true;
+                chkXN.Visible = true;
             }   
         }
 
@@ -155,7 +131,7 @@ namespace Project.GIAODIEN
                 gv_danhsachbenhnhan.Rows.RemoveAt(currentRow);
                 deleteLineTxt(currentRow);
             }
-            catch (Exception)
+            catch (Exception ee)
             {
                 MessageBox.Show("Vui lòng chọn dòng cần xóa");
             }
@@ -185,10 +161,38 @@ namespace Project.GIAODIEN
         {
             if (!chkSA.Checked)
             {
-                chklbSA.ClearSelected();
-                chklbSA.Refresh();
+                chklbSA.Visible = false;
+                foreach (int i in chklbSA.CheckedIndices)
+                {
+                    chklbSA.SetItemCheckState(i, CheckState.Unchecked);
+                }
             }
-                
+            else
+            {
+                chklbSA.Visible = true;
+            }
+        }
+        private void chkXN_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!chkXN.Checked)
+            {
+                chklbXetNghiem.Visible = false;
+                foreach (int i in chklbXetNghiem.CheckedIndices)
+                {
+                    chklbXetNghiem.SetItemCheckState(i, CheckState.Unchecked);
+                }
+            }
+            else
+            {
+                chklbXetNghiem.Visible = true;
+            }
+        }
+        private void chkSA_VisibleChanged(object sender, EventArgs e)
+        {
+            if (chkSA.Checked)
+                chklbSA.Visible = true;
+            else
+                chklbSA.Visible = false;
         }
     }
 }

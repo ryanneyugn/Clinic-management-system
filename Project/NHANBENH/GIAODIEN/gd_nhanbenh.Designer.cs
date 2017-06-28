@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkXN = new System.Windows.Forms.CheckBox();
+            this.chklbXetNghiem = new System.Windows.Forms.CheckedListBox();
+            this.chkSA = new System.Windows.Forms.CheckBox();
+            this.chklbSA = new System.Windows.Forms.CheckedListBox();
             this.gb_ThonTinBenhNhan = new System.Windows.Forms.GroupBox();
             this.btnXoa = new System.Windows.Forms.Button();
             this.mtxtSDT = new System.Windows.Forms.MaskedTextBox();
@@ -45,10 +49,6 @@
             this.gv_danhsachbenhnhan = new System.Windows.Forms.DataGridView();
             this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chklbXetNghiem = new System.Windows.Forms.CheckedListBox();
-            this.chklbSA = new System.Windows.Forms.CheckedListBox();
-            this.chkSA = new System.Windows.Forms.CheckBox();
-            this.chkXN = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.gb_ThonTinBenhNhan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_danhsachbenhnhan)).BeginInit();
@@ -68,6 +68,65 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách bệnh nhân";
+            // 
+            // chkXN
+            // 
+            this.chkXN.AutoSize = true;
+            this.chkXN.Location = new System.Drawing.Point(364, 234);
+            this.chkXN.Name = "chkXN";
+            this.chkXN.Size = new System.Drawing.Size(81, 17);
+            this.chkXN.TabIndex = 4;
+            this.chkXN.Text = "Xét Nghiệm";
+            this.chkXN.UseVisualStyleBackColor = true;
+            this.chkXN.Visible = false;
+            this.chkXN.CheckedChanged += new System.EventHandler(this.chkXN_CheckedChanged);
+            // 
+            // chklbXetNghiem
+            // 
+            this.chklbXetNghiem.CheckOnClick = true;
+            this.chklbXetNghiem.FormattingEnabled = true;
+            this.chklbXetNghiem.Items.AddRange(new object[] {
+            "Quick stick",
+            "Tổng phân tích nước tiểu",
+            "Định lượng BHCG",
+            "Xét nghiệm tổng quát",
+            "Điện tâm đồ",
+            "Rubella",
+            "Viêm gan siêu vi B",
+            "Bilan tiền sản giật"});
+            this.chklbXetNghiem.Location = new System.Drawing.Point(364, 257);
+            this.chklbXetNghiem.Name = "chklbXetNghiem";
+            this.chklbXetNghiem.Size = new System.Drawing.Size(149, 124);
+            this.chklbXetNghiem.TabIndex = 3;
+            this.chklbXetNghiem.Visible = false;
+            // 
+            // chkSA
+            // 
+            this.chkSA.AutoSize = true;
+            this.chkSA.Location = new System.Drawing.Point(269, 234);
+            this.chkSA.Name = "chkSA";
+            this.chkSA.Size = new System.Drawing.Size(65, 17);
+            this.chkSA.TabIndex = 3;
+            this.chkSA.Text = "Siêu Âm";
+            this.chkSA.UseVisualStyleBackColor = true;
+            this.chkSA.Visible = false;
+            this.chkSA.CheckedChanged += new System.EventHandler(this.chkSA_CheckedChanged);
+            this.chkSA.VisibleChanged += new System.EventHandler(this.chkSA_VisibleChanged);
+            // 
+            // chklbSA
+            // 
+            this.chklbSA.CheckOnClick = true;
+            this.chklbSA.FormattingEnabled = true;
+            this.chklbSA.Items.AddRange(new object[] {
+            "Thai 2D",
+            "Ngã âm đạo",
+            "Hình thái học",
+            "Màu"});
+            this.chklbSA.Location = new System.Drawing.Point(269, 257);
+            this.chklbSA.Name = "chklbSA";
+            this.chklbSA.Size = new System.Drawing.Size(89, 64);
+            this.chklbSA.TabIndex = 4;
+            this.chklbSA.Visible = false;
             // 
             // gb_ThonTinBenhNhan
             // 
@@ -225,63 +284,11 @@
             this.sdt.Name = "sdt";
             this.sdt.ReadOnly = true;
             // 
-            // chklbXetNghiem
-            // 
-            this.chklbXetNghiem.FormattingEnabled = true;
-            this.chklbXetNghiem.Items.AddRange(new object[] {
-            "Quick stick",
-            "Tổng phân tích nước tiểu",
-            "Định lượng BHCG",
-            "Xét nghiệm tổng quát",
-            "Điện tâm đồ",
-            "Rubella",
-            "Viêm gan siêu vi B",
-            "Bilan tiền sản giật"});
-            this.chklbXetNghiem.Location = new System.Drawing.Point(364, 257);
-            this.chklbXetNghiem.Name = "chklbXetNghiem";
-            this.chklbXetNghiem.Size = new System.Drawing.Size(149, 124);
-            this.chklbXetNghiem.TabIndex = 3;
-            this.chklbXetNghiem.Visible = false;
-            // 
-            // chklbSA
-            // 
-            this.chklbSA.FormattingEnabled = true;
-            this.chklbSA.Items.AddRange(new object[] {
-            "Thai 2D",
-            "Ngã âm đạo",
-            "Hình thái học",
-            "Màu"});
-            this.chklbSA.Location = new System.Drawing.Point(269, 257);
-            this.chklbSA.Name = "chklbSA";
-            this.chklbSA.Size = new System.Drawing.Size(89, 64);
-            this.chklbSA.TabIndex = 4;
-            // 
-            // chkSA
-            // 
-            this.chkSA.AutoSize = true;
-            this.chkSA.Location = new System.Drawing.Point(269, 234);
-            this.chkSA.Name = "chkSA";
-            this.chkSA.Size = new System.Drawing.Size(65, 17);
-            this.chkSA.TabIndex = 3;
-            this.chkSA.Text = "Siêu Âm";
-            this.chkSA.UseVisualStyleBackColor = true;
-            this.chkSA.CheckedChanged += new System.EventHandler(this.chkSA_CheckedChanged);
-            // 
-            // chkXN
-            // 
-            this.chkXN.AutoSize = true;
-            this.chkXN.Location = new System.Drawing.Point(364, 234);
-            this.chkXN.Name = "chkXN";
-            this.chkXN.Size = new System.Drawing.Size(81, 17);
-            this.chkXN.TabIndex = 4;
-            this.chkXN.Text = "Xét Nghiệm";
-            this.chkXN.UseVisualStyleBackColor = true;
-            // 
             // gd_nhanbenh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 395);
+            this.ClientSize = new System.Drawing.Size(527, 395);
             this.Controls.Add(this.groupBox1);
             this.Name = "gd_nhanbenh";
             this.Text = "Nhận bệnh";
