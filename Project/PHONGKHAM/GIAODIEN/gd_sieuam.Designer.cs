@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dtgv_dsbn = new System.Windows.Forms.DataGridView();
             this.maso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv_dsbn)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dtgv_dsbn);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(285, 414);
@@ -49,26 +49,27 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách bệnh nhân";
             // 
-            // dataGridView1
+            // dtgv_dsbn
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dtgv_dsbn.AllowUserToAddRows = false;
+            this.dtgv_dsbn.AllowUserToDeleteRows = false;
+            this.dtgv_dsbn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgv_dsbn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maso,
             this.hoten,
             this.sdt});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 21);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(279, 389);
-            this.dataGridView1.TabIndex = 0;
+            this.dtgv_dsbn.Location = new System.Drawing.Point(6, 21);
+            this.dtgv_dsbn.Name = "dtgv_dsbn";
+            this.dtgv_dsbn.ReadOnly = true;
+            this.dtgv_dsbn.Size = new System.Drawing.Size(279, 389);
+            this.dtgv_dsbn.TabIndex = 0;
             // 
             // maso
             // 
             this.maso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.maso.HeaderText = "Mã số";
             this.maso.Name = "maso";
+            this.maso.ReadOnly = true;
             this.maso.Width = 61;
             // 
             // hoten
@@ -76,6 +77,7 @@
             this.hoten.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
             this.hoten.HeaderText = "Họ tên";
             this.hoten.Name = "hoten";
+            this.hoten.ReadOnly = true;
             this.hoten.Width = 60;
             // 
             // sdt
@@ -83,6 +85,7 @@
             this.sdt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.sdt.HeaderText = "Số điện thoại";
             this.sdt.Name = "sdt";
+            this.sdt.ReadOnly = true;
             // 
             // button1
             // 
@@ -113,7 +116,7 @@
             this.Name = "gd_sieuam";
             this.Text = "Siêu âm";
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgv_dsbn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -121,7 +124,7 @@
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dtgv_dsbn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maso;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoten;
         private System.Windows.Forms.DataGridViewTextBoxColumn sdt;

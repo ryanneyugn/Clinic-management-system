@@ -19,6 +19,11 @@ namespace PHONGKHAM.GIAODIEN
             return true;
         }
 
+        public void frmClose()
+        {
+            
+        }
+
         public gd_khambenh()
         {
             InitializeComponent();

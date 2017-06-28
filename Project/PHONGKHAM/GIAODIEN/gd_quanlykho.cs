@@ -10,23 +10,11 @@ using System.Windows.Forms;
 
 namespace PHONGKHAM.GIAODIEN
 {
-    public partial class gd_trangchu : Form
+    public partial class gd_quanlykho : Form
     {
-        public gd_trangchu()
+        public gd_quanlykho()
         {
             InitializeComponent();
-        }
-
-        public void frmClose()
-        {
-
-        }
-
-        private void btn_khambenh_Click(object sender, EventArgs e)
-        {
-            Hide();
-            Form f = new gd_khambenh();
-            f.Show();
         }
     }
 }
