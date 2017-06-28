@@ -29,24 +29,47 @@ namespace Project.GIAODIEN
             string hoten = txt_hoten.Text;
             string sdt = mtxtSDT.Text;
             string dv = "null";
+            //file.txt
+            TXTOBJECT dsXN = new TXTOBJECT("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsXetNghiem.txt");
+            TXTOBJECT dsSA = new TXTOBJECT("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsSieuAm.txt");
+            TXTOBJECT dsKT = new TXTOBJECT("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsKhamThuong.txt");
             try
             {
                 if (!txt_hoten.Text.Equals(""))
                 {
                     if (cbDichVu.SelectedItem.Equals("Xét nghiệm"))
+                    {
                         dv = chklbXetNghiem.SelectedItem.ToString();
+                        string[] row = { hoten, sdt, dv };
+                        //write file txt
+                        dsXN.writeAppend(hoten, sdt, dv);
+                        //display data
+                        gv_danhsachbenhnhan.Rows.Add(row);
+                        ResetAll();
+                        gv_danhsachbenhnhan.Visible = true;
+                    }
                     else if (cbDichVu.SelectedItem.Equals("Khám + siêu âm"))
+                    {
                         dv = chklbSA.SelectedItem.ToString();
+                        string[] row = { hoten, sdt, dv };
+                        //write file txt
+                        dsSA.writeAppend(hoten, sdt, dv);
+                        //display data
+                        gv_danhsachbenhnhan.Rows.Add(row);
+                        ResetAll();
+                        gv_danhsachbenhnhan.Visible = true;
+                    }
                     else
+                    {
                         dv = "null";
-                    string[] row = { hoten, sdt, dv };
-                    //write file txt
-                    TXTOBJECT a = new TXTOBJECT("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsBenhNhan.txt");
-                    a.writeAppend(hoten, sdt, dv);
-                    //display data
-                    gv_danhsachbenhnhan.Rows.Add(row);
-                    ResetAll();
-                    gv_danhsachbenhnhan.Visible = true;
+                        string[] row = { hoten, sdt, dv };
+                        //write file txt
+                        dsKT.writeAppend(hoten, sdt, dv);
+                        //display data
+                        gv_danhsachbenhnhan.Rows.Add(row);
+                        ResetAll();
+                        gv_danhsachbenhnhan.Visible = true;
+                    }      
                 }
                 else MessageBox.Show("Vui lòng điền đủ thông tin"); ;
                 }
@@ -171,7 +194,9 @@ namespace Project.GIAODIEN
         }
         private void gd_nhanbenh_Load(object sender, EventArgs e)
         {
-            updateGridView("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsBenhNhan.txt");
+            updateGridView("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsXetNghiem.txt");
+            updateGridView("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsSieuAm.txt");
+            updateGridView("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsKhamThuong.txt");
         }
     }
 }
