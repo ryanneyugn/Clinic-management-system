@@ -12,9 +12,16 @@ namespace PHONGKHAM.GIAODIEN
 {
     public partial class gd_thongke : Form
     {
-        public gd_thongke()
+        private Form parent;
+        public gd_thongke(Form parent)
         {
             InitializeComponent();
+            this.parent = parent;
+        }
+
+        private void gd_thongke_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            parent.Show();
         }
     }
 }

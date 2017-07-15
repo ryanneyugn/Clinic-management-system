@@ -23,10 +23,24 @@ namespace PHONGKHAM.GIAODIEN
         }
 
         private void btn_khambenh_Click(object sender, EventArgs e)
-        {
-            Hide();
-            Form f = new gd_khambenh();
+        {            
+            Form f = new gd_khambenh(this);
             f.Show();
+            Hide();            
+        }
+
+        private void btn_thongke_Click(object sender, EventArgs e)
+        {
+            Form f = new gd_thongke(this);
+            f.Show();
+            Hide();
+        }
+
+        private void btn_quanlykho_Click(object sender, EventArgs e)
+        {
+            Form f = new gd_quanlykho(this);
+            f.Show();
+            Hide();
         }
     }
 }

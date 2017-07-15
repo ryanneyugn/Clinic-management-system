@@ -12,9 +12,16 @@ namespace PHONGKHAM.GIAODIEN
 {
     public partial class gd_quanlykho : Form
     {
-        public gd_quanlykho()
+        private Form parent;
+        public gd_quanlykho(Form parent)
         {
             InitializeComponent();
+            this.parent = parent;
+        }
+
+        private void gd_quanlykho_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            parent.Show();
         }
     }
 }
