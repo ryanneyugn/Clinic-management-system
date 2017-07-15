@@ -145,9 +145,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="dsBenhNhan.txt" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\TXT\TXT.csproj">
       <Project>{ce8a890c-7d56-4811-a78d-edfedd53e5bb}</Project>
       <Name>TXT</Name>
