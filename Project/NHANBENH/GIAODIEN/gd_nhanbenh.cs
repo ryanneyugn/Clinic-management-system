@@ -31,7 +31,7 @@ namespace Project.GIAODIEN
             string dvSA = "null";
             string dvXN = "null";
             //file.txt
-            TXTOBJECT dsNB = new TXTOBJECT("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsNhanBenh.txt");
+            TXTOBJECT dsNB = new TXTOBJECT("F:/GIT/ryan-repository/Project/dsNhanBenh.txt");
             if (txt_hoten.Text.Equals(""))
             {
                 return;
@@ -89,7 +89,7 @@ namespace Project.GIAODIEN
         }
         private void deleteLineTxt(int i)
         {
-            TXTOBJECT a = new TXTOBJECT("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsNhanBenh.txt");
+            TXTOBJECT a = new TXTOBJECT("F:/GIT/ryan-repository/Project/dsNhanBenh.txt");
             string[] listbn = a.read();List<string> ds = new List<string>();
             foreach (string str in listbn)
             {
@@ -118,7 +118,7 @@ namespace Project.GIAODIEN
 
         private void btn_Tao_Click(object sender, EventArgs e)
         {
-            string connetionString = "server=localhost;database=qlpk;uid=root;pwd=123456;";
+            string connetionString = "server=localconnection;database=phongkham;uid=root;pwd=1;";
             ConnData con = new ConnData(connetionString);
             con.OpenConnec();
             string query = "insert into benhnhan (ten, nam_sinh, address, phone_num) values('"+txt_hoten.Text+"', '"+mtxtNamSinh.Text+ "', '" + txt_diachi.Text + "', '" + mtxtSDT.Text + "')";
@@ -157,7 +157,7 @@ namespace Project.GIAODIEN
         }
         private void gd_nhanbenh_Load(object sender, EventArgs e)
         {
-            updateGridView("S:/Project_Clinic/ryan-repository/Project/PHONGKHAM/dsNhanBenh.txt");
+            updateGridView("F:/GIT/ryan-repository/Project/dsNhanBenh.txt");
         }
 
         private void chkSA_CheckedChanged(object sender, EventArgs e)

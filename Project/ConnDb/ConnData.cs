@@ -12,8 +12,7 @@ namespace ConnDb
     {
         private  string Connectionstring;
         private MySqlCommand command;
-        private MySqlConnection connection;
-        private MySqlDataAdapter adapter;
+        private MySqlConnection connection;        
 
         public ConnData(string connectionString)
         {

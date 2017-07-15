@@ -1,8 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Project\\PHONGKHAM\\GIAODIEN"
+    "\\database",
+    "\\database\\queries",
+    "\\model",
+    "\\Project",
+    "\\Project\\NHANBENH",
+    "\\Project\\NHANBENH\\GIAODIEN"
   ],
-  "SelectedNode": "\\Project",
+  "SelectedNode": "\\Project\\NHANBENH\\GIAODIEN\\gd_nhanbenh.cs",
   "PreviewInSolutionExplorer": false
 }

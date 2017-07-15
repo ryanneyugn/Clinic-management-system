@@ -5,3 +5,9 @@ S:\Project_Clinic\ryan-repository\Project\ConnDb\bin\Debug\MySql.Data.xml
 S:\Project_Clinic\ryan-repository\Project\ConnDb\obj\Debug\ConnDb.csprojResolveAssemblyReference.cache
 S:\Project_Clinic\ryan-repository\Project\ConnDb\obj\Debug\ConnDb.dll
 S:\Project_Clinic\ryan-repository\Project\ConnDb\obj\Debug\ConnDb.pdb
+F:\GIT\ryan-repository\Project\ConnDb\bin\Debug\ConnDb.dll
+F:\GIT\ryan-repository\Project\ConnDb\bin\Debug\ConnDb.pdb
+F:\GIT\ryan-repository\Project\ConnDb\bin\Debug\MySql.Data.dll
+F:\GIT\ryan-repository\Project\ConnDb\bin\Debug\MySql.Data.xml
+F:\GIT\ryan-repository\Project\ConnDb\obj\Debug\ConnDb.dll
+F:\GIT\ryan-repository\Project\ConnDb\obj\Debug\ConnDb.pdb
