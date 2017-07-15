@@ -36,7 +36,7 @@ namespace PHONGKHAM.GIAODIEN
 
         private void gd_khambenh_Load(object sender, System.EventArgs e)
         {
-            updateGridView("F:/GIT/ryan-repository/Project/PHONGKHAM/dsBenhNhan.txt");
+            updateGridView("F:/GIT/dsbn.txt");
         }
 
         public void Gd_khambenh_FormClosing(object sender, FormClosingEventArgs e)

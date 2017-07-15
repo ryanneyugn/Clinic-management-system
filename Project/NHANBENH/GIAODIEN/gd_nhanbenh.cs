@@ -31,7 +31,7 @@ namespace Project.GIAODIEN
             string dvSA = "null";
             string dvXN = "null";
             //file.txt
-            TXTOBJECT dsNB = new TXTOBJECT("F:/GIT/ryan-repository/Project/dsNhanBenh.txt");
+            TXTOBJECT dsNB = new TXTOBJECT("F:/GIT/dsbn.txt");
             if (txt_hoten.Text.Equals(""))
             {
                 return;
@@ -89,7 +89,7 @@ namespace Project.GIAODIEN
         }
         private void deleteLineTxt(int i)
         {
-            TXTOBJECT a = new TXTOBJECT("F:/GIT/ryan-repository/Project/dsNhanBenh.txt");
+            TXTOBJECT a = new TXTOBJECT("F:/GIT/dsbn.txt");
             string[] listbn = a.read();List<string> ds = new List<string>();
             foreach (string str in listbn)
             {
@@ -157,7 +157,7 @@ namespace Project.GIAODIEN
         }
         private void gd_nhanbenh_Load(object sender, EventArgs e)
         {
-            updateGridView("F:/GIT/ryan-repository/Project/dsNhanBenh.txt");
+            updateGridView("F:/GIT/dsbn.txt"); 
         }
 
         private void chkSA_CheckedChanged(object sender, EventArgs e)
@@ -197,5 +197,6 @@ namespace Project.GIAODIEN
             else
                 chklbSA.Visible = false;
         }
+        
     }
 }
