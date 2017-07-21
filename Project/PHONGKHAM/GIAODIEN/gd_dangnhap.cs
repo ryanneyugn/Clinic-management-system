@@ -1,5 +1,6 @@
 ﻿using System.Windows.Forms;
 using ConnDb;
+using System.Data;
 
 namespace PHONGKHAM.GIAODIEN
 {
@@ -10,12 +11,12 @@ namespace PHONGKHAM.GIAODIEN
             InitializeComponent();
         }
 
-        private void btn_thoat_Click(object sender, System.EventArgs e)
+        private void Btn_thoat_Click(object sender, System.EventArgs e)
         {
             Close();
         }
 
-        private void btn_ok_Click(object sender, System.EventArgs e)
+        private void Btn_ok_Click(object sender, System.EventArgs e)
         {
             if (txt_tendangnhap.Text == "")
             {
@@ -27,17 +28,25 @@ namespace PHONGKHAM.GIAODIEN
             {
                 MessageBox.Show("Mật khẩu không được để trống.");
                 return;
-            }
+            }          
+            
+            ConnData con = new ConnData();
+            if (!con.OpenConnection())
+                MessageBox.Show(con.ShowErrorMessage());
+            string query = "SELECT * FROM nguoidung where username=\"" + txt_tendangnhap.Text + "\" and passwords =\"" + txt_matkhau.Text + "\";  ";
+            DataTable dt = con.ExecuteReader(query);
+            if (!con.CloseConnection())
+                MessageBox.Show(con.ShowErrorMessage());
 
-            string connetionString = "server=localconnection;database=phongkham;uid=root;pwd=1;";
-            ConnData con = new ConnData(connetionString);
-            con.OpenConnec();
-            string query = "SELECT * FROM phongkham.nguoidung where username=\"" + txt_tendangnhap + "\" and passwords =\"" + txt_matkhau + "\";  ";
-            con.ExecuteNonQuery(query);
-            con.CloseConnec();
-
-
-
+            if (dt.Rows.Count == 0)
+            {
+                MessageBox.Show("Tên đăng nhập và mật khẩu không trùng khớp. Hãy thử lại.");
+                txt_matkhau.Clear();
+                return;
+            } else
+            {
+                MessageBox.Show("Success");
+            }            
         }
     }
 }

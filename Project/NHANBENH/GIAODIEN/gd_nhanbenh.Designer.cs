@@ -1,6 +1,6 @@
 ﻿namespace Project.GIAODIEN
 {
-    partial class gd_nhanbenh
+    partial class Gd_nhanbenh
     {
         /// <summary>
         /// Required designer variable.
@@ -79,7 +79,7 @@
             this.chkXN.Text = "Xét Nghiệm";
             this.chkXN.UseVisualStyleBackColor = true;
             this.chkXN.Visible = false;
-            this.chkXN.CheckedChanged += new System.EventHandler(this.chkXN_CheckedChanged);
+            this.chkXN.CheckedChanged += new System.EventHandler(this.ChkXN_CheckedChanged);
             // 
             // chklbXetNghiem
             // 
@@ -110,8 +110,8 @@
             this.chkSA.Text = "Siêu Âm";
             this.chkSA.UseVisualStyleBackColor = true;
             this.chkSA.Visible = false;
-            this.chkSA.CheckedChanged += new System.EventHandler(this.chkSA_CheckedChanged);
-            this.chkSA.VisibleChanged += new System.EventHandler(this.chkSA_VisibleChanged);
+            this.chkSA.CheckedChanged += new System.EventHandler(this.ChkSA_CheckedChanged);
+            this.chkSA.VisibleChanged += new System.EventHandler(this.ChkSA_VisibleChanged);
             // 
             // chklbSA
             // 
@@ -157,7 +157,7 @@
             this.btnXoa.TabIndex = 15;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.btnXoa.Click += new System.EventHandler(this.BtnXoa_Click);
             // 
             // mtxtSDT
             // 
@@ -183,7 +183,7 @@
             this.btn_XepVaoHangDoi.TabIndex = 4;
             this.btn_XepVaoHangDoi.Text = "Xếp vào hàng đợi";
             this.btn_XepVaoHangDoi.UseVisualStyleBackColor = true;
-            this.btn_XepVaoHangDoi.Click += new System.EventHandler(this.btn_XepVaoHangDoi_Click);
+            this.btn_XepVaoHangDoi.Click += new System.EventHandler(this.Btn_XepVaoHangDoi_Click);
             // 
             // btn_TaoMoi
             // 
@@ -193,7 +193,7 @@
             this.btn_TaoMoi.TabIndex = 6;
             this.btn_TaoMoi.Text = "Reset";
             this.btn_TaoMoi.UseVisualStyleBackColor = true;
-            this.btn_TaoMoi.Click += new System.EventHandler(this.btn_Reset_Click);
+            this.btn_TaoMoi.Click += new System.EventHandler(this.Btn_Reset_Click);
             // 
             // btn_Tao
             // 
@@ -203,7 +203,7 @@
             this.btn_Tao.TabIndex = 5;
             this.btn_Tao.Text = "Tạo";
             this.btn_Tao.UseVisualStyleBackColor = true;
-            this.btn_Tao.Click += new System.EventHandler(this.btn_Tao_Click);
+            this.btn_Tao.Click += new System.EventHandler(this.Btn_Tao_Click);
             // 
             // txt_diachi
             // 
@@ -218,7 +218,7 @@
             this.txt_hoten.Name = "txt_hoten";
             this.txt_hoten.Size = new System.Drawing.Size(111, 20);
             this.txt_hoten.TabIndex = 0;
-            this.txt_hoten.TextChanged += new System.EventHandler(this.txt_hoten_TextChanged);
+            this.txt_hoten.TextChanged += new System.EventHandler(this.Txt_hoten_TextChanged);
             // 
             // label4
             // 
@@ -270,7 +270,7 @@
             this.gv_danhsachbenhnhan.ReadOnly = true;
             this.gv_danhsachbenhnhan.Size = new System.Drawing.Size(241, 345);
             this.gv_danhsachbenhnhan.TabIndex = 0;
-            this.gv_danhsachbenhnhan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_danhsachbenhnhan_CellClick);
+            this.gv_danhsachbenhnhan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Gv_danhsachbenhnhan_CellClick);
             // 
             // hoten
             // 
@@ -292,7 +292,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "gd_nhanbenh";
             this.Text = "Nhận bệnh";
-            this.Load += new System.EventHandler(this.gd_nhanbenh_Load);
+            this.Load += new System.EventHandler(this.Gd_nhanbenh_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gb_ThonTinBenhNhan.ResumeLayout(false);

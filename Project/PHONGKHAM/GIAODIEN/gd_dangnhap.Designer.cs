@@ -76,7 +76,7 @@
             this.btn_ok.TabIndex = 4;
             this.btn_ok.Text = "OK";
             this.btn_ok.UseVisualStyleBackColor = true;
-            this.btn_ok.Click += new System.EventHandler(this.btn_ok_Click);
+            this.btn_ok.Click += new System.EventHandler(this.Btn_ok_Click);
             // 
             // btn_thoat
             // 
@@ -86,7 +86,7 @@
             this.btn_thoat.TabIndex = 5;
             this.btn_thoat.Text = "Thoát";
             this.btn_thoat.UseVisualStyleBackColor = true;
-            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
+            this.btn_thoat.Click += new System.EventHandler(this.Btn_thoat_Click);
             // 
             // gd_dangnhap
             // 

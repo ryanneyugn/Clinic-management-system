@@ -14,7 +14,7 @@ namespace Project
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new gd_nhanbenh());
+            Application.Run(new Gd_nhanbenh());
         }
     }
 }

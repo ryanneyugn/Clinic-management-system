@@ -11,10 +11,15 @@ namespace ConnDb
         private string uid;
         private string password;
         private MySqlCommand command;
+        private string errormessage;
 
-        public ConnData(string server, string database, string uid, string password)
-        {
-            Initialize(server, database, uid, password);
+        public ConnData()
+        {            
+            server = "localhost";
+            database = "phongkham";
+            uid = "root";
+            password = "1";
+            Initialize(server, database, uid, password);        
         }
 
         private void Initialize(string server, string database, string uid, string password)
@@ -28,35 +33,40 @@ namespace ConnDb
             connection = new MySqlConnection(connectionString);
         }
 
-        public string OpenConnection()
+        public bool OpenConnection()
         {
             try {
                 connection.Open();
-                return "Opened connection";
+                return true;
             } catch (MySqlException ex)
             {
                 switch (ex.Number)
                 {
                     case 0:
-                        return "Cannot connect to server.  Contact administrator.";
+                        errormessage = "Cannot connect to server.  Contact administrator.";
+                        break;
                     case 1045:
-                        return "Invalid username/password, please try again.";
+                        errormessage = "Invalid username/password, please try again.";
+                        break;
                     default:
-                        return "Error: " + ex.Message;
+                        errormessage = "Error: " + ex.Message;
+                        break;
                 }
+                return false;
             }            
         }
 
-        public string CloseConnection()
+        public bool CloseConnection()
         {
             try
             {
-                connection.Close();
-                return "Connection closed.";
+                connection.Close();                
+                return true; 
             }
             catch (MySqlException ex)
             {
-                return ex.Message;
+                errormessage = ex.Message;
+                return false;
             }
         }
 
@@ -67,10 +77,16 @@ namespace ConnDb
             adapter.Fill(tb);
             return tb;
         }
+
         public void ExecuteNonQuery(string sql)
         {
             command = new MySqlCommand(sql, connection);
             command.ExecuteNonQuery();
+        }
+
+        public string ShowErrorMessage()
+        {
+            return errormessage;
         }
     }
 }
