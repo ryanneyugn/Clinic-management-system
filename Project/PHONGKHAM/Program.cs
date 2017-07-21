@@ -14,7 +14,7 @@ namespace PHONGKHAM
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new gd_trangchu());
+            Application.Run(new gd_dangnhap());
         }
     }
 }

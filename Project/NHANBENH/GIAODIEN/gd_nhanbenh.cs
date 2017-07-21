@@ -117,13 +117,16 @@ namespace Project.GIAODIEN
         }
 
         private void btn_Tao_Click(object sender, EventArgs e)
-        {
-            string connetionString = "server=localconnection;database=phongkham;uid=root;pwd=1;";
-            ConnData con = new ConnData(connetionString);
-            con.OpenConnec();
+        {            
+            string server = "localconnection";
+            string database = "phongkham";
+            string uid = "root";
+            string password = "1";
+            ConnData con = new ConnData(server, database, uid, password);
+            MessageBox.Show(con.OpenConnection());
             string query = "insert into benhnhan (ten, nam_sinh, address, phone_num) values('"+txt_hoten.Text+"', '"+mtxtNamSinh.Text+ "', '" + txt_diachi.Text + "', '" + mtxtSDT.Text + "')";
-            con.executeNonQuery(query);
-            con.CloseConnec();
+            con.ExecuteNonQuery(query);
+            MessageBox.Show(con.CloseConnection());
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
