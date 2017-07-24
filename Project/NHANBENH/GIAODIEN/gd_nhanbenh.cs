@@ -156,6 +156,7 @@ namespace Project.GIAODIEN
             gv_danhsachbenhnhan.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             return true;
         }
+
         private void Gd_nhanbenh_Load(object sender, EventArgs e)
         {
             UpdateGridView("F:/GIT/dsbn.txt"); 
@@ -176,6 +177,7 @@ namespace Project.GIAODIEN
                 chklbSA.Visible = true;
             }
         }
+
         private void ChkXN_CheckedChanged(object sender, EventArgs e)
         {
             if (!chkXN.Checked)
@@ -191,6 +193,7 @@ namespace Project.GIAODIEN
                 chklbXetNghiem.Visible = true;
             }
         }
+
         private void ChkSA_VisibleChanged(object sender, EventArgs e)
         {
             if (chkSA.Checked)

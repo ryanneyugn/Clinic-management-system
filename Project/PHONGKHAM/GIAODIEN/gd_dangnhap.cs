@@ -45,7 +45,9 @@ namespace PHONGKHAM.GIAODIEN
                 return;
             } else
             {
-                MessageBox.Show("Success");
+                Form f = new gd_trangchu(this);
+                f.Show();
+                Hide();
             }            
         }
     }

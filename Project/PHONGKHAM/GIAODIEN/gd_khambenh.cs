@@ -18,12 +18,7 @@ namespace PHONGKHAM.GIAODIEN
             dtgv_dsbn.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.DisplayedCells;
             dtgv_dsbn.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             return true;
-        }
-
-        public void frmClose()
-        {
-            
-        }
+        }        
 
         public gd_khambenh(Form parent)
         {
@@ -43,5 +38,12 @@ namespace PHONGKHAM.GIAODIEN
         {
             parent.Show();
         }
+
+        private void btn_thoat_Click(object sender, System.EventArgs e)
+        {
+            Close();
+        }
+
+        
     }
 }

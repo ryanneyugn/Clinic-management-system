@@ -23,5 +23,10 @@ namespace PHONGKHAM.GIAODIEN
         {
             parent.Show();
         }
+        
+        private void Btn_thoat_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
     }
 }
