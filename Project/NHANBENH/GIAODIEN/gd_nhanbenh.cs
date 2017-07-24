@@ -30,11 +30,20 @@ namespace Project.GIAODIEN
             string sdt = mtxtSDT.Text;
             string dvSA = "null";
             string dvXN = "null";
+            string dvKB = "null";
             //file.txt
             TXTOBJECT dsNB = new TXTOBJECT("F:/GIT/dsbn.txt");
             if (txt_hoten.Text.Equals(""))
             {
                 return;
+            }
+            if (chkKB.Checked)
+            {
+                dvKB = "true";
+            }
+            else
+            {
+                dvKB = "null";
             }
             if (chkSA.Checked)
             {
@@ -64,9 +73,9 @@ namespace Project.GIAODIEN
             {
                 dvXN = "null";
             }
-            string[] row = { hoten, sdt, dvSA, dvXN };
+            string[] row = { hoten, sdt, dvKB , dvSA, dvXN };
             //write file txt
-            dsNB.writeAppend(hoten, sdt, dvSA, dvXN);
+            dsNB.writeAppend(hoten, sdt, dvKB, dvSA, dvXN);
             //display data
             gv_danhsachbenhnhan.Rows.Add(row);
             ResetAll();
@@ -108,11 +117,14 @@ namespace Project.GIAODIEN
                 chkSA.Checked = false;
                 chkXN.Visible = false;
                 chkXN.Checked = false;
+                chkKB.Visible = false;
+                chkKB.Checked = false;                
             }
             else
             {
                 chkSA.Visible = true;
                 chkXN.Visible = true;
+                chkKB.Visible = true;
             }   
         }
 

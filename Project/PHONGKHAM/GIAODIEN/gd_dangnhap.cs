@@ -45,7 +45,7 @@ namespace PHONGKHAM.GIAODIEN
                 return;
             } else
             {
-                Form f = new gd_trangchu(this);
+                Form f = new gd_trangchu(this, txt_tendangnhap.Text);
                 f.Show();
                 Hide();
             }            

@@ -32,9 +32,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtgv_dsbn = new System.Windows.Forms.DataGridView();
-            this.maso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_sdtbn = new System.Windows.Forms.TextBox();
             this.txt_diachibn = new System.Windows.Forms.TextBox();
@@ -71,6 +68,9 @@
             this.chandoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.masotoathuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.maso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_dsbn)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -102,7 +102,7 @@
             this.dtgv_dsbn.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -119,31 +119,6 @@
             this.dtgv_dsbn.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtgv_dsbn.Size = new System.Drawing.Size(333, 119);
             this.dtgv_dsbn.TabIndex = 0;
-            // 
-            // maso
-            // 
-            this.maso.HeaderText = "Mã Số";
-            this.maso.Name = "maso";
-            this.maso.ReadOnly = true;
-            this.maso.Width = 101;
-            // 
-            // hoten
-            // 
-            this.hoten.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.hoten.HeaderText = "Họ Tên";
-            this.hoten.MinimumWidth = 100;
-            this.hoten.Name = "hoten";
-            this.hoten.ReadOnly = true;
-            this.hoten.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // sdt
-            // 
-            this.sdt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.sdt.HeaderText = "Số điện thoại";
-            this.sdt.Name = "sdt";
-            this.sdt.ReadOnly = true;
-            this.sdt.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.sdt.Width = 95;
             // 
             // groupBox2
             // 
@@ -595,6 +570,34 @@
             this.groupBox5.TabIndex = 11;
             this.groupBox5.TabStop = false;
             // 
+            // maso
+            // 
+            this.maso.HeaderText = "Mã Số";
+            this.maso.Name = "maso";
+            this.maso.ReadOnly = true;
+            this.maso.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.maso.Width = 101;
+            // 
+            // hoten
+            // 
+            this.hoten.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.hoten.HeaderText = "Họ Tên";
+            this.hoten.MinimumWidth = 100;
+            this.hoten.Name = "hoten";
+            this.hoten.ReadOnly = true;
+            this.hoten.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.hoten.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // sdt
+            // 
+            this.sdt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.sdt.HeaderText = "Số điện thoại";
+            this.sdt.Name = "sdt";
+            this.sdt.ReadOnly = true;
+            this.sdt.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.sdt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.sdt.Width = 76;
+            // 
             // gd_khambenh
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -642,9 +645,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_tenbs;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hoten;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txt_ah;
         private System.Windows.Forms.TextBox txt_cd;
@@ -673,5 +673,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaykham;
         private System.Windows.Forms.DataGridViewTextBoxColumn chandoan;
         private System.Windows.Forms.DataGridViewTextBoxColumn masotoathuoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hoten;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
     }
 }

@@ -83,7 +83,9 @@
             this.Controls.Add(this.btn_quanlykho);
             this.Controls.Add(this.btn_thongke);
             this.Controls.Add(this.btn_khambenh);
+            this.MaximizeBox = false;
             this.Name = "gd_trangchu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Trang chủ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.gd_trangchu_FormClosing);
             this.ResumeLayout(false);
