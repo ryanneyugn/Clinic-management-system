@@ -115,6 +115,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "gd_sieuam";
             this.Text = "Siêu âm";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.gd_sieuam_FormClosing);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_dsbn)).EndInit();
             this.ResumeLayout(false);

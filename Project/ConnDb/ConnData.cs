@@ -1,43 +1,92 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Data;
+﻿using System.Data;
 using MySql.Data.MySqlClient;
 
 namespace ConnDb
 {
     public class ConnData
-    {
-        private  string Connectionstring;
+    {        
+        private MySqlConnection connection;
+        private string server;
+        private string database;
+        private string uid;
+        private string password;
         private MySqlCommand command;
-        private MySqlConnection connection;        
+        private string errormessage;
 
-        public ConnData(string connectionString)
-        {
-            this.Connectionstring = connectionString;
+        public ConnData()
+        {            
+            server = "localhost";
+            database = "phongkham";
+            uid = "root";
+            password = "1";
+            Initialize(server, database, uid, password);        
         }
-        public void OpenConnec()
+
+        private void Initialize(string server, string database, string uid, string password)
         {
-            connection = new MySqlConnection(this.Connectionstring);
-            connection.Open();
+            this.server = server;
+            this.database = database;
+            this.uid = uid;
+            this.password = password;
+            string connectionString = "server=" + this.server + ";" + "database=" + this.database + ";" + "uid=" + this.uid + ";" + "password=" + this.password + ";";
+
+            connection = new MySqlConnection(connectionString);
         }
-        public void CloseConnec()
+
+        public bool OpenConnection()
         {
-            connection.Close();
+            try {
+                connection.Open();
+                return true;
+            } catch (MySqlException ex)
+            {
+                switch (ex.Number)
+                {
+                    case 0:
+                        errormessage = "Cannot connect to server.  Contact administrator.";
+                        break;
+                    case 1045:
+                        errormessage = "Invalid username/password, please try again.";
+                        break;
+                    default:
+                        errormessage = "Error: " + ex.Message;
+                        break;
+                }
+                return false;
+            }            
         }
-        public DataTable executeReader(string sql)
+
+        public bool CloseConnection()
+        {
+            try
+            {
+                connection.Close();                
+                return true; 
+            }
+            catch (MySqlException ex)
+            {
+                errormessage = ex.Message;
+                return false;
+            }
+        }
+
+        public DataTable ExecuteReader(string sql)
         {
             DataTable tb = new DataTable();
             MySqlDataAdapter adapter = new MySqlDataAdapter(sql, connection);
             adapter.Fill(tb);
             return tb;
         }
-        public void executeNonQuery(string sql)
+
+        public void ExecuteNonQuery(string sql)
         {
             command = new MySqlCommand(sql, connection);
             command.ExecuteNonQuery();
+        }
+
+        public string ShowErrorMessage()
+        {
+            return errormessage;
         }
     }
 }

@@ -5,9 +5,17 @@ namespace PHONGKHAM.GIAODIEN
 {
     public partial class gd_sieuam : Form
     {
-        public gd_sieuam()
+        private Form parent;
+
+        public gd_sieuam(Form parent)
         {
             InitializeComponent();
+            this.parent = parent;
+        }
+
+        private void gd_sieuam_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            parent.Show();
         }
     }
 }

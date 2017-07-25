@@ -28,11 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dtgv_dsbn = new System.Windows.Forms.DataGridView();
-            this.maso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.txt_sdtbn = new System.Windows.Forms.TextBox();
             this.txt_diachibn = new System.Windows.Forms.TextBox();
@@ -69,6 +68,9 @@
             this.chandoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.masotoathuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.maso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_dsbn)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -98,6 +100,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgv_dsbn.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv_dsbn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgv_dsbn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgv_dsbn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maso,
@@ -107,33 +117,8 @@
             this.dtgv_dsbn.Name = "dtgv_dsbn";
             this.dtgv_dsbn.ReadOnly = true;
             this.dtgv_dsbn.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dtgv_dsbn.Size = new System.Drawing.Size(333, 106);
+            this.dtgv_dsbn.Size = new System.Drawing.Size(333, 119);
             this.dtgv_dsbn.TabIndex = 0;
-            // 
-            // maso
-            // 
-            this.maso.HeaderText = "Mã Số";
-            this.maso.Name = "maso";
-            this.maso.ReadOnly = true;
-            this.maso.Width = 101;
-            // 
-            // hoten
-            // 
-            this.hoten.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.hoten.HeaderText = "Họ Tên";
-            this.hoten.MinimumWidth = 100;
-            this.hoten.Name = "hoten";
-            this.hoten.ReadOnly = true;
-            this.hoten.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // sdt
-            // 
-            this.sdt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.sdt.HeaderText = "Số điện thoại";
-            this.sdt.Name = "sdt";
-            this.sdt.ReadOnly = true;
-            this.sdt.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.sdt.Width = 99;
             // 
             // groupBox2
             // 
@@ -488,6 +473,7 @@
             this.btn_thoat.TabIndex = 9;
             this.btn_thoat.Text = "Thoát";
             this.btn_thoat.UseVisualStyleBackColor = true;
+            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
             // 
             // btn_kedonthuoc
             // 
@@ -530,12 +516,20 @@
             // 
             this.dtgv_lskb.AllowUserToAddRows = false;
             this.dtgv_lskb.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv_lskb.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgv_lskb.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgv_lskb.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ngaykham,
             this.chandoan,
             this.masotoathuoc});
-            this.dtgv_lskb.Location = new System.Drawing.Point(6, 19);
+            this.dtgv_lskb.Location = new System.Drawing.Point(5, 19);
             this.dtgv_lskb.Name = "dtgv_lskb";
             this.dtgv_lskb.ReadOnly = true;
             this.dtgv_lskb.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -548,7 +542,7 @@
             this.ngaykham.HeaderText = "Ngày khám";
             this.ngaykham.Name = "ngaykham";
             this.ngaykham.ReadOnly = true;
-            this.ngaykham.Width = 87;
+            this.ngaykham.Width = 79;
             // 
             // chandoan
             // 
@@ -563,7 +557,6 @@
             this.masotoathuoc.HeaderText = "Mã số toa thuốc";
             this.masotoathuoc.Name = "masotoathuoc";
             this.masotoathuoc.ReadOnly = true;
-            this.masotoathuoc.Width = 114;
             // 
             // groupBox5
             // 
@@ -576,6 +569,34 @@
             this.groupBox5.Size = new System.Drawing.Size(125, 220);
             this.groupBox5.TabIndex = 11;
             this.groupBox5.TabStop = false;
+            // 
+            // maso
+            // 
+            this.maso.HeaderText = "Mã Số";
+            this.maso.Name = "maso";
+            this.maso.ReadOnly = true;
+            this.maso.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.maso.Width = 101;
+            // 
+            // hoten
+            // 
+            this.hoten.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.hoten.HeaderText = "Họ Tên";
+            this.hoten.MinimumWidth = 100;
+            this.hoten.Name = "hoten";
+            this.hoten.ReadOnly = true;
+            this.hoten.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.hoten.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // sdt
+            // 
+            this.sdt.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
+            this.sdt.HeaderText = "Số điện thoại";
+            this.sdt.Name = "sdt";
+            this.sdt.ReadOnly = true;
+            this.sdt.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.sdt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.sdt.Width = 76;
             // 
             // gd_khambenh
             // 
@@ -624,9 +645,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_tenbs;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn hoten;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.TextBox txt_ah;
         private System.Windows.Forms.TextBox txt_cd;
@@ -655,5 +673,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn ngaykham;
         private System.Windows.Forms.DataGridViewTextBoxColumn chandoan;
         private System.Windows.Forms.DataGridViewTextBoxColumn masotoathuoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn hoten;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
     }
 }

@@ -6,9 +6,9 @@ using ConnDb;
 
 namespace Project.GIAODIEN
 {
-    public partial class gd_nhanbenh : Form
+    public partial class Gd_nhanbenh : Form
     {
-        public gd_nhanbenh()
+        public Gd_nhanbenh()
         {
             InitializeComponent();
         }
@@ -24,17 +24,26 @@ namespace Project.GIAODIEN
             mtxtNamSinh.Clear();
         }
 
-        private void btn_XepVaoHangDoi_Click(object sender, EventArgs e)
+        private void Btn_XepVaoHangDoi_Click(object sender, EventArgs e)
         {
             string hoten = txt_hoten.Text;
             string sdt = mtxtSDT.Text;
             string dvSA = "null";
             string dvXN = "null";
+            string dvKB = "null";
             //file.txt
             TXTOBJECT dsNB = new TXTOBJECT("F:/GIT/dsbn.txt");
             if (txt_hoten.Text.Equals(""))
             {
                 return;
+            }
+            if (chkKB.Checked)
+            {
+                dvKB = "true";
+            }
+            else
+            {
+                dvKB = "null";
             }
             if (chkSA.Checked)
             {
@@ -64,20 +73,20 @@ namespace Project.GIAODIEN
             {
                 dvXN = "null";
             }
-            string[] row = { hoten, sdt, dvSA, dvXN };
+            string[] row = { hoten, sdt, dvKB , dvSA, dvXN };
             //write file txt
-            dsNB.writeAppend(hoten, sdt, dvSA, dvXN);
+            dsNB.writeAppend(hoten, sdt, dvKB, dvSA, dvXN);
             //display data
             gv_danhsachbenhnhan.Rows.Add(row);
             ResetAll();
         }
 
-        private void btn_Reset_Click(object sender, EventArgs e)
+        private void Btn_Reset_Click(object sender, EventArgs e)
         {
             ResetAll();
         }
 
-        private void gv_danhsachbenhnhan_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void Gv_danhsachbenhnhan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
@@ -87,7 +96,7 @@ namespace Project.GIAODIEN
 
             }
         }
-        private void deleteLineTxt(int i)
+        private void DeleteLineTxt(int i)
         {
             TXTOBJECT a = new TXTOBJECT("F:/GIT/dsbn.txt");
             string[] listbn = a.read();List<string> ds = new List<string>();
@@ -100,7 +109,7 @@ namespace Project.GIAODIEN
             a.writeOver(ds);
         }
 
-        private void txt_hoten_TextChanged(object sender, EventArgs e)
+        private void Txt_hoten_TextChanged(object sender, EventArgs e)
         {
             if (txt_hoten.Text.Equals(""))
             {
@@ -108,31 +117,35 @@ namespace Project.GIAODIEN
                 chkSA.Checked = false;
                 chkXN.Visible = false;
                 chkXN.Checked = false;
+                chkKB.Visible = false;
+                chkKB.Checked = false;                
             }
             else
             {
                 chkSA.Visible = true;
                 chkXN.Visible = true;
+                chkKB.Visible = true;
             }   
         }
 
-        private void btn_Tao_Click(object sender, EventArgs e)
-        {
-            string connetionString = "server=localconnection;database=phongkham;uid=root;pwd=1;";
-            ConnData con = new ConnData(connetionString);
-            con.OpenConnec();
+        private void Btn_Tao_Click(object sender, EventArgs e)
+        {                        
+            ConnData con = new ConnData();
+            if (!con.OpenConnection())
+                MessageBox.Show(con.ShowErrorMessage());
             string query = "insert into benhnhan (ten, nam_sinh, address, phone_num) values('"+txt_hoten.Text+"', '"+mtxtNamSinh.Text+ "', '" + txt_diachi.Text + "', '" + mtxtSDT.Text + "')";
-            con.executeNonQuery(query);
-            con.CloseConnec();
+            con.ExecuteNonQuery(query);
+            if (!con.CloseConnection())
+                MessageBox.Show(con.ShowErrorMessage());
         }
 
-        private void btnXoa_Click(object sender, EventArgs e)
+        private void BtnXoa_Click(object sender, EventArgs e)
         {
             try
             {
                 int currentRow = gv_danhsachbenhnhan.CurrentCell.RowIndex;
                 gv_danhsachbenhnhan.Rows.RemoveAt(currentRow);
-                deleteLineTxt(currentRow);
+                DeleteLineTxt(currentRow);
             }
             catch (Exception)
             {
@@ -142,7 +155,7 @@ namespace Project.GIAODIEN
             ResetAll();
         }
 
-        public bool updateGridView(string path)
+        public bool UpdateGridView(string path)
         {
             TXTOBJECT a = new TXTOBJECT(path);
             string[] listbn = a.read();
@@ -155,12 +168,13 @@ namespace Project.GIAODIEN
             gv_danhsachbenhnhan.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
             return true;
         }
-        private void gd_nhanbenh_Load(object sender, EventArgs e)
+
+        private void Gd_nhanbenh_Load(object sender, EventArgs e)
         {
-            updateGridView("F:/GIT/dsbn.txt"); 
+            UpdateGridView("F:/GIT/dsbn.txt"); 
         }
 
-        private void chkSA_CheckedChanged(object sender, EventArgs e)
+        private void ChkSA_CheckedChanged(object sender, EventArgs e)
         {
             if (!chkSA.Checked)
             {
@@ -175,7 +189,8 @@ namespace Project.GIAODIEN
                 chklbSA.Visible = true;
             }
         }
-        private void chkXN_CheckedChanged(object sender, EventArgs e)
+
+        private void ChkXN_CheckedChanged(object sender, EventArgs e)
         {
             if (!chkXN.Checked)
             {
@@ -190,7 +205,8 @@ namespace Project.GIAODIEN
                 chklbXetNghiem.Visible = true;
             }
         }
-        private void chkSA_VisibleChanged(object sender, EventArgs e)
+
+        private void ChkSA_VisibleChanged(object sender, EventArgs e)
         {
             if (chkSA.Checked)
                 chklbSA.Visible = true;

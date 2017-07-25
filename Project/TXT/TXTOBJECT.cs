@@ -27,10 +27,10 @@ namespace TXT
             }
         }
         
-        public void writeAppend(string hoten, string sdt, string dv1, string dv2)
+        public void writeAppend(string hoten, string sdt, string dv1, string dv2, string dv3)
         {
             // Compose a string that consists of three lines.
-            string lines = hoten + " - " + sdt + " - " + dv1 + " - " + dv2 + "\n";
+            string lines = hoten + " - " + sdt + " - " + dv1 + " - " + dv2 + " - " + dv3 + "\n";
 
             // Write the string to a file.
             FileStream f = File.Open(path, FileMode.Append);

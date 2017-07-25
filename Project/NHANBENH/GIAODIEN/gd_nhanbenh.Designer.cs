@@ -1,6 +1,6 @@
 ﻿namespace Project.GIAODIEN
 {
-    partial class gd_nhanbenh
+    partial class Gd_nhanbenh
     {
         /// <summary>
         /// Required designer variable.
@@ -49,6 +49,7 @@
             this.gv_danhsachbenhnhan = new System.Windows.Forms.DataGridView();
             this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chkKB = new System.Windows.Forms.CheckBox();
             this.groupBox1.SuspendLayout();
             this.gb_ThonTinBenhNhan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_danhsachbenhnhan)).BeginInit();
@@ -56,6 +57,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chkKB);
             this.groupBox1.Controls.Add(this.chkXN);
             this.groupBox1.Controls.Add(this.chklbXetNghiem);
             this.groupBox1.Controls.Add(this.chkSA);
@@ -67,7 +69,7 @@
             this.groupBox1.Size = new System.Drawing.Size(513, 412);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Danh sách bệnh nhân";            
+            this.groupBox1.Text = "Danh sách bệnh nhân";
             // 
             // chkXN
             // 
@@ -79,7 +81,7 @@
             this.chkXN.Text = "Xét Nghiệm";
             this.chkXN.UseVisualStyleBackColor = true;
             this.chkXN.Visible = false;
-            this.chkXN.CheckedChanged += new System.EventHandler(this.chkXN_CheckedChanged);
+            this.chkXN.CheckedChanged += new System.EventHandler(this.ChkXN_CheckedChanged);
             // 
             // chklbXetNghiem
             // 
@@ -103,15 +105,15 @@
             // chkSA
             // 
             this.chkSA.AutoSize = true;
-            this.chkSA.Location = new System.Drawing.Point(269, 234);
+            this.chkSA.Location = new System.Drawing.Point(269, 257);
             this.chkSA.Name = "chkSA";
             this.chkSA.Size = new System.Drawing.Size(65, 17);
             this.chkSA.TabIndex = 3;
             this.chkSA.Text = "Siêu Âm";
             this.chkSA.UseVisualStyleBackColor = true;
             this.chkSA.Visible = false;
-            this.chkSA.CheckedChanged += new System.EventHandler(this.chkSA_CheckedChanged);
-            this.chkSA.VisibleChanged += new System.EventHandler(this.chkSA_VisibleChanged);
+            this.chkSA.CheckedChanged += new System.EventHandler(this.ChkSA_CheckedChanged);
+            this.chkSA.VisibleChanged += new System.EventHandler(this.ChkSA_VisibleChanged);
             // 
             // chklbSA
             // 
@@ -122,7 +124,7 @@
             "Ngã âm đạo",
             "Hình thái học",
             "Màu"});
-            this.chklbSA.Location = new System.Drawing.Point(269, 257);
+            this.chklbSA.Location = new System.Drawing.Point(269, 280);
             this.chklbSA.Name = "chklbSA";
             this.chklbSA.Size = new System.Drawing.Size(89, 64);
             this.chklbSA.TabIndex = 4;
@@ -157,7 +159,7 @@
             this.btnXoa.TabIndex = 15;
             this.btnXoa.Text = "Xóa";
             this.btnXoa.UseVisualStyleBackColor = true;
-            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            this.btnXoa.Click += new System.EventHandler(this.BtnXoa_Click);
             // 
             // mtxtSDT
             // 
@@ -183,7 +185,7 @@
             this.btn_XepVaoHangDoi.TabIndex = 4;
             this.btn_XepVaoHangDoi.Text = "Xếp vào hàng đợi";
             this.btn_XepVaoHangDoi.UseVisualStyleBackColor = true;
-            this.btn_XepVaoHangDoi.Click += new System.EventHandler(this.btn_XepVaoHangDoi_Click);
+            this.btn_XepVaoHangDoi.Click += new System.EventHandler(this.Btn_XepVaoHangDoi_Click);
             // 
             // btn_TaoMoi
             // 
@@ -193,7 +195,7 @@
             this.btn_TaoMoi.TabIndex = 6;
             this.btn_TaoMoi.Text = "Reset";
             this.btn_TaoMoi.UseVisualStyleBackColor = true;
-            this.btn_TaoMoi.Click += new System.EventHandler(this.btn_Reset_Click);
+            this.btn_TaoMoi.Click += new System.EventHandler(this.Btn_Reset_Click);
             // 
             // btn_Tao
             // 
@@ -203,7 +205,7 @@
             this.btn_Tao.TabIndex = 5;
             this.btn_Tao.Text = "Tạo";
             this.btn_Tao.UseVisualStyleBackColor = true;
-            this.btn_Tao.Click += new System.EventHandler(this.btn_Tao_Click);
+            this.btn_Tao.Click += new System.EventHandler(this.Btn_Tao_Click);
             // 
             // txt_diachi
             // 
@@ -218,7 +220,7 @@
             this.txt_hoten.Name = "txt_hoten";
             this.txt_hoten.Size = new System.Drawing.Size(111, 20);
             this.txt_hoten.TabIndex = 0;
-            this.txt_hoten.TextChanged += new System.EventHandler(this.txt_hoten_TextChanged);
+            this.txt_hoten.TextChanged += new System.EventHandler(this.Txt_hoten_TextChanged);
             // 
             // label4
             // 
@@ -270,7 +272,7 @@
             this.gv_danhsachbenhnhan.ReadOnly = true;
             this.gv_danhsachbenhnhan.Size = new System.Drawing.Size(241, 345);
             this.gv_danhsachbenhnhan.TabIndex = 0;
-            this.gv_danhsachbenhnhan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gv_danhsachbenhnhan_CellClick);
+            this.gv_danhsachbenhnhan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Gv_danhsachbenhnhan_CellClick);
             // 
             // hoten
             // 
@@ -284,15 +286,26 @@
             this.sdt.Name = "sdt";
             this.sdt.ReadOnly = true;
             // 
-            // gd_nhanbenh
+            // chkKB
+            // 
+            this.chkKB.AutoSize = true;
+            this.chkKB.Location = new System.Drawing.Point(269, 234);
+            this.chkKB.Name = "chkKB";
+            this.chkKB.Size = new System.Drawing.Size(80, 17);
+            this.chkKB.TabIndex = 5;
+            this.chkKB.Text = "Khám bệnh";
+            this.chkKB.UseVisualStyleBackColor = true;
+            this.chkKB.Visible = false;
+            // 
+            // Gd_nhanbenh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(527, 395);
             this.Controls.Add(this.groupBox1);
-            this.Name = "gd_nhanbenh";
+            this.Name = "Gd_nhanbenh";
             this.Text = "Nhận bệnh";
-            this.Load += new System.EventHandler(this.gd_nhanbenh_Load);
+            this.Load += new System.EventHandler(this.Gd_nhanbenh_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.gb_ThonTinBenhNhan.ResumeLayout(false);
@@ -325,5 +338,6 @@
         private System.Windows.Forms.CheckedListBox chklbXetNghiem;
         private System.Windows.Forms.CheckBox chkSA;
         private System.Windows.Forms.CheckedListBox chklbSA;
+        private System.Windows.Forms.CheckBox chkKB;
     }
 }

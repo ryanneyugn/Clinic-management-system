@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace PHONGKHAM.GIAODIEN
 {
-    public partial class gd_kedonthuoc : Form
+    public partial class Gd_kedonthuoc : Form
     {
-        public gd_kedonthuoc()
+        public Gd_kedonthuoc()
         {
             InitializeComponent();
         }

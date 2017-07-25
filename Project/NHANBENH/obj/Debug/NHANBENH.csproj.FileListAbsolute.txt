@@ -8,7 +8,7 @@ F:\GIT\ryan-repository\Project\NHANBENH\bin\Debug\ConnDb.pdb
 F:\GIT\ryan-repository\Project\NHANBENH\bin\Debug\TXT.pdb
 F:\GIT\ryan-repository\Project\NHANBENH\bin\Debug\MySql.Data.xml
 F:\GIT\ryan-repository\Project\NHANBENH\obj\Debug\NHANBENH.csprojResolveAssemblyReference.cache
-F:\GIT\ryan-repository\Project\NHANBENH\obj\Debug\Project.GIAODIEN.gd_nhanbenh.resources
+F:\GIT\ryan-repository\Project\NHANBENH\obj\Debug\Project.GIAODIEN.Gd_nhanbenh.resources
 F:\GIT\ryan-repository\Project\NHANBENH\obj\Debug\Project.Properties.Resources.resources
 F:\GIT\ryan-repository\Project\NHANBENH\obj\Debug\NHANBENH.csproj.GenerateResource.Cache
 F:\GIT\ryan-repository\Project\NHANBENH\obj\Debug\Project.exe

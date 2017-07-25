@@ -65,8 +65,10 @@
             // 
             this.txt_matkhau.Location = new System.Drawing.Point(125, 95);
             this.txt_matkhau.Name = "txt_matkhau";
+            this.txt_matkhau.PasswordChar = '*';
             this.txt_matkhau.Size = new System.Drawing.Size(119, 20);
             this.txt_matkhau.TabIndex = 3;
+            this.txt_matkhau.UseSystemPasswordChar = true;
             // 
             // btn_ok
             // 
@@ -76,6 +78,7 @@
             this.btn_ok.TabIndex = 4;
             this.btn_ok.Text = "OK";
             this.btn_ok.UseVisualStyleBackColor = true;
+            this.btn_ok.Click += new System.EventHandler(this.Btn_ok_Click);
             // 
             // btn_thoat
             // 
@@ -85,7 +88,7 @@
             this.btn_thoat.TabIndex = 5;
             this.btn_thoat.Text = "Thoát";
             this.btn_thoat.UseVisualStyleBackColor = true;
-            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
+            this.btn_thoat.Click += new System.EventHandler(this.Btn_thoat_Click);
             // 
             // gd_dangnhap
             // 
@@ -98,7 +101,9 @@
             this.Controls.Add(this.txt_tendangnhap);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
             this.Name = "gd_dangnhap";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập";
             this.ResumeLayout(false);
             this.PerformLayout();

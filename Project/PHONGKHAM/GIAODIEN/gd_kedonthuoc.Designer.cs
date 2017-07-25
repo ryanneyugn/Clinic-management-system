@@ -1,6 +1,6 @@
 ﻿namespace PHONGKHAM.GIAODIEN
 {
-    partial class gd_kedonthuoc
+    partial class Gd_kedonthuoc
     {
         /// <summary>
         /// Required designer variable.
