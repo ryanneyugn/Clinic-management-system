@@ -1,4 +1,4 @@
-﻿namespace Project.GIAODIEN
+﻿namespace NHANBENH.GIAODIEN
 {
     partial class Gd_nhanbenh
     {

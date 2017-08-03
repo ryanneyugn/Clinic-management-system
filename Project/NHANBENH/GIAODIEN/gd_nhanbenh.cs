@@ -4,7 +4,7 @@ using System.Windows.Forms;
 using TXT;
 using ConnDb;
 
-namespace Project.GIAODIEN
+namespace NHANBENH.GIAODIEN
 {
     public partial class Gd_nhanbenh : Form
     {
