@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chkKB = new System.Windows.Forms.CheckBox();
             this.chkXN = new System.Windows.Forms.CheckBox();
             this.chklbXetNghiem = new System.Windows.Forms.CheckedListBox();
             this.chkSA = new System.Windows.Forms.CheckBox();
@@ -36,7 +37,7 @@
             this.gb_ThonTinBenhNhan = new System.Windows.Forms.GroupBox();
             this.btnXoa = new System.Windows.Forms.Button();
             this.mtxtSDT = new System.Windows.Forms.MaskedTextBox();
-            this.mtxtNamSinh = new System.Windows.Forms.MaskedTextBox();
+            this.mtxtTuoi = new System.Windows.Forms.MaskedTextBox();
             this.btn_XepVaoHangDoi = new System.Windows.Forms.Button();
             this.btn_TaoMoi = new System.Windows.Forms.Button();
             this.btn_Tao = new System.Windows.Forms.Button();
@@ -49,7 +50,7 @@
             this.gv_danhsachbenhnhan = new System.Windows.Forms.DataGridView();
             this.hoten = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sdt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chkKB = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.gb_ThonTinBenhNhan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gv_danhsachbenhnhan)).BeginInit();
@@ -57,6 +58,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.chkKB);
             this.groupBox1.Controls.Add(this.chkXN);
             this.groupBox1.Controls.Add(this.chklbXetNghiem);
@@ -71,12 +73,23 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách bệnh nhân";
             // 
+            // chkKB
+            // 
+            this.chkKB.AutoSize = true;
+            this.chkKB.Location = new System.Drawing.Point(269, 234);
+            this.chkKB.Name = "chkKB";
+            this.chkKB.Size = new System.Drawing.Size(90, 19);
+            this.chkKB.TabIndex = 5;
+            this.chkKB.Text = "Khám bệnh";
+            this.chkKB.UseVisualStyleBackColor = true;
+            this.chkKB.Visible = false;
+            // 
             // chkXN
             // 
             this.chkXN.AutoSize = true;
             this.chkXN.Location = new System.Drawing.Point(364, 234);
             this.chkXN.Name = "chkXN";
-            this.chkXN.Size = new System.Drawing.Size(81, 17);
+            this.chkXN.Size = new System.Drawing.Size(91, 19);
             this.chkXN.TabIndex = 4;
             this.chkXN.Text = "Xét Nghiệm";
             this.chkXN.UseVisualStyleBackColor = true;
@@ -107,7 +120,7 @@
             this.chkSA.AutoSize = true;
             this.chkSA.Location = new System.Drawing.Point(269, 257);
             this.chkSA.Name = "chkSA";
-            this.chkSA.Size = new System.Drawing.Size(65, 17);
+            this.chkSA.Size = new System.Drawing.Size(72, 19);
             this.chkSA.TabIndex = 3;
             this.chkSA.Text = "Siêu Âm";
             this.chkSA.UseVisualStyleBackColor = true;
@@ -134,7 +147,7 @@
             // 
             this.gb_ThonTinBenhNhan.Controls.Add(this.btnXoa);
             this.gb_ThonTinBenhNhan.Controls.Add(this.mtxtSDT);
-            this.gb_ThonTinBenhNhan.Controls.Add(this.mtxtNamSinh);
+            this.gb_ThonTinBenhNhan.Controls.Add(this.mtxtTuoi);
             this.gb_ThonTinBenhNhan.Controls.Add(this.btn_XepVaoHangDoi);
             this.gb_ThonTinBenhNhan.Controls.Add(this.btn_TaoMoi);
             this.gb_ThonTinBenhNhan.Controls.Add(this.btn_Tao);
@@ -169,13 +182,13 @@
             this.mtxtSDT.Size = new System.Drawing.Size(111, 20);
             this.mtxtSDT.TabIndex = 3;
             // 
-            // mtxtNamSinh
+            // mtxtTuoi
             // 
-            this.mtxtNamSinh.Location = new System.Drawing.Point(95, 49);
-            this.mtxtNamSinh.Mask = "0000";
-            this.mtxtNamSinh.Name = "mtxtNamSinh";
-            this.mtxtNamSinh.Size = new System.Drawing.Size(111, 20);
-            this.mtxtNamSinh.TabIndex = 1;
+            this.mtxtTuoi.Location = new System.Drawing.Point(95, 49);
+            this.mtxtTuoi.Mask = "000";
+            this.mtxtTuoi.Name = "mtxtTuoi";
+            this.mtxtTuoi.Size = new System.Drawing.Size(111, 20);
+            this.mtxtTuoi.TabIndex = 1;
             // 
             // btn_XepVaoHangDoi
             // 
@@ -227,7 +240,7 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(16, 104);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(73, 13);
+            this.label4.Size = new System.Drawing.Size(82, 15);
             this.label4.TabIndex = 14;
             this.label4.Text = "Số điện thoại:";
             // 
@@ -236,7 +249,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(16, 75);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(43, 13);
+            this.label3.Size = new System.Drawing.Size(48, 15);
             this.label3.TabIndex = 13;
             this.label3.Text = "Địa chỉ:";
             // 
@@ -245,16 +258,16 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(16, 52);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(54, 13);
+            this.label2.Size = new System.Drawing.Size(34, 15);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Năm sinh:";
+            this.label2.Text = "Tuổi:";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(16, 26);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 13);
+            this.label1.Size = new System.Drawing.Size(46, 15);
             this.label1.TabIndex = 11;
             this.label1.Text = "Họ tên:";
             // 
@@ -286,16 +299,15 @@
             this.sdt.Name = "sdt";
             this.sdt.ReadOnly = true;
             // 
-            // chkKB
+            // button1
             // 
-            this.chkKB.AutoSize = true;
-            this.chkKB.Location = new System.Drawing.Point(269, 234);
-            this.chkKB.Name = "chkKB";
-            this.chkKB.Size = new System.Drawing.Size(80, 17);
-            this.chkKB.TabIndex = 5;
-            this.chkKB.Text = "Khám bệnh";
-            this.chkKB.UseVisualStyleBackColor = true;
-            this.chkKB.Visible = false;
+            this.button1.Location = new System.Drawing.Point(269, 350);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 6;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Gd_nhanbenh
             // 
@@ -332,12 +344,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn hoten;
         private System.Windows.Forms.DataGridViewTextBoxColumn sdt;
         private System.Windows.Forms.MaskedTextBox mtxtSDT;
-        private System.Windows.Forms.MaskedTextBox mtxtNamSinh;
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.CheckBox chkXN;
         private System.Windows.Forms.CheckedListBox chklbXetNghiem;
         private System.Windows.Forms.CheckBox chkSA;
         private System.Windows.Forms.CheckedListBox chklbSA;
         private System.Windows.Forms.CheckBox chkKB;
+        private System.Windows.Forms.MaskedTextBox mtxtTuoi;
+        private System.Windows.Forms.Button button1;
     }
 }

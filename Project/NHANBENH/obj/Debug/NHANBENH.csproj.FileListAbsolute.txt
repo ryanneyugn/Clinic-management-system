@@ -28,3 +28,4 @@ S:\Project_Clinic\ryan-repository\Project\NHANBENH\obj\Debug\Project.Properties.
 S:\Project_Clinic\ryan-repository\Project\NHANBENH\obj\Debug\NHANBENH.csproj.GenerateResource.Cache
 S:\Project_Clinic\ryan-repository\Project\NHANBENH\obj\Debug\Project.exe
 S:\Project_Clinic\ryan-repository\Project\NHANBENH\obj\Debug\Project.pdb
+S:\Project_Clinic\ryan-repository\Project\NHANBENH\obj\Debug\Project.frmSetting.resources

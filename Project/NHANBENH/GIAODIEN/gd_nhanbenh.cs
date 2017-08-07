@@ -21,7 +21,7 @@ namespace Project.GIAODIEN
             txt_hoten.Clear();
             txt_diachi.Clear();
             mtxtSDT.Clear();
-            mtxtNamSinh.Clear();
+            mtxtTuoi.Clear();
         }
 
         private void Btn_XepVaoHangDoi_Click(object sender, EventArgs e)
@@ -32,7 +32,7 @@ namespace Project.GIAODIEN
             string dvXN = "null";
             string dvKB = "null";
             //file.txt
-            TXTOBJECT dsNB = new TXTOBJECT("F:/GIT/dsbn.txt");
+            TXTOBJECT dsNB = new TXTOBJECT("S:/GIT/dsbn.txt");
             if (txt_hoten.Text.Equals(""))
             {
                 return;
@@ -98,7 +98,7 @@ namespace Project.GIAODIEN
         }
         private void DeleteLineTxt(int i)
         {
-            TXTOBJECT a = new TXTOBJECT("F:/GIT/dsbn.txt");
+            TXTOBJECT a = new TXTOBJECT("S:/GIT/dsbn.txt");
             string[] listbn = a.read();List<string> ds = new List<string>();
             foreach (string str in listbn)
             {
@@ -133,7 +133,7 @@ namespace Project.GIAODIEN
             ConnData con = new ConnData();
             if (!con.OpenConnection())
                 MessageBox.Show(con.ShowErrorMessage());
-            string query = "insert into benhnhan (ten, nam_sinh, address, phone_num) values('"+txt_hoten.Text+"', '"+mtxtNamSinh.Text+ "', '" + txt_diachi.Text + "', '" + mtxtSDT.Text + "')";
+            string query = "insert into benhnhan (ten, nam_sinh, address, phone_num) values('"+txt_hoten.Text+"', '"+mtxtTuoi.Text+ "', '" + txt_diachi.Text + "', '" + mtxtSDT.Text + "')";
             con.ExecuteNonQuery(query);
             if (!con.CloseConnection())
                 MessageBox.Show(con.ShowErrorMessage());
@@ -160,7 +160,7 @@ namespace Project.GIAODIEN
             TXTOBJECT a = new TXTOBJECT(path);
             string[] listbn = a.read();
             foreach (string str in listbn)
-            {
+            { 
                 string[] row = str.Split('-');
                 gv_danhsachbenhnhan.Rows.Add(row);
             }
@@ -171,7 +171,7 @@ namespace Project.GIAODIEN
 
         private void Gd_nhanbenh_Load(object sender, EventArgs e)
         {
-            UpdateGridView("F:/GIT/dsbn.txt"); 
+            UpdateGridView("S:/GIT/dsbn.txt"); 
         }
 
         private void ChkSA_CheckedChanged(object sender, EventArgs e)
@@ -213,6 +213,11 @@ namespace Project.GIAODIEN
             else
                 chklbSA.Visible = false;
         }
-        
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form a = new frmSetting();
+            a.Show();
+        }
     }
 }

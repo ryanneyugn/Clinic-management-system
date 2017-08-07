@@ -1,6 +1,6 @@
 ﻿namespace Project
 {
-    partial class Setting
+    partial class frmSetting
     {
         /// <summary>
         /// Required designer variable.
@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtClient_2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnGetIP = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -41,7 +42,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(23, 33);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(54, 13);
+            this.label1.Size = new System.Drawing.Size(59, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Server IP:";
             // 
@@ -64,7 +65,7 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(23, 74);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 13);
+            this.label2.Size = new System.Drawing.Size(69, 15);
             this.label2.TabIndex = 2;
             this.label2.Text = "Client_1 IP:";
             // 
@@ -80,22 +81,33 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(23, 120);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(61, 13);
+            this.label3.Size = new System.Drawing.Size(69, 15);
             this.label3.TabIndex = 4;
             this.label3.Text = "Client_2 IP:";
             // 
-            // Setting
+            // btnGetIP
+            // 
+            this.btnGetIP.Location = new System.Drawing.Point(48, 170);
+            this.btnGetIP.Name = "btnGetIP";
+            this.btnGetIP.Size = new System.Drawing.Size(75, 23);
+            this.btnGetIP.TabIndex = 6;
+            this.btnGetIP.Text = "GET";
+            this.btnGetIP.UseVisualStyleBackColor = true;
+            this.btnGetIP.Click += new System.EventHandler(this.btnGetIP_Click);
+            // 
+            // frmSetting
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btnGetIP);
             this.Controls.Add(this.txtClient_2);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtClient_1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtServerIP);
             this.Controls.Add(this.label1);
-            this.Name = "Setting";
+            this.Name = "frmSetting";
             this.Text = "Setting";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -110,5 +122,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtClient_2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button btnGetIP;
     }
 }

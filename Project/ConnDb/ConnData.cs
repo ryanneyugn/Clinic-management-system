@@ -16,9 +16,9 @@ namespace ConnDb
         public ConnData()
         {            
             server = "localhost";
-            database = "phongkham";
+            database = "qlpk";
             uid = "root";
-            password = "1";
+            password = "123456";
             Initialize(server, database, uid, password);        
         }
 
