@@ -22,6 +22,11 @@ namespace ConnDb
             Initialize(server, database, uid, password);        
         }
 
+        public ConnData(string server, string database, string uid, string password)
+        {
+            Initialize(server, database, uid, password);
+        }
+
         private void Initialize(string server, string database, string uid, string password)
         {
             this.server = server;

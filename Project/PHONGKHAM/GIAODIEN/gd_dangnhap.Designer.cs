@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gd_dangnhap));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txt_tendangnhap = new System.Windows.Forms.TextBox();
             this.txt_matkhau = new System.Windows.Forms.TextBox();
             this.btn_ok = new System.Windows.Forms.Button();
             this.btn_thoat = new System.Windows.Forms.Button();
+            this.btn_setting = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -90,11 +92,24 @@
             this.btn_thoat.UseVisualStyleBackColor = true;
             this.btn_thoat.Click += new System.EventHandler(this.Btn_thoat_Click);
             // 
+            // btn_setting
+            // 
+            this.btn_setting.FlatAppearance.BorderSize = 0;
+            this.btn_setting.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_setting.Image = ((System.Drawing.Image)(resources.GetObject("btn_setting.Image")));
+            this.btn_setting.Location = new System.Drawing.Point(12, 165);
+            this.btn_setting.Name = "btn_setting";
+            this.btn_setting.Size = new System.Drawing.Size(30, 30);
+            this.btn_setting.TabIndex = 6;
+            this.btn_setting.UseVisualStyleBackColor = true;
+            this.btn_setting.Click += new System.EventHandler(this.btn_setting_Click);
+            // 
             // gd_dangnhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 207);
+            this.Controls.Add(this.btn_setting);
             this.Controls.Add(this.btn_thoat);
             this.Controls.Add(this.btn_ok);
             this.Controls.Add(this.txt_matkhau);
@@ -118,5 +133,6 @@
         private System.Windows.Forms.TextBox txt_matkhau;
         private System.Windows.Forms.Button btn_ok;
         private System.Windows.Forms.Button btn_thoat;
+        private System.Windows.Forms.Button btn_setting;
     }
 }

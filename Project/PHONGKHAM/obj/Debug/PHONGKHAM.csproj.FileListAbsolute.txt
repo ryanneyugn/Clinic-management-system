@@ -33,3 +33,5 @@ F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.exe
 F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.pdb
 F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\PHONGKHAM.exe.config
 F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\PHONGKHAM.pdb
+F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.Configure.resources
+F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\config\connection_info.cfg
