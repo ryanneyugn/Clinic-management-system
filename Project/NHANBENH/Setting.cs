@@ -16,6 +16,7 @@ namespace Project
         public frmSetting()
         {
             InitializeComponent();
+            getClientIP();
         }
 
         private void btnGetIP_Click(object sender, EventArgs e)
@@ -27,6 +28,22 @@ namespace Project
             foreach(IPAddress ip in host.AddressList)
             {
                 if(ip.AddressFamily.ToString() == "InterNetwork")
+                {
+                    localIP = ip.ToString();
+                    txtServerIP.Text = localIP;
+                }
+            }
+        }
+
+        private void getClientIP()
+        {
+            IPHostEntry host;
+            string localIP = "?";
+            host = Dns.GetHostEntry(Dns.GetHostName());
+
+            foreach (IPAddress ip in host.AddressList)
+            {
+                if (ip.AddressFamily.ToString() == "InterNetwork")
                 {
                     localIP = ip.ToString();
                     txtServerIP.Text = localIP;
