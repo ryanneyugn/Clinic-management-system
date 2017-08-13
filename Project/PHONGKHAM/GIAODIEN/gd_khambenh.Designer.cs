@@ -34,7 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupbox_dsbn = new System.Windows.Forms.GroupBox();
             this.btn_refreshdsbn = new System.Windows.Forms.Button();
             this.dtgv_dsbn = new System.Windows.Forms.DataGridView();
             this.stt = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -71,45 +71,43 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btn_thoat = new System.Windows.Forms.Button();
             this.btn_kedonthuoc = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.groupbox_lskb = new System.Windows.Forms.GroupBox();
             this.btn_xemdonthuoccu = new System.Windows.Forms.Button();
             this.dtgv_lskb = new System.Windows.Forms.DataGridView();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
-            this.groupBox6 = new System.Windows.Forms.GroupBox();
-            this.txt_chandoan = new System.Windows.Forms.RichTextBox();
-            this.lbl_currentdate = new System.Windows.Forms.Label();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.maso = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ngaylap = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chandoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bs = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.groupBox1.SuspendLayout();
+            this.groupbox_control = new System.Windows.Forms.GroupBox();
+            this.groupbox_chandoan = new System.Windows.Forms.GroupBox();
+            this.txt_chandoan = new System.Windows.Forms.RichTextBox();
+            this.lbl_currentdate = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.groupbox_dsbn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_dsbn)).BeginInit();
             this.groupbox_ttpk.SuspendLayout();
-            this.groupBox4.SuspendLayout();
+            this.groupbox_lskb.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_lskb)).BeginInit();
-            this.groupBox5.SuspendLayout();
-            this.groupBox6.SuspendLayout();
+            this.groupbox_control.SuspendLayout();
+            this.groupbox_chandoan.SuspendLayout();
             this.SuspendLayout();
             // 
-            // groupBox1
+            // groupbox_dsbn
             // 
-            this.groupBox1.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox1.Controls.Add(this.btn_refreshdsbn);
-            this.groupBox1.Controls.Add(this.dtgv_dsbn);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(12, 31);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(366, 217);
-            this.groupBox1.TabIndex = 0;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Danh sách bệnh nhân chờ khám";
+            this.groupbox_dsbn.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupbox_dsbn.Controls.Add(this.btn_refreshdsbn);
+            this.groupbox_dsbn.Controls.Add(this.dtgv_dsbn);
+            this.groupbox_dsbn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupbox_dsbn.Location = new System.Drawing.Point(12, 31);
+            this.groupbox_dsbn.Name = "groupbox_dsbn";
+            this.groupbox_dsbn.Size = new System.Drawing.Size(366, 217);
+            this.groupbox_dsbn.TabIndex = 0;
+            this.groupbox_dsbn.TabStop = false;
+            this.groupbox_dsbn.Text = "Danh sách bệnh nhân chờ khám";
             // 
             // btn_refreshdsbn
             // 
             this.btn_refreshdsbn.FlatAppearance.BorderSize = 0;
-            this.btn_refreshdsbn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btn_refreshdsbn.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_refreshdsbn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_refreshdsbn.Image = ((System.Drawing.Image)(resources.GetObject("btn_refreshdsbn.Image")));
             this.btn_refreshdsbn.Location = new System.Drawing.Point(327, 184);
@@ -130,7 +128,7 @@
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
@@ -150,9 +148,10 @@
             this.dtgv_dsbn.ReadOnly = true;
             this.dtgv_dsbn.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dtgv_dsbn.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgv_dsbn.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgv_dsbn.Size = new System.Drawing.Size(354, 160);
             this.dtgv_dsbn.TabIndex = 0;
-            this.dtgv_dsbn.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgv_dsbn_RowHeaderMouseClick);
+            this.dtgv_dsbn.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_dsbn_CellClick);
             // 
             // stt
             // 
@@ -172,7 +171,7 @@
             this.id.ReadOnly = true;
             this.id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.id.Width = 24;
+            this.id.Visible = false;
             // 
             // hoten
             // 
@@ -341,8 +340,6 @@
             // btn_editphieukham
             // 
             this.btn_editphieukham.FlatAppearance.BorderSize = 0;
-            this.btn_editphieukham.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Silver;
-            this.btn_editphieukham.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Silver;
             this.btn_editphieukham.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_editphieukham.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.btn_editphieukham.Image = ((System.Drawing.Image)(resources.GetObject("btn_editphieukham.Image")));
@@ -578,20 +575,21 @@
             this.btn_kedonthuoc.TabIndex = 8;
             this.btn_kedonthuoc.Text = "Kê đơn thuốc";
             this.btn_kedonthuoc.UseVisualStyleBackColor = true;
+            this.btn_kedonthuoc.Click += new System.EventHandler(this.btn_kedonthuoc_Click);
             // 
-            // groupBox4
+            // groupbox_lskb
             // 
-            this.groupBox4.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox4.Controls.Add(this.btn_xemdonthuoccu);
-            this.groupBox4.Controls.Add(this.dtgv_lskb);
-            this.groupBox4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.groupBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox4.Location = new System.Drawing.Point(12, 254);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(779, 181);
-            this.groupBox4.TabIndex = 10;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Lịch sử khám bệnh";
+            this.groupbox_lskb.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupbox_lskb.Controls.Add(this.btn_xemdonthuoccu);
+            this.groupbox_lskb.Controls.Add(this.dtgv_lskb);
+            this.groupbox_lskb.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.groupbox_lskb.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupbox_lskb.Location = new System.Drawing.Point(12, 254);
+            this.groupbox_lskb.Name = "groupbox_lskb";
+            this.groupbox_lskb.Size = new System.Drawing.Size(779, 181);
+            this.groupbox_lskb.TabIndex = 10;
+            this.groupbox_lskb.TabStop = false;
+            this.groupbox_lskb.Text = "Lịch sử khám bệnh";
             // 
             // btn_xemdonthuoccu
             // 
@@ -629,41 +627,87 @@
             this.dtgv_lskb.ReadOnly = true;
             this.dtgv_lskb.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.dtgv_lskb.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtgv_lskb.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgv_lskb.Size = new System.Drawing.Size(636, 156);
             this.dtgv_lskb.TabIndex = 0;
-            this.dtgv_lskb.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dtgv_lskb_RowHeaderMouseClick);
+            this.dtgv_lskb.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_lskb_CellClick);
             // 
-            // groupBox5
+            // maso
             // 
-            this.groupBox5.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox5.Controls.Add(this.btn_thoat);
-            this.groupBox5.Controls.Add(this.btn_kedonthuoc);
-            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox5.Location = new System.Drawing.Point(666, 441);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(125, 130);
-            this.groupBox5.TabIndex = 11;
-            this.groupBox5.TabStop = false;
+            this.maso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maso.DefaultCellStyle = dataGridViewCellStyle4;
+            this.maso.HeaderText = "Mã số";
+            this.maso.MinimumWidth = 30;
+            this.maso.Name = "maso";
+            this.maso.ReadOnly = true;
+            this.maso.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.maso.Width = 42;
             // 
-            // groupBox6
+            // ngaylap
             // 
-            this.groupBox6.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.groupBox6.Controls.Add(this.txt_chandoan);
-            this.groupBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox6.Location = new System.Drawing.Point(12, 441);
-            this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(647, 130);
-            this.groupBox6.TabIndex = 12;
-            this.groupBox6.TabStop = false;
-            this.groupBox6.Text = "Chẩn đoán";
+            this.ngaylap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ngaylap.HeaderText = "Ngày lập";
+            this.ngaylap.Name = "ngaylap";
+            this.ngaylap.ReadOnly = true;
+            this.ngaylap.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ngaylap.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ngaylap.Width = 55;
+            // 
+            // chandoan
+            // 
+            this.chandoan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.chandoan.HeaderText = "Chẩn đoán";
+            this.chandoan.MinimumWidth = 350;
+            this.chandoan.Name = "chandoan";
+            this.chandoan.ReadOnly = true;
+            this.chandoan.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.chandoan.Width = 350;
+            // 
+            // bs
+            // 
+            this.bs.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.bs.HeaderText = "Bác sĩ phụ trách";
+            this.bs.MinimumWidth = 200;
+            this.bs.Name = "bs";
+            this.bs.ReadOnly = true;
+            this.bs.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.bs.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.bs.Width = 200;
+            // 
+            // groupbox_control
+            // 
+            this.groupbox_control.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupbox_control.Controls.Add(this.btn_thoat);
+            this.groupbox_control.Controls.Add(this.btn_kedonthuoc);
+            this.groupbox_control.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupbox_control.Location = new System.Drawing.Point(666, 441);
+            this.groupbox_control.Name = "groupbox_control";
+            this.groupbox_control.Size = new System.Drawing.Size(125, 130);
+            this.groupbox_control.TabIndex = 11;
+            this.groupbox_control.TabStop = false;
+            // 
+            // groupbox_chandoan
+            // 
+            this.groupbox_chandoan.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupbox_chandoan.Controls.Add(this.txt_chandoan);
+            this.groupbox_chandoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupbox_chandoan.Location = new System.Drawing.Point(12, 441);
+            this.groupbox_chandoan.Name = "groupbox_chandoan";
+            this.groupbox_chandoan.Size = new System.Drawing.Size(647, 130);
+            this.groupbox_chandoan.TabIndex = 12;
+            this.groupbox_chandoan.TabStop = false;
+            this.groupbox_chandoan.Text = "Chẩn đoán";
             // 
             // txt_chandoan
             // 
+            this.txt_chandoan.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_chandoan.Location = new System.Drawing.Point(6, 19);
             this.txt_chandoan.Name = "txt_chandoan";
             this.txt_chandoan.Size = new System.Drawing.Size(634, 105);
             this.txt_chandoan.TabIndex = 0;
             this.txt_chandoan.Text = "";
+            this.txt_chandoan.TextChanged += new System.EventHandler(this.txt_chandoan_TextChanged);
             // 
             // lbl_currentdate
             // 
@@ -681,57 +725,18 @@
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // maso
-            // 
-            this.maso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maso.DefaultCellStyle = dataGridViewCellStyle4;
-            this.maso.HeaderText = "Mã số";
-            this.maso.MinimumWidth = 30;
-            this.maso.Name = "maso";
-            this.maso.ReadOnly = true;
-            this.maso.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.maso.Width = 42;
-            // 
-            // ngaylap
-            // 
-            this.ngaylap.HeaderText = "Ngày lập";
-            this.ngaylap.Name = "ngaylap";
-            this.ngaylap.ReadOnly = true;
-            this.ngaylap.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ngaylap.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ngaylap.Width = 150;
-            // 
-            // chandoan
-            // 
-            this.chandoan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.chandoan.HeaderText = "Chẩn đoán";
-            this.chandoan.Name = "chandoan";
-            this.chandoan.ReadOnly = true;
-            this.chandoan.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // bs
-            // 
-            this.bs.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.ColumnHeader;
-            this.bs.HeaderText = "Bác sĩ phụ trách";
-            this.bs.Name = "bs";
-            this.bs.ReadOnly = true;
-            this.bs.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.bs.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.bs.Width = 62;
-            // 
             // gd_khambenh
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(803, 583);
             this.Controls.Add(this.lbl_currentdate);
-            this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.groupBox6);
-            this.Controls.Add(this.groupBox4);
+            this.Controls.Add(this.groupbox_control);
+            this.Controls.Add(this.groupbox_chandoan);
+            this.Controls.Add(this.groupbox_lskb);
             this.Controls.Add(this.groupbox_ttpk);
             this.Controls.Add(this.lbl_tenbs);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupbox_dsbn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(823, 626);
@@ -742,14 +747,14 @@
             this.Text = "Khám bệnh";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Gd_khambenh_FormClosing);
             this.Load += new System.EventHandler(this.gd_khambenh_Load);
-            this.groupBox1.ResumeLayout(false);
+            this.groupbox_dsbn.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_dsbn)).EndInit();
             this.groupbox_ttpk.ResumeLayout(false);
             this.groupbox_ttpk.PerformLayout();
-            this.groupBox4.ResumeLayout(false);
+            this.groupbox_lskb.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_lskb)).EndInit();
-            this.groupBox5.ResumeLayout(false);
-            this.groupBox6.ResumeLayout(false);
+            this.groupbox_control.ResumeLayout(false);
+            this.groupbox_chandoan.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -757,16 +762,16 @@
 
         #endregion
 
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupbox_dsbn;
         private System.Windows.Forms.DataGridView dtgv_dsbn;
         private System.Windows.Forms.Label lbl_tenbs;
         private System.Windows.Forms.GroupBox groupbox_ttpk;
         private System.Windows.Forms.Button btn_thoat;
         private System.Windows.Forms.Button btn_kedonthuoc;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox groupbox_lskb;
         private System.Windows.Forms.Button btn_xemdonthuoccu;
         private System.Windows.Forms.DataGridView dtgv_lskb;
-        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox groupbox_control;
         private System.Windows.Forms.Button btn_refreshdsbn;
         private System.Windows.Forms.TextBox txt_idbn;
         private System.Windows.Forms.Label label10;
@@ -783,7 +788,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.GroupBox groupbox_chandoan;
         private System.Windows.Forms.RichTextBox txt_chandoan;
         private System.Windows.Forms.Label lbl_currentdate;
         private System.Windows.Forms.Button btn_editphieukham;
@@ -791,6 +796,13 @@
         private System.Windows.Forms.TextBox txt_tiencangd;
         private System.Windows.Forms.Button btn_accept;
         private System.Windows.Forms.Button btn_cancel;
+        private System.Windows.Forms.TextBox txt_nghenghiep;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaylap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn chandoan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bs;
         private System.Windows.Forms.DataGridViewTextBoxColumn stt;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoten;
@@ -799,12 +811,5 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tuoi;
         private System.Windows.Forms.DataGridViewTextBoxColumn para;
         private System.Windows.Forms.DataGridViewTextBoxColumn nghenghiep;
-        private System.Windows.Forms.TextBox txt_nghenghiep;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngaylap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn chandoan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bs;
     }
 }

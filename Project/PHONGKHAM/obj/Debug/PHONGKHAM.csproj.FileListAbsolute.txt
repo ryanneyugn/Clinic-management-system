@@ -14,9 +14,7 @@ S:\Project_Clinic\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.pdb
 F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\PHONGKHAM.exe
 F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\ConnDb.dll
 F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\MySql.Data.dll
-F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\TXT.dll
 F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\ConnDb.pdb
-F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\TXT.pdb
 F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\MySql.Data.xml
 F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.csprojResolveAssemblyReference.cache
 F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_dangnhap.resources
@@ -35,3 +33,4 @@ F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\PHONGKHAM.exe.config
 F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\PHONGKHAM.pdb
 F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.Configure.resources
 F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\config\connection_info.cfg
+F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_themthuoc.resources

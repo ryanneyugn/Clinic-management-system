@@ -13,6 +13,9 @@ namespace ConnDb
         private MySqlCommand command;
         private string errormessage;
 
+        public MySqlCommand Command { get => command; set => command = value; }
+        public MySqlConnection Connection { get => connection; set => connection = value; }
+
         public ConnData()
         {            
             server = "localhost";
@@ -35,13 +38,13 @@ namespace ConnDb
             this.password = password;
             string connectionString = "server=" + this.server + ";" + "database=" + this.database + ";" + "uid=" + this.uid + ";" + "password=" + this.password + ";";
 
-            connection = new MySqlConnection(connectionString);
+            Connection = new MySqlConnection(connectionString);
         }
 
         public bool OpenConnection()
         {
             try {
-                connection.Open();
+                Connection.Open();
                 return true;
             } catch (MySqlException ex)
             {
@@ -65,7 +68,7 @@ namespace ConnDb
         {
             try
             {
-                connection.Close();                
+                Connection.Close();                
                 return true; 
             }
             catch (MySqlException ex)
@@ -78,15 +81,15 @@ namespace ConnDb
         public DataTable ExecuteReader(string sql)
         {
             DataTable tb = new DataTable();
-            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, connection);
+            MySqlDataAdapter adapter = new MySqlDataAdapter(sql, Connection);
             adapter.Fill(tb);
             return tb;
         }
 
         public void ExecuteNonQuery(string sql)
         {
-            command = new MySqlCommand(sql, connection);
-            command.ExecuteNonQuery();
+            Command = new MySqlCommand(sql, Connection);
+            Command.ExecuteNonQuery();
         }
 
         public string ShowErrorMessage()

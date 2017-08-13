@@ -100,6 +100,12 @@
     <Compile Include="GIAODIEN\gd_sieuam.Designer.cs">
       <DependentUpon>gd_sieuam.cs</DependentUpon>
     </Compile>
+    <Compile Include="GIAODIEN\gd_themthuoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GIAODIEN\gd_themthuoc.Designer.cs">
+      <DependentUpon>gd_themthuoc.cs</DependentUpon>
+    </Compile>
     <Compile Include="GIAODIEN\gd_thongke.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GIAODIEN\gd_sieuam.resx">
       <DependentUpon>gd_sieuam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GIAODIEN\gd_themthuoc.resx">
+      <DependentUpon>gd_themthuoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GIAODIEN\gd_thongke.resx">
       <DependentUpon>gd_thongke.cs</DependentUpon>
@@ -176,10 +185,6 @@
     <ProjectReference Include="..\ConnDb\ConnDb.csproj">
       <Project>{0af7b184-a91f-4707-b2da-476cf951b39b}</Project>
       <Name>ConnDb</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\TXT\TXT.csproj">
-      <Project>{ce8a890c-7d56-4811-a78d-edfedd53e5bb}</Project>
-      <Name>TXT</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

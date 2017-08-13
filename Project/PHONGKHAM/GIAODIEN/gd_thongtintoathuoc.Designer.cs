@@ -35,11 +35,13 @@
             this.lbl_idtoathuoc = new System.Windows.Forms.Label();
             this.lbl_ngaylap = new System.Windows.Forms.Label();
             this.txt_loidan = new System.Windows.Forms.TextBox();
+            this.idctthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.duongdung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quycach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.giaban = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.duongdung = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quycach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,17 +52,21 @@
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idctthuoc,
+            this.idthuoc,
             this.tenthuoc,
-            this.duongdung,
-            this.quycach,
             this.soluong,
-            this.giaban});
+            this.giaban,
+            this.duongdung,
+            this.quycach});
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.Location = new System.Drawing.Point(12, 87);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(664, 209);
             this.dataGridView1.TabIndex = 0;
             // 
@@ -118,6 +124,21 @@
             this.txt_loidan.Size = new System.Drawing.Size(366, 72);
             this.txt_loidan.TabIndex = 6;
             // 
+            // idctthuoc
+            // 
+            this.idctthuoc.HeaderText = "IDCTHUOC";
+            this.idctthuoc.Name = "idctthuoc";
+            this.idctthuoc.ReadOnly = true;
+            this.idctthuoc.Visible = false;
+            // 
+            // idthuoc
+            // 
+            this.idthuoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.idthuoc.HeaderText = "ID";
+            this.idthuoc.Name = "idthuoc";
+            this.idthuoc.ReadOnly = true;
+            this.idthuoc.Width = 43;
+            // 
             // tenthuoc
             // 
             this.tenthuoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -126,6 +147,22 @@
             this.tenthuoc.Name = "tenthuoc";
             this.tenthuoc.ReadOnly = true;
             this.tenthuoc.Width = 150;
+            // 
+            // soluong
+            // 
+            this.soluong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.soluong.HeaderText = "Số lượng";
+            this.soluong.Name = "soluong";
+            this.soluong.ReadOnly = true;
+            this.soluong.Width = 74;
+            // 
+            // giaban
+            // 
+            this.giaban.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.giaban.HeaderText = "Giá bán";
+            this.giaban.Name = "giaban";
+            this.giaban.ReadOnly = true;
+            this.giaban.Width = 69;
             // 
             // duongdung
             // 
@@ -143,22 +180,6 @@
             this.quycach.Name = "quycach";
             this.quycach.ReadOnly = true;
             this.quycach.Width = 250;
-            // 
-            // soluong
-            // 
-            this.soluong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.soluong.HeaderText = "Số lượng";
-            this.soluong.Name = "soluong";
-            this.soluong.ReadOnly = true;
-            this.soluong.Width = 74;
-            // 
-            // giaban
-            // 
-            this.giaban.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.giaban.HeaderText = "Giá bán";
-            this.giaban.Name = "giaban";
-            this.giaban.ReadOnly = true;
-            this.giaban.Width = 69;
             // 
             // gd_thongtintoathuoc
             // 
@@ -190,10 +211,12 @@
         private System.Windows.Forms.Label lbl_idtoathuoc;
         private System.Windows.Forms.Label lbl_ngaylap;
         private System.Windows.Forms.TextBox txt_loidan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idctthuoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idthuoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenthuoc;
-        private System.Windows.Forms.DataGridViewTextBoxColumn duongdung;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quycach;
         private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
         private System.Windows.Forms.DataGridViewTextBoxColumn giaban;
+        private System.Windows.Forms.DataGridViewTextBoxColumn duongdung;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quycach;
     }
 }
