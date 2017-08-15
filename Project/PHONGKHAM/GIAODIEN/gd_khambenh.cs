@@ -85,8 +85,7 @@ namespace PHONGKHAM.GIAODIEN
                     txt_tiencangd.Text = dt_temp.Rows[0]["tiencan_gd"].ToString();
                     btn_editphieukham.Visible = true;
                 } catch (System.Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
+                {                    
                     return false;
                 }                
 
