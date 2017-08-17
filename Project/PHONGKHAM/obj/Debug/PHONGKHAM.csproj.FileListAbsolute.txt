@@ -1,8 +1,6 @@
 S:\Project_Clinic\ryan-repository\Project\PHONGKHAM\bin\Debug\PHONGKHAM.exe.config
 S:\Project_Clinic\ryan-repository\Project\PHONGKHAM\bin\Debug\PHONGKHAM.exe
 S:\Project_Clinic\ryan-repository\Project\PHONGKHAM\bin\Debug\PHONGKHAM.pdb
-S:\Project_Clinic\ryan-repository\Project\PHONGKHAM\bin\Debug\TXT.dll
-S:\Project_Clinic\ryan-repository\Project\PHONGKHAM\bin\Debug\TXT.pdb
 S:\Project_Clinic\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.csprojResolveAssemblyReference.cache
 S:\Project_Clinic\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_dangnhap.resources
 S:\Project_Clinic\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_khambenh.resources
@@ -34,3 +32,15 @@ F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\PHONGKHAM.pdb
 F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.Configure.resources
 F:\GIT\ryan-repository\Project\PHONGKHAM\bin\Debug\config\connection_info.cfg
 F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_themthuoc.resources
+S:\Project_Clinic\ryan-repository\Project\PHONGKHAM\bin\Debug\config\connection_info.cfg
+S:\Project_Clinic\ryan-repository\Project\PHONGKHAM\bin\Debug\ConnDb.dll
+S:\Project_Clinic\ryan-repository\Project\PHONGKHAM\bin\Debug\MySql.Data.dll
+S:\Project_Clinic\ryan-repository\Project\PHONGKHAM\bin\Debug\ConnDb.pdb
+S:\Project_Clinic\ryan-repository\Project\PHONGKHAM\bin\Debug\MySql.Data.xml
+S:\Project_Clinic\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.Configure.resources
+S:\Project_Clinic\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.Gd_kedonthuoc.resources
+S:\Project_Clinic\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_quanlykho.resources
+S:\Project_Clinic\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_sieuam.resources
+S:\Project_Clinic\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_themthuoc.resources
+S:\Project_Clinic\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_thongke.resources
+S:\Project_Clinic\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_thongtintoathuoc.resources
