@@ -36,5 +36,34 @@ namespace NHANBENH.GIAODIEN
                 chkXN.Visible = true;
             }   
         }
+
+        private void chkSA_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!chkSA.Checked)
+            {
+                chklbSA.Visible = false;
+                foreach (int i in chklbSA.CheckedIndices)
+                    chklbSA.SetItemChecked(i, false);
+            }
+            else
+                chklbSA.Visible = true;
+        }
+
+        private void chkXN_CheckedChanged(object sender, EventArgs e)
+        {
+            if (!chkXN.Checked)
+            {
+                chklbXN.Visible = false;
+                foreach (int i in chklbXN.CheckedIndices)
+                    chklbXN.SetItemChecked(i, false);
+            }
+            else
+                chklbXN.Visible = true;
+        }
+
+        private void Gd_nhanbenh_Load(object sender, EventArgs e)
+        {
+            txt_hoten.Focus();
+        }
     }
 }

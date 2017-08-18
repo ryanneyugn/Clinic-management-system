@@ -61,7 +61,7 @@
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(489, 203);
-            this.groupBox1.TabIndex = 1;
+            this.groupBox1.TabIndex = 44;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Danh sách hàng chờ";
             // 
@@ -80,7 +80,7 @@
             this.gv_danhsachbenhnhan.Name = "gv_danhsachbenhnhan";
             this.gv_danhsachbenhnhan.ReadOnly = true;
             this.gv_danhsachbenhnhan.Size = new System.Drawing.Size(489, 180);
-            this.gv_danhsachbenhnhan.TabIndex = 0;
+            this.gv_danhsachbenhnhan.TabIndex = 41;
             this.gv_danhsachbenhnhan.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Gv_danhsachbenhnhan_CellClick);
             // 
             // hoten
@@ -115,10 +115,11 @@
             this.chkXN.Location = new System.Drawing.Point(343, 241);
             this.chkXN.Name = "chkXN";
             this.chkXN.Size = new System.Drawing.Size(90, 17);
-            this.chkXN.TabIndex = 4;
+            this.chkXN.TabIndex = 40;
             this.chkXN.Text = "Xét Nghiệm";
             this.chkXN.UseVisualStyleBackColor = false;
             this.chkXN.Visible = false;
+            this.chkXN.CheckedChanged += new System.EventHandler(this.chkXN_CheckedChanged);
             // 
             // chklbXN
             // 
@@ -147,10 +148,11 @@
             this.chkSA.Location = new System.Drawing.Point(248, 241);
             this.chkSA.Name = "chkSA";
             this.chkSA.Size = new System.Drawing.Size(72, 17);
-            this.chkSA.TabIndex = 3;
+            this.chkSA.TabIndex = 30;
             this.chkSA.Text = "Siêu Âm";
             this.chkSA.UseVisualStyleBackColor = false;
             this.chkSA.Visible = false;
+            this.chkSA.CheckedChanged += new System.EventHandler(this.chkSA_CheckedChanged);
             // 
             // chklbSA
             // 
@@ -183,7 +185,7 @@
             this.gb_ThonTinBenhNhan.Location = new System.Drawing.Point(12, 221);
             this.gb_ThonTinBenhNhan.Name = "gb_ThonTinBenhNhan";
             this.gb_ThonTinBenhNhan.Size = new System.Drawing.Size(230, 209);
-            this.gb_ThonTinBenhNhan.TabIndex = 1;
+            this.gb_ThonTinBenhNhan.TabIndex = 42;
             this.gb_ThonTinBenhNhan.TabStop = false;
             this.gb_ThonTinBenhNhan.Text = "Thông tin bệnh nhân";
             // 
@@ -202,7 +204,7 @@
             this.mtxtTuoi.Mask = "000";
             this.mtxtTuoi.Name = "mtxtTuoi";
             this.mtxtTuoi.Size = new System.Drawing.Size(111, 20);
-            this.mtxtTuoi.TabIndex = 1;
+            this.mtxtTuoi.TabIndex = 3;
             this.mtxtTuoi.TextChanged += new System.EventHandler(this.mtxtTuoi_TextChanged);
             // 
             // btnXoa
@@ -221,7 +223,7 @@
             this.mtxtSDT.Mask = "(99) 0000 0000";
             this.mtxtSDT.Name = "mtxtSDT";
             this.mtxtSDT.Size = new System.Drawing.Size(111, 20);
-            this.mtxtSDT.TabIndex = 3;
+            this.mtxtSDT.TabIndex = 2;
             // 
             // btn_XepVaoHangDoi
             // 
@@ -229,8 +231,8 @@
             this.btn_XepVaoHangDoi.Location = new System.Drawing.Point(19, 137);
             this.btn_XepVaoHangDoi.Name = "btn_XepVaoHangDoi";
             this.btn_XepVaoHangDoi.Size = new System.Drawing.Size(82, 23);
-            this.btn_XepVaoHangDoi.TabIndex = 4;
-            this.btn_XepVaoHangDoi.Text = "Xếp vào hàng đợi";
+            this.btn_XepVaoHangDoi.TabIndex = 5;
+            this.btn_XepVaoHangDoi.Text = "Thêm";
             this.btn_XepVaoHangDoi.UseVisualStyleBackColor = false;
             // 
             // btn_TaoMoi
@@ -248,7 +250,7 @@
             this.txt_diachi.Location = new System.Drawing.Point(95, 52);
             this.txt_diachi.Name = "txt_diachi";
             this.txt_diachi.Size = new System.Drawing.Size(111, 20);
-            this.txt_diachi.TabIndex = 2;
+            this.txt_diachi.TabIndex = 1;
             // 
             // txt_hoten
             // 
@@ -297,6 +299,7 @@
             this.Controls.Add(this.chklbSA);
             this.Name = "Gd_nhanbenh";
             this.Text = "Nhận bệnh";
+            this.Load += new System.EventHandler(this.Gd_nhanbenh_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gv_danhsachbenhnhan)).EndInit();
             this.gb_ThonTinBenhNhan.ResumeLayout(false);
