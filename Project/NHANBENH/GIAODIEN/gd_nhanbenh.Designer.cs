@@ -254,6 +254,8 @@
             // 
             // txt_hoten
             // 
+            this.txt_hoten.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
+            this.txt_hoten.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
             this.txt_hoten.Location = new System.Drawing.Point(95, 23);
             this.txt_hoten.Name = "txt_hoten";
             this.txt_hoten.Size = new System.Drawing.Size(111, 20);

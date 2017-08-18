@@ -16,15 +16,6 @@ namespace ConnDb
         public MySqlCommand Command { get => command; set => command = value; }
         public MySqlConnection Connection { get => connection; set => connection = value; }
 
-        public ConnData()
-        {            
-            server = "localhost";
-            database = "phongkham";
-            uid = "root";
-            password = "1";
-            Initialize(server, database, uid, password);        
-        }
-
         public ConnData(string server, string database, string uid, string password)
         {
             Initialize(server, database, uid, password);
