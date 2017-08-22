@@ -105,6 +105,7 @@
             this.Controls.Add(this.btn_thongke);
             this.Controls.Add(this.btn_khambenh);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "gd_trangchu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{31C58EAA-348B-41E9-8E9C-112AD714ABC2}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>PHONGKHAM</RootNamespace>
-    <AssemblyName>PHONGKHAM</AssemblyName>
+    <RootNamespace>CMS</RootNamespace>
+    <AssemblyName>CMS</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -25,10 +25,11 @@
     <MapFileExtensions>true</MapFileExtensions>
     <ProductName>Clinic CS</ProductName>
     <PublisherName>The Unknowns</PublisherName>
+    <SuiteName>TCH</SuiteName>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>6</ApplicationRevision>
+    <ApplicationRevision>9</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <UseApplicationTrust>false</UseApplicationTrust>
+    <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -56,7 +57,8 @@
     <ManifestCertificateThumbprint>B98F14BF92A09442D1C7BD25863B3418D675EC7E</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>PHONGKHAM_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -66,6 +68,9 @@
   </PropertyGroup>
   <PropertyGroup>
     <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>clinic-icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
@@ -209,6 +214,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="clinic-icon.ico" />
     <Content Include="config\connection_info.cfg">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

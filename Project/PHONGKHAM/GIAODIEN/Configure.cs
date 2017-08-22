@@ -6,9 +6,12 @@ namespace PHONGKHAM.GIAODIEN
 {
     public partial class Configure : Form
     {
+        private ToolTip tt;
+
         public Configure()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            tt = new ToolTip();
         }
 
         private void btn_cancel_Click(object sender, EventArgs e)
@@ -29,6 +32,26 @@ namespace PHONGKHAM.GIAODIEN
             sw.Close();
 
             Close();
+        }
+
+        private void Configure_Load(object sender, EventArgs e)
+        {
+            string dir = System.IO.Directory.GetCurrentDirectory();
+            string path = Path.Combine(dir, "config/connection_info.cfg");
+
+            string[] info = File.ReadAllLines(path);
+
+            showToolTip("Current Server: " + info[0], txt_sv);
+            showToolTip("Current UID: " + info[2], txt_uid);
+            showToolTip("Current Password: " + info[3], txt_pw);
+            showToolTip("Current Database: " + info[1], txt_db);
+        }
+
+        private void showToolTip(string message, Control control)
+        {
+            tt.IsBalloon = true;
+            tt.InitialDelay = 1;            
+            tt.SetToolTip(control, message);            
         }
     }
 }

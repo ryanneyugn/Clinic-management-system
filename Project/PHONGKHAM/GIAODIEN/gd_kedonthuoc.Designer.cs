@@ -50,12 +50,21 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_exit = new System.Windows.Forms.Button();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.txt_songay = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.txt_tongtien = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_loidan = new System.Windows.Forms.RichTextBox();
             this.dtgv_donthuoc = new System.Windows.Forms.DataGridView();
+            this.idthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.solan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moilan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_del = new System.Windows.Forms.Button();
             this.btn_print = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -73,15 +82,6 @@
             this.btn_add = new System.Windows.Forms.Button();
             this.lbl_digitalclock = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.idthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.solan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.moilan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label10 = new System.Windows.Forms.Label();
-            this.txt_songay = new System.Windows.Forms.TextBox();
             this.lbl_idpk = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -254,6 +254,22 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "Đơn thuốc";
             // 
+            // txt_songay
+            // 
+            this.txt_songay.Location = new System.Drawing.Point(86, 258);
+            this.txt_songay.Name = "txt_songay";
+            this.txt_songay.Size = new System.Drawing.Size(100, 20);
+            this.txt_songay.TabIndex = 7;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(6, 261);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(76, 13);
+            this.label10.TabIndex = 6;
+            this.label10.Text = "Số ngày dùng:";
+            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -266,7 +282,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(444, 228);
+            this.label8.Location = new System.Drawing.Point(444, 232);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(30, 13);
             this.label8.TabIndex = 3;
@@ -282,7 +298,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(239, 228);
+            this.label7.Location = new System.Drawing.Point(239, 232);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(55, 13);
             this.label7.TabIndex = 1;
@@ -342,6 +358,61 @@
             this.dtgv_donthuoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgv_donthuoc.Size = new System.Drawing.Size(468, 200);
             this.dtgv_donthuoc.TabIndex = 0;
+            // 
+            // idthuoc
+            // 
+            this.idthuoc.HeaderText = "ID";
+            this.idthuoc.Name = "idthuoc";
+            this.idthuoc.ReadOnly = true;
+            this.idthuoc.Visible = false;
+            // 
+            // tenthuoc
+            // 
+            this.tenthuoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.tenthuoc.HeaderText = "Tên thuốc";
+            this.tenthuoc.Name = "tenthuoc";
+            this.tenthuoc.ReadOnly = true;
+            this.tenthuoc.Width = 75;
+            // 
+            // sl
+            // 
+            this.sl.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.sl.HeaderText = "Số lượng";
+            this.sl.Name = "sl";
+            this.sl.ReadOnly = true;
+            this.sl.Width = 69;
+            // 
+            // dongia
+            // 
+            this.dongia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dongia.HeaderText = "Đơn giá";
+            this.dongia.Name = "dongia";
+            this.dongia.ReadOnly = true;
+            this.dongia.Width = 64;
+            // 
+            // solan
+            // 
+            this.solan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.solan.HeaderText = "Số lần trong ngày";
+            this.solan.Name = "solan";
+            this.solan.ReadOnly = true;
+            this.solan.Width = 85;
+            // 
+            // moilan
+            // 
+            this.moilan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.moilan.HeaderText = "Mỗi lần dùng";
+            this.moilan.Name = "moilan";
+            this.moilan.ReadOnly = true;
+            this.moilan.Width = 86;
+            // 
+            // tong
+            // 
+            this.tong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.tong.HeaderText = "Tổng";
+            this.tong.Name = "tong";
+            this.tong.ReadOnly = true;
+            this.tong.Width = 57;
             // 
             // btn_del
             // 
@@ -547,77 +618,6 @@
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // idthuoc
-            // 
-            this.idthuoc.HeaderText = "ID";
-            this.idthuoc.Name = "idthuoc";
-            this.idthuoc.ReadOnly = true;
-            this.idthuoc.Visible = false;
-            // 
-            // tenthuoc
-            // 
-            this.tenthuoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.tenthuoc.HeaderText = "Tên thuốc";
-            this.tenthuoc.Name = "tenthuoc";
-            this.tenthuoc.ReadOnly = true;
-            this.tenthuoc.Width = 81;
-            // 
-            // sl
-            // 
-            this.sl.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.sl.HeaderText = "Số lượng";
-            this.sl.Name = "sl";
-            this.sl.ReadOnly = true;
-            this.sl.Width = 74;
-            // 
-            // dongia
-            // 
-            this.dongia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dongia.HeaderText = "Đơn giá";
-            this.dongia.Name = "dongia";
-            this.dongia.ReadOnly = true;
-            this.dongia.Width = 69;
-            // 
-            // solan
-            // 
-            this.solan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.solan.HeaderText = "Số lần trong ngày";
-            this.solan.Name = "solan";
-            this.solan.ReadOnly = true;
-            this.solan.Width = 85;
-            // 
-            // moilan
-            // 
-            this.moilan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.moilan.HeaderText = "Mỗi lần dùng";
-            this.moilan.Name = "moilan";
-            this.moilan.ReadOnly = true;
-            this.moilan.Width = 86;
-            // 
-            // tong
-            // 
-            this.tong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.tong.HeaderText = "Tổng";
-            this.tong.Name = "tong";
-            this.tong.ReadOnly = true;
-            this.tong.Width = 57;
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 261);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(76, 13);
-            this.label10.TabIndex = 6;
-            this.label10.Text = "Số ngày dùng:";
-            // 
-            // txt_songay
-            // 
-            this.txt_songay.Location = new System.Drawing.Point(86, 258);
-            this.txt_songay.Name = "txt_songay";
-            this.txt_songay.Size = new System.Drawing.Size(100, 20);
-            this.txt_songay.TabIndex = 7;
-            // 
             // lbl_idpk
             // 
             this.lbl_idpk.AutoSize = true;
@@ -636,7 +636,9 @@
             this.Controls.Add(this.lbl_digitalclock);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Gd_kedonthuoc";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kê đơn thuốc";
             this.Load += new System.EventHandler(this.Gd_kedonthuoc_Load);
             this.groupBox1.ResumeLayout(false);

@@ -84,7 +84,7 @@ namespace PHONGKHAM.GIAODIEN
                     txt_tiencanbn.Text = dt_temp.Rows[0]["tiencan_bt"].ToString();
                     txt_tiencangd.Text = dt_temp.Rows[0]["tiencan_gd"].ToString();
                     btn_editphieukham.Visible = true;
-                } catch (System.Exception ex)
+                } catch 
                 {                    
                     return false;
                 }                
@@ -386,9 +386,9 @@ namespace PHONGKHAM.GIAODIEN
                     db.CloseConnection();
                     return;
                 }
-            } catch(System.Exception ex)
+            } catch
             {
-
+                return;
             }                       
         }
 
@@ -424,9 +424,9 @@ namespace PHONGKHAM.GIAODIEN
                 }
 
                 updategridview_lskb(idbn);
-            } catch (System.Exception ex)
+            } catch
             {
-
+                return;
             }
         }
     }
