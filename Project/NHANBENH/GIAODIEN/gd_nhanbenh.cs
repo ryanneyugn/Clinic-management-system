@@ -189,59 +189,69 @@ namespace NHANBENH.GIAODIEN
         }
         private void btnXoa_Click(object sender, EventArgs e)
         {
-
+            string sdt = gv_danhsachcho.Rows[gv_danhsachcho.SelectedRows[0].Index].Cells[2].Value.ToString();
+            //MessageBox.Show(sdt);
+            string qr = "select idBN from benhnhan where phone_num like '" + sdt + "';";
+            DataTable lst_id = db.ExecuteReader(qr);
+            string idBN = String.Empty;
+            if (lst_id.Rows.Count > 0)
+            {
+                idBN = lst_id.Rows[0]["idBN"].ToString();
+            }
+            //
+            db.OpenConnection();
+            string qr1 = "delete from danhsachcho where idBN="+idBN+";";
+            db.ExecuteNonQuery(qr1);
+            db.CloseConnection();
+            update_GV();
+            ResetAll();
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
         {
 
             db.OpenConnection();
-            checkExist();
-            string idBN = getIdBN();
-
-            
-            
-            string sieu_am = "";
-            string xet_nghiem = "";
-            for(int i = 0; i< chklbSA.Items.Count; i++)
-            {
-                if (chklbSA.GetItemChecked(i))
-                    sieu_am += (string)chklbSA.Items[i] + "/";
-            }
-            for(int j = 0; j < chklbXN.Items.Count; j++)
-            {
-                if (chklbXN.GetItemChecked(j))
-                    xet_nghiem += (string)chklbXN.Items[j] + "/";
-            }
-
-            string qr4 = "insert into danhsachcho(idBN, khambenh, sieuam, xetnghiem) values(" + idBN + ", '" + "asdasd" + "', '" + sieu_am + "', '" + xet_nghiem + "')";
-            //MessageBox.Show(sieu_am);
-            db.ExecuteNonQuery(qr4);
-            db.CloseConnection();
-            update_GV();
-        }
-        private void checkExist()
-        {
+            //check new customer
             string qr = "select * from benhnhan where ten like '" + txt_hoten.Text + "' and address like '" + txt_diachi.Text + "' and phone_num like '" + txtSDT.Text + "' and tuoi like '" + txtTuoi.Text + "'";
             if (!(db.ExecuteReader(qr).Rows.Count > 0))
             {
                 string qr2 = "insert into benhnhan(ten, address, phone_num, tuoi, PARA, nghe_nghiep, tiencan_gd, tiencan_bt) values('" + txt_hoten.Text + "', '" + txt_diachi.Text + "', '" + txtSDT.Text + "', " + txtTuoi.Text + ", '', '', '', '')";
                 db.ExecuteNonQuery(qr2);
             }
-        }
-        private string getIdBN()
-        {
-            string qr3 = "select idBN from benhnhan where phone_num like " + txtSDT.Text + "";
+            //get IdBN 
+            string qr3 = "select idBN from benhnhan where phone_num like '" + txtSDT.Text + "';";
             DataTable lst_id = db.ExecuteReader(qr3);
-            StringBuilder id = new StringBuilder();
-            foreach (DataRow r in lst_id.Rows)
+            string idBN = String.Empty;
+            if(lst_id.Rows.Count > 0)
             {
-                object[] arr = r.ItemArray;
-                id.Append(Convert.ToString(arr[0]));
+                idBN = lst_id.Rows[0]["idBN"].ToString();
             }
-            return id.ToString();
+            //
+            string sieu_am = "";
+            string xet_nghiem = "";
+            for(int i = 0; i< chklbSA.Items.Count; i++)
+            {
+                if (chklbSA.GetItemChecked(i))
+                    sieu_am += (string)chklbSA.Items[i] + ".";
+            }
+            for(int j = 0; j < chklbXN.Items.Count; j++)
+            {
+                if (chklbXN.GetItemChecked(j))
+                    xet_nghiem += (string)chklbXN.Items[j] + ".";
+            }
+
+            string qr4 = "insert into danhsachcho(idBN, khambenh, sieuam, xetnghiem) values(" + idBN + ", '', '" + sieu_am + "', '" + xet_nghiem + "')";
+            
+            db.ExecuteNonQuery(qr4);
+            db.CloseConnection();
+            update_GV();
+            ResetAll();
         }
         private void btn_Reset_Click(object sender, EventArgs e)
+        {
+            ResetAll();
+        }
+        private void ResetAll()
         {
             txt_hoten.Text = "";
             txt_diachi.Text = "";

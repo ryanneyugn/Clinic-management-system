@@ -75,11 +75,12 @@
             this.diachi,
             this.sdt,
             this.tuoi});
-            this.gv_danhsachcho.Location = new System.Drawing.Point(0, 19);
+            this.gv_danhsachcho.Location = new System.Drawing.Point(19, 19);
             this.gv_danhsachcho.MultiSelect = false;
             this.gv_danhsachcho.Name = "gv_danhsachcho";
             this.gv_danhsachcho.ReadOnly = true;
-            this.gv_danhsachcho.Size = new System.Drawing.Size(489, 180);
+            this.gv_danhsachcho.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.gv_danhsachcho.Size = new System.Drawing.Size(443, 180);
             this.gv_danhsachcho.TabIndex = 41;
             this.gv_danhsachcho.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Gv_danhsachbenhnhan_CellClick);
             // 
