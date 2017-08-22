@@ -26,3 +26,4 @@ S:\Project_Clinic\ryan-repository\Project\NHANBENH\bin\Debug\ConnDb.dll
 S:\Project_Clinic\ryan-repository\Project\NHANBENH\bin\Debug\MySql.Data.dll
 S:\Project_Clinic\ryan-repository\Project\NHANBENH\bin\Debug\ConnDb.pdb
 S:\Project_Clinic\ryan-repository\Project\NHANBENH\bin\Debug\MySql.Data.xml
+S:\Project_Clinic\ryan-repository\Project\NHANBENH\bin\Debug\config\connection_info.cfg
