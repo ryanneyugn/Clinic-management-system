@@ -199,6 +199,7 @@
             this.txtTuoi.Size = new System.Drawing.Size(111, 20);
             this.txtTuoi.TabIndex = 3;
             this.txtTuoi.TextChanged += new System.EventHandler(this.txtTuoi_TextChanged_1);
+            this.txtTuoi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTuoi_KeyDown);
             this.txtTuoi.Leave += new System.EventHandler(this.txtTuoi_Leave);
             // 
             // txtSDT
@@ -210,6 +211,7 @@
             this.txtSDT.Size = new System.Drawing.Size(111, 20);
             this.txtSDT.TabIndex = 2;
             this.txtSDT.TextChanged += new System.EventHandler(this.txtSDT_TextChanged);
+            this.txtSDT.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSDT_KeyDown);
             this.txtSDT.Leave += new System.EventHandler(this.txtSDT_Leave);
             // 
             // label2
@@ -263,6 +265,7 @@
             this.txt_diachi.Size = new System.Drawing.Size(111, 20);
             this.txt_diachi.TabIndex = 1;
             this.txt_diachi.TextChanged += new System.EventHandler(this.txt_diachi_TextChanged);
+            this.txt_diachi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_diachi_KeyDown);
             // 
             // txt_hoten
             // 
@@ -273,6 +276,7 @@
             this.txt_hoten.Size = new System.Drawing.Size(111, 20);
             this.txt_hoten.TabIndex = 0;
             this.txt_hoten.TextChanged += new System.EventHandler(this.txt_hoten_TextChanged);
+            this.txt_hoten.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txt_hoten_KeyDown);
             // 
             // label4
             // 

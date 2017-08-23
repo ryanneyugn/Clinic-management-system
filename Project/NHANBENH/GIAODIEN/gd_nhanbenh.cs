@@ -142,6 +142,7 @@ namespace NHANBENH.GIAODIEN
 
         private void txt_hoten_TextChanged(object sender, EventArgs e)
         {
+            //logic
             if (!String.IsNullOrEmpty(txtTuoi.Text) && !String.IsNullOrEmpty(txtSDT.Text) && !String.IsNullOrEmpty(txt_diachi.Text) && !String.IsNullOrEmpty(txt_hoten.Text))
             {
                 chkSA.Enabled = true;
@@ -189,22 +190,30 @@ namespace NHANBENH.GIAODIEN
         }
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            string sdt = gv_danhsachcho.Rows[gv_danhsachcho.SelectedRows[0].Index].Cells[2].Value.ToString();
-            //MessageBox.Show(sdt);
-            string qr = "select idBN from benhnhan where phone_num like '" + sdt + "';";
-            DataTable lst_id = db.ExecuteReader(qr);
-            string idBN = String.Empty;
-            if (lst_id.Rows.Count > 0)
+            DialogResult dialogResult = MessageBox.Show("Bạn có xóa?", "Xác nhận", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-                idBN = lst_id.Rows[0]["idBN"].ToString();
+                try
+                {
+                    string sdt = gv_danhsachcho.Rows[gv_danhsachcho.SelectedRows[0].Index].Cells[2].Value.ToString();
+
+                    string qr = "select idBN from benhnhan where phone_num like '" + sdt + "';";
+                    DataTable lst_id = db.ExecuteReader(qr);
+                    string idBN = String.Empty;
+                    if (lst_id.Rows.Count > 0)
+                    {
+                        idBN = lst_id.Rows[0]["idBN"].ToString();
+                    }
+                    //
+                    db.OpenConnection();
+                    string qr1 = "delete from danhsachcho where idBN=" + idBN + ";";
+                    db.ExecuteNonQuery(qr1);
+                    db.CloseConnection();
+                    update_GV();
+                    ResetAll();
+                }
+                catch { }
             }
-            //
-            db.OpenConnection();
-            string qr1 = "delete from danhsachcho where idBN="+idBN+";";
-            db.ExecuteNonQuery(qr1);
-            db.CloseConnection();
-            update_GV();
-            ResetAll();
         }
 
         private void btn_Them_Click(object sender, EventArgs e)
@@ -257,6 +266,84 @@ namespace NHANBENH.GIAODIEN
             txt_diachi.Text = "";
             txtTuoi.Text = "";
             txtSDT.Text = "";
+        }
+
+        private void txt_hoten_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtTuoi.Text) && !String.IsNullOrEmpty(txtSDT.Text) && !String.IsNullOrEmpty(txt_diachi.Text) && !String.IsNullOrEmpty(txt_hoten.Text))
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    DialogResult dialogResult = MessageBox.Show("Bạn có chỉnh sửa?", "Xác nhận", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        //int curIndex = gv_danhsachcho.CurrentRow.Index;
+                        string qr = "update benhnhan set ten = '" + txt_hoten.Text + "' where phone_num like '" + txtSDT.Text + "'";
+                        db.OpenConnection();
+                        db.ExecuteNonQuery(qr);
+                        db.CloseConnection();
+                        update_GV();
+                        //gv_danhsachcho.CurrentCell
+                    }
+                }
+            }
+        }
+
+        private void txt_diachi_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtTuoi.Text) && !String.IsNullOrEmpty(txtSDT.Text) && !String.IsNullOrEmpty(txt_diachi.Text) && !String.IsNullOrEmpty(txt_hoten.Text))
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    DialogResult dialogResult = MessageBox.Show("Bạn có chỉnh sửa?", "Xác nhận", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        string qr = "update benhnhan set address = '" + txt_diachi.Text + "' where phone_num like '" + txtSDT.Text + "'";
+                        db.OpenConnection();
+                        db.ExecuteNonQuery(qr);
+                        db.CloseConnection();
+                        update_GV();
+                    }
+                }
+            }
+        }
+
+        private void txtSDT_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtTuoi.Text) && !String.IsNullOrEmpty(txtSDT.Text) && !String.IsNullOrEmpty(txt_diachi.Text) && !String.IsNullOrEmpty(txt_hoten.Text))
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    DialogResult dialogResult = MessageBox.Show("Bạn có chỉnh sửa?", "Xác nhận", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        string qr = "update benhnhan set phone_num = '" + txtSDT.Text + "' where address like '" + txt_diachi.Text + "'";
+                        db.OpenConnection();
+                        db.ExecuteNonQuery(qr);
+                        db.CloseConnection();
+                        update_GV();
+                    }
+                }
+            }
+        }
+
+        private void txtTuoi_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtTuoi.Text) && !String.IsNullOrEmpty(txtSDT.Text) && !String.IsNullOrEmpty(txt_diachi.Text) && !String.IsNullOrEmpty(txt_hoten.Text))
+            {
+                if (e.KeyCode == Keys.Enter)
+                {
+                    DialogResult dialogResult = MessageBox.Show("Bạn có chỉnh sửa?", "Xác nhận", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        string qr = "update benhnhan set tuoi = '" + txtTuoi.Text + "' where phone_num like '" + txtSDT.Text + "'";
+                        db.OpenConnection();
+                        db.ExecuteNonQuery(qr);
+                        db.CloseConnection();
+                        update_GV();
+                    }
+                }
+            }
         }
     }
 }
