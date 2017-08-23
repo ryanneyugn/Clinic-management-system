@@ -28,13 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gd_thongtintoathuoc));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.lbl_tongtien = new System.Windows.Forms.Label();
-            this.lbl_songay = new System.Windows.Forms.Label();
-            this.lbl_idtoathuoc = new System.Windows.Forms.Label();
-            this.lbl_ngaylap = new System.Windows.Forms.Label();
-            this.txt_loidan = new System.Windows.Forms.TextBox();
             this.idctthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.idthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tenthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,6 +37,12 @@
             this.giaban = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.duongdung = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.quycach = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_tongtien = new System.Windows.Forms.Label();
+            this.lbl_songay = new System.Windows.Forms.Label();
+            this.lbl_idtoathuoc = new System.Windows.Forms.Label();
+            this.lbl_ngaylap = new System.Windows.Forms.Label();
+            this.txt_loidan = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,60 +70,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(664, 209);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(259, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Lời dặn:";
-            // 
-            // lbl_tongtien
-            // 
-            this.lbl_tongtien.AutoSize = true;
-            this.lbl_tongtien.Location = new System.Drawing.Point(129, 12);
-            this.lbl_tongtien.Name = "lbl_tongtien";
-            this.lbl_tongtien.Size = new System.Drawing.Size(48, 13);
-            this.lbl_tongtien.TabIndex = 2;
-            this.lbl_tongtien.Text = "tong tien";
-            // 
-            // lbl_songay
-            // 
-            this.lbl_songay.AutoSize = true;
-            this.lbl_songay.Location = new System.Drawing.Point(12, 49);
-            this.lbl_songay.Name = "lbl_songay";
-            this.lbl_songay.Size = new System.Drawing.Size(71, 13);
-            this.lbl_songay.TabIndex = 3;
-            this.lbl_songay.Text = "so ngay dung";
-            // 
-            // lbl_idtoathuoc
-            // 
-            this.lbl_idtoathuoc.AutoSize = true;
-            this.lbl_idtoathuoc.Location = new System.Drawing.Point(12, 12);
-            this.lbl_idtoathuoc.Name = "lbl_idtoathuoc";
-            this.lbl_idtoathuoc.Size = new System.Drawing.Size(18, 13);
-            this.lbl_idtoathuoc.TabIndex = 4;
-            this.lbl_idtoathuoc.Text = "ID";
-            // 
-            // lbl_ngaylap
-            // 
-            this.lbl_ngaylap.AutoSize = true;
-            this.lbl_ngaylap.Location = new System.Drawing.Point(129, 49);
-            this.lbl_ngaylap.Name = "lbl_ngaylap";
-            this.lbl_ngaylap.Size = new System.Drawing.Size(47, 13);
-            this.lbl_ngaylap.TabIndex = 5;
-            this.lbl_ngaylap.Text = "ngay lap";
-            // 
-            // txt_loidan
-            // 
-            this.txt_loidan.Location = new System.Drawing.Point(310, 9);
-            this.txt_loidan.Multiline = true;
-            this.txt_loidan.Name = "txt_loidan";
-            this.txt_loidan.ReadOnly = true;
-            this.txt_loidan.Size = new System.Drawing.Size(366, 72);
-            this.txt_loidan.TabIndex = 6;
             // 
             // idctthuoc
             // 
@@ -181,6 +128,60 @@
             this.quycach.ReadOnly = true;
             this.quycach.Width = 250;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(259, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(45, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "Lời dặn:";
+            // 
+            // lbl_tongtien
+            // 
+            this.lbl_tongtien.AutoSize = true;
+            this.lbl_tongtien.Location = new System.Drawing.Point(129, 12);
+            this.lbl_tongtien.Name = "lbl_tongtien";
+            this.lbl_tongtien.Size = new System.Drawing.Size(48, 13);
+            this.lbl_tongtien.TabIndex = 2;
+            this.lbl_tongtien.Text = "tong tien";
+            // 
+            // lbl_songay
+            // 
+            this.lbl_songay.AutoSize = true;
+            this.lbl_songay.Location = new System.Drawing.Point(12, 49);
+            this.lbl_songay.Name = "lbl_songay";
+            this.lbl_songay.Size = new System.Drawing.Size(71, 13);
+            this.lbl_songay.TabIndex = 3;
+            this.lbl_songay.Text = "so ngay dung";
+            // 
+            // lbl_idtoathuoc
+            // 
+            this.lbl_idtoathuoc.AutoSize = true;
+            this.lbl_idtoathuoc.Location = new System.Drawing.Point(12, 12);
+            this.lbl_idtoathuoc.Name = "lbl_idtoathuoc";
+            this.lbl_idtoathuoc.Size = new System.Drawing.Size(18, 13);
+            this.lbl_idtoathuoc.TabIndex = 4;
+            this.lbl_idtoathuoc.Text = "ID";
+            // 
+            // lbl_ngaylap
+            // 
+            this.lbl_ngaylap.AutoSize = true;
+            this.lbl_ngaylap.Location = new System.Drawing.Point(129, 49);
+            this.lbl_ngaylap.Name = "lbl_ngaylap";
+            this.lbl_ngaylap.Size = new System.Drawing.Size(47, 13);
+            this.lbl_ngaylap.TabIndex = 5;
+            this.lbl_ngaylap.Text = "ngay lap";
+            // 
+            // txt_loidan
+            // 
+            this.txt_loidan.Location = new System.Drawing.Point(310, 9);
+            this.txt_loidan.Multiline = true;
+            this.txt_loidan.Name = "txt_loidan";
+            this.txt_loidan.ReadOnly = true;
+            this.txt_loidan.Size = new System.Drawing.Size(366, 72);
+            this.txt_loidan.TabIndex = 6;
+            // 
             // gd_thongtintoathuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,6 +194,7 @@
             this.Controls.Add(this.lbl_tongtien);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "gd_thongtintoathuoc";
             this.Text = "Thông tin toa thuốc";
             this.Load += new System.EventHandler(this.gd_thongtintoathuoc_Load);

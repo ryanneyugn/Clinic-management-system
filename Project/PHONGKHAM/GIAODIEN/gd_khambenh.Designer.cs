@@ -738,6 +738,7 @@
             this.Controls.Add(this.lbl_tenbs);
             this.Controls.Add(this.groupbox_dsbn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(823, 626);
             this.MinimumSize = new System.Drawing.Size(823, 626);

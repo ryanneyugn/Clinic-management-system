@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gd_themthuoc));
             this.txt_soluong = new System.Windows.Forms.TextBox();
             this.txt_hsd = new System.Windows.Forms.TextBox();
             this.txt_giaban = new System.Windows.Forms.TextBox();
@@ -74,6 +75,7 @@
             // 
             // txt_tenthuoc
             // 
+            this.txt_tenthuoc.AllowDrop = true;
             this.txt_tenthuoc.Location = new System.Drawing.Point(104, 19);
             this.txt_tenthuoc.Name = "txt_tenthuoc";
             this.txt_tenthuoc.Size = new System.Drawing.Size(185, 20);
@@ -179,6 +181,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.Name = "gd_themthuoc";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

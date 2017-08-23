@@ -1,7 +1,6 @@
 ﻿using System.Windows.Forms;
 using System.Data;
 using ConnDb;
-using MySql.Data.MySqlClient;
 
 namespace PHONGKHAM.GIAODIEN
 {
@@ -119,16 +118,19 @@ namespace PHONGKHAM.GIAODIEN
 
         private void btn_print_Click(object sender, System.EventArgs e)
         {
-            string query = "insert into toathuoc (ngay_lap, so_ngay, loi_dan, tong_tien, idPhieuKham) values ('" + lbl_digitalclock.Text + "', '" + txt_songay.Text + "', '" + txt_loidan.Text + "', '" + txt_tongtien.Text + "', '" + idpk + "')";
+            string sqldatetime = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
+            string query = "insert into toathuoc (ngay_lap, so_ngay, loi_dan, tong_tien, idPhieuKham) values ('" + sqldatetime  + "', '" + txt_songay.Text + "', '" + txt_loidan.Text + "', '" + txt_tongtien.Text + "', '" + idpk + "')";
 
             try
             {
                 db.OpenConnection();
                 db.ExecuteNonQuery(query);
                 db.CloseConnection();
+                Close();
             } catch(System.Exception ex)
             {
                 MessageBox.Show(ex.Message);
+                db.CloseConnection();
             }
 
         }        
@@ -137,7 +139,7 @@ namespace PHONGKHAM.GIAODIEN
         {
             if (txt_timkiem.Text == "")
             {
-                update_gridview_dsthuoc("select* from thuoc");
+                update_gridview_dsthuoc("select * from thuoc");
                 txt_timkiem.Text = "search...";
             }                
         }
