@@ -1,218 +1,262 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
+using System.Data;
+using System.Text;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
-using TXT;
-using ConnDb;
 
-namespace Project.GIAODIEN
+namespace NHANBENH.GIAODIEN
 {
     public partial class Gd_nhanbenh : Form
     {
+        private ConnDb.ConnData db;
         public Gd_nhanbenh()
         {
             InitializeComponent();
+            string path = System.IO.Path.Combine(System.IO.Directory.GetCurrentDirectory(), "config/connection_info.cfg");
+            string[] coninfo = System.IO.File.ReadAllLines(path);
+            db = new ConnDb.ConnData(coninfo[0], coninfo[1], coninfo[2], coninfo[3]);
+            update_GV();
+            autoCompleteText();
         }
-        
-        /// <summary>
-        /// Reset data 
-        /// </summary>
-        void ResetAll()
+        private void update_GV()
         {
-            txt_hoten.Clear();
-            txt_diachi.Clear();
-            mtxtSDT.Clear();
-            mtxtNamSinh.Clear();
+            gv_danhsachcho.Rows.Clear();
+            db.OpenConnection();
+            string qr = "select ten, address, phone_num, tuoi from benhnhan, danhsachcho where benhnhan.idBN = danhsachcho.idBN";
+            DataTable ds_cho = db.ExecuteReader(qr);
+            foreach(DataRow r in ds_cho.Rows)
+            {
+                gv_danhsachcho.Rows.Add(r.ItemArray);
+            }
+            db.CloseConnection();
         }
-
-        private void Btn_XepVaoHangDoi_Click(object sender, EventArgs e)
-        {
-            string hoten = txt_hoten.Text;
-            string sdt = mtxtSDT.Text;
-            string dvSA = "null";
-            string dvXN = "null";
-            string dvKB = "null";
-            //file.txt
-            TXTOBJECT dsNB = new TXTOBJECT("F:/GIT/dsbn.txt");
-            if (txt_hoten.Text.Equals(""))
-            {
-                return;
-            }
-            if (chkKB.Checked)
-            {
-                dvKB = "true";
-            }
-            else
-            {
-                dvKB = "null";
-            }
-            if (chkSA.Checked)
-            {
-                foreach(string tmp in chklbSA.CheckedItems)
-                {
-                    if(dvSA.Equals("null"))
-                        dvSA = tmp;
-                    else
-                        dvSA += "," + tmp;
-                }
-            }
-            else
-            {
-                dvSA = "null";
-            }
-            if (chkXN.Checked)
-            {
-                foreach (string tmp in chklbXetNghiem.CheckedItems)
-                {
-                    if (dvXN.Equals("null"))
-                        dvXN = tmp;
-                    else
-                        dvXN += "," + tmp;
-                }
-            }
-            else
-            {
-                dvXN = "null";
-            }
-            string[] row = { hoten, sdt, dvKB , dvSA, dvXN };
-            //write file txt
-            dsNB.writeAppend(hoten, sdt, dvKB, dvSA, dvXN);
-            //display data
-            gv_danhsachbenhnhan.Rows.Add(row);
-            ResetAll();
-        }
-
-        private void Btn_Reset_Click(object sender, EventArgs e)
-        {
-            ResetAll();
-        }
-
         private void Gv_danhsachbenhnhan_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
             {
-                txt_hoten.Text = gv_danhsachbenhnhan.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txt_hoten.Text = gv_danhsachcho.Rows[e.RowIndex].Cells[0].Value.ToString();
+                txt_diachi.Text = gv_danhsachcho.Rows[e.RowIndex].Cells[1].Value.ToString();
+                txtSDT.Text = gv_danhsachcho.Rows[e.RowIndex].Cells[2].Value.ToString();
+                txtTuoi.Text = gv_danhsachcho.Rows[e.RowIndex].Cells[3].Value.ToString();
             }
             catch (Exception){
 
             }
-        }
-        private void DeleteLineTxt(int i)
+        }   
+        private void chkSA_CheckedChanged(object sender, EventArgs e)
         {
-            TXTOBJECT a = new TXTOBJECT("F:/GIT/dsbn.txt");
-            string[] listbn = a.read();List<string> ds = new List<string>();
-            foreach (string str in listbn)
+            if (!chkSA.Checked)
             {
-                ds.Add(str);
-            }
-            ds.RemoveAt(i);
-            //write again
-            a.writeOver(ds);
-        }
-
-        private void Txt_hoten_TextChanged(object sender, EventArgs e)
-        {
-            if (txt_hoten.Text.Equals(""))
-            {
-                chkSA.Visible = false;
-                chkSA.Checked = false;
-                chkXN.Visible = false;
-                chkXN.Checked = false;
-                chkKB.Visible = false;
-                chkKB.Checked = false;                
+                chklbSA.Enabled = false;
+                foreach (int i in chklbSA.CheckedIndices)
+                    chklbSA.SetItemChecked(i, false);
             }
             else
-            {
-                chkSA.Visible = true;
-                chkXN.Visible = true;
-                chkKB.Visible = true;
-            }   
+                chklbSA.Enabled = true;
         }
 
-        private void Btn_Tao_Click(object sender, EventArgs e)
-        {                        
-            ConnData con = new ConnData();
-            if (!con.OpenConnection())
-                MessageBox.Show(con.ShowErrorMessage());
-            string query = "insert into benhnhan (ten, nam_sinh, address, phone_num) values('"+txt_hoten.Text+"', '"+mtxtNamSinh.Text+ "', '" + txt_diachi.Text + "', '" + mtxtSDT.Text + "')";
-            con.ExecuteNonQuery(query);
-            if (!con.CloseConnection())
-                MessageBox.Show(con.ShowErrorMessage());
-        }
-
-        private void BtnXoa_Click(object sender, EventArgs e)
+        private void chkXN_CheckedChanged(object sender, EventArgs e)
         {
-            try
+            if (!chkXN.Checked)
             {
-                int currentRow = gv_danhsachbenhnhan.CurrentCell.RowIndex;
-                gv_danhsachbenhnhan.Rows.RemoveAt(currentRow);
-                DeleteLineTxt(currentRow);
+                chklbXN.Enabled = false;
+                foreach (int i in chklbXN.CheckedIndices)
+                    chklbXN.SetItemChecked(i, false);
             }
-            catch (Exception)
-            {
-                MessageBox.Show("Vui lòng chọn dòng cần xóa");
-            }
-
-            ResetAll();
-        }
-
-        public bool UpdateGridView(string path)
-        {
-            TXTOBJECT a = new TXTOBJECT(path);
-            string[] listbn = a.read();
-            foreach (string str in listbn)
-            {
-                string[] row = str.Split('-');
-                gv_danhsachbenhnhan.Rows.Add(row);
-            }
-            gv_danhsachbenhnhan.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            gv_danhsachbenhnhan.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            return true;
+            else
+                chklbXN.Enabled = true;
         }
 
         private void Gd_nhanbenh_Load(object sender, EventArgs e)
         {
-            UpdateGridView("F:/GIT/dsbn.txt"); 
+            txt_hoten.Focus();
+        }
+        void autoCompleteText()
+        {
+            AutoCompleteStringCollection lst_hoten = new AutoCompleteStringCollection();
+            AutoCompleteStringCollection lst_diachi = new AutoCompleteStringCollection();
+            AutoCompleteStringCollection lst_sdt = new AutoCompleteStringCollection();
+            AutoCompleteStringCollection lst_tuoi = new AutoCompleteStringCollection();
+
+            String query = "select * from benhnhan";
+            db.OpenConnection();
+            MySqlCommand cmd = new MySqlCommand(query, db.Connection);
+            MySqlDataReader reader;
+
+            reader = cmd.ExecuteReader();
+            while (reader.Read())
+            {
+                string str_hoten = reader.GetString("ten");
+                lst_hoten.Add(str_hoten);
+                string str_diachi = reader.GetString("address");
+                lst_diachi.Add(str_diachi);
+                string str_sdt = reader.GetString("phone_num");
+                lst_sdt.Add(str_sdt);
+                string str_tuoi = reader.GetString("tuoi");
+                lst_tuoi.Add(str_tuoi);
+            }
+            txt_hoten.AutoCompleteCustomSource = lst_hoten;
+            txt_diachi.AutoCompleteCustomSource = lst_diachi;
+            txtSDT.AutoCompleteCustomSource = lst_sdt;
+            txtTuoi.AutoCompleteCustomSource = lst_tuoi;
+            db.CloseConnection();
         }
 
-        private void ChkSA_CheckedChanged(object sender, EventArgs e)
+        private void txtSDT_Leave(object sender, EventArgs e)
         {
-            if (!chkSA.Checked)
+            Regex pattern = new Regex("^[0-9]{7,11}$");
+            if (!pattern.IsMatch(txtSDT.Text))
             {
-                chklbSA.Visible = false;
-                foreach (int i in chklbSA.CheckedIndices)
-                {
-                    chklbSA.SetItemCheckState(i, CheckState.Unchecked);
-                }
+                MessageBox.Show("Không hợp lệ. Yêu cầu nhập lại.");
+                txtSDT.Focus();
+            }
+        }
+
+        private void txtTuoi_Leave(object sender, EventArgs e)
+        {
+            Regex pattern = new Regex("^[0-9]{1,3}$");
+            if (!pattern.IsMatch(txtTuoi.Text))
+            {
+                MessageBox.Show("Không hợp lệ. Yêu cầu nhập lại.");
+                txtTuoi.Focus();
+            }
+        }
+
+        private void txtTuoi_TextChanged_1(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtTuoi.Text)&& !String.IsNullOrEmpty(txtSDT.Text)&& !String.IsNullOrEmpty(txt_diachi.Text)&& !String.IsNullOrEmpty(txt_hoten.Text))
+            {
+                chkSA.Enabled = true;
+                chkXN.Enabled = true;
             }
             else
             {
-                chklbSA.Visible = true;
+                chkSA.Enabled = false;
+                chkSA.Checked = false;
+                chkXN.Enabled = false;
+                chkXN.Checked = false;
             }
         }
 
-        private void ChkXN_CheckedChanged(object sender, EventArgs e)
+        private void txt_hoten_TextChanged(object sender, EventArgs e)
         {
-            if (!chkXN.Checked)
+            if (!String.IsNullOrEmpty(txtTuoi.Text) && !String.IsNullOrEmpty(txtSDT.Text) && !String.IsNullOrEmpty(txt_diachi.Text) && !String.IsNullOrEmpty(txt_hoten.Text))
             {
-                chklbXetNghiem.Visible = false;
-                foreach (int i in chklbXetNghiem.CheckedIndices)
-                {
-                    chklbXetNghiem.SetItemCheckState(i, CheckState.Unchecked);
-                }
+                chkSA.Enabled = true;
+                chkXN.Enabled = true;
             }
             else
             {
-                chklbXetNghiem.Visible = true;
+                chkSA.Enabled = false;
+                chkSA.Checked = false;
+                chkXN.Enabled = false;
+                chkXN.Checked = false;
             }
         }
 
-        private void ChkSA_VisibleChanged(object sender, EventArgs e)
+        private void txt_diachi_TextChanged(object sender, EventArgs e)
         {
-            if (chkSA.Checked)
-                chklbSA.Visible = true;
+            if (!String.IsNullOrEmpty(txtTuoi.Text) && !String.IsNullOrEmpty(txtSDT.Text) && !String.IsNullOrEmpty(txt_diachi.Text) && !String.IsNullOrEmpty(txt_hoten.Text))
+            {
+                chkSA.Enabled = true;
+                chkXN.Enabled = true;
+            }
             else
-                chklbSA.Visible = false;
+            {
+                chkSA.Enabled = false;
+                chkSA.Checked = false;
+                chkXN.Enabled = false;
+                chkXN.Checked = false;
+            }
         }
-        
+
+        private void txtSDT_TextChanged(object sender, EventArgs e)
+        {
+            if (!String.IsNullOrEmpty(txtTuoi.Text) && !String.IsNullOrEmpty(txtSDT.Text) && !String.IsNullOrEmpty(txt_diachi.Text) && !String.IsNullOrEmpty(txt_hoten.Text))
+            {
+                chkSA.Enabled = true;
+                chkXN.Enabled = true;
+            }
+            else
+            {
+                chkSA.Enabled = false;
+                chkSA.Checked = false;
+                chkXN.Enabled = false;
+                chkXN.Checked = false;
+            }
+        }
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            string sdt = gv_danhsachcho.Rows[gv_danhsachcho.SelectedRows[0].Index].Cells[2].Value.ToString();
+            //MessageBox.Show(sdt);
+            string qr = "select idBN from benhnhan where phone_num like '" + sdt + "';";
+            DataTable lst_id = db.ExecuteReader(qr);
+            string idBN = String.Empty;
+            if (lst_id.Rows.Count > 0)
+            {
+                idBN = lst_id.Rows[0]["idBN"].ToString();
+            }
+            //
+            db.OpenConnection();
+            string qr1 = "delete from danhsachcho where idBN="+idBN+";";
+            db.ExecuteNonQuery(qr1);
+            db.CloseConnection();
+            update_GV();
+            ResetAll();
+        }
+
+        private void btn_Them_Click(object sender, EventArgs e)
+        {
+
+            db.OpenConnection();
+            //check new customer
+            string qr = "select * from benhnhan where ten like '" + txt_hoten.Text + "' and address like '" + txt_diachi.Text + "' and phone_num like '" + txtSDT.Text + "' and tuoi like '" + txtTuoi.Text + "'";
+            if (!(db.ExecuteReader(qr).Rows.Count > 0))
+            {
+                string qr2 = "insert into benhnhan(ten, address, phone_num, tuoi, PARA, nghe_nghiep, tiencan_gd, tiencan_bt) values('" + txt_hoten.Text + "', '" + txt_diachi.Text + "', '" + txtSDT.Text + "', " + txtTuoi.Text + ", '', '', '', '')";
+                db.ExecuteNonQuery(qr2);
+            }
+            //get IdBN 
+            string qr3 = "select idBN from benhnhan where phone_num like '" + txtSDT.Text + "';";
+            DataTable lst_id = db.ExecuteReader(qr3);
+            string idBN = String.Empty;
+            if(lst_id.Rows.Count > 0)
+            {
+                idBN = lst_id.Rows[0]["idBN"].ToString();
+            }
+            //
+            string sieu_am = "";
+            string xet_nghiem = "";
+            for(int i = 0; i< chklbSA.Items.Count; i++)
+            {
+                if (chklbSA.GetItemChecked(i))
+                    sieu_am += (string)chklbSA.Items[i] + ".";
+            }
+            for(int j = 0; j < chklbXN.Items.Count; j++)
+            {
+                if (chklbXN.GetItemChecked(j))
+                    xet_nghiem += (string)chklbXN.Items[j] + ".";
+            }
+
+            string qr4 = "insert into danhsachcho(idBN, khambenh, sieuam, xetnghiem) values(" + idBN + ", '', '" + sieu_am + "', '" + xet_nghiem + "')";
+            
+            db.ExecuteNonQuery(qr4);
+            db.CloseConnection();
+            update_GV();
+            ResetAll();
+        }
+        private void btn_Reset_Click(object sender, EventArgs e)
+        {
+            ResetAll();
+        }
+        private void ResetAll()
+        {
+            txt_hoten.Text = "";
+            txt_diachi.Text = "";
+            txtTuoi.Text = "";
+            txtSDT.Text = "";
+        }
     }
 }

@@ -1,8 +1,8 @@
-﻿using Project.GIAODIEN;
+﻿using NHANBENH.GIAODIEN;
 using System;
 using System.Windows.Forms;
 
-namespace Project
+namespace NHANBENH
 {
     static class Program
     {

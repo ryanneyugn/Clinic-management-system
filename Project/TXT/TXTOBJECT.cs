@@ -54,6 +54,6 @@ namespace TXT
                 f.Write(info, 0, info.Length);
             }
             f.Close();
-        }
+        }        
     }
 }
