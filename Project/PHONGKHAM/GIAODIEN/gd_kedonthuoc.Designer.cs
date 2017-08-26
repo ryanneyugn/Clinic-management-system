@@ -58,13 +58,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.txt_loidan = new System.Windows.Forms.RichTextBox();
             this.dtgv_donthuoc = new System.Windows.Forms.DataGridView();
-            this.idthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sl = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.solan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.moilan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tong = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btn_del = new System.Windows.Forms.Button();
             this.btn_print = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -83,6 +76,12 @@
             this.lbl_digitalclock = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lbl_idpk = new System.Windows.Forms.Label();
+            this.idthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sl = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dongia = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.solan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moilan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox4.SuspendLayout();
@@ -292,6 +291,7 @@
             // 
             this.txt_tongtien.Location = new System.Drawing.Point(300, 225);
             this.txt_tongtien.Name = "txt_tongtien";
+            this.txt_tongtien.ReadOnly = true;
             this.txt_tongtien.Size = new System.Drawing.Size(138, 20);
             this.txt_tongtien.TabIndex = 2;
             // 
@@ -333,8 +333,7 @@
             this.sl,
             this.dongia,
             this.solan,
-            this.moilan,
-            this.tong});
+            this.moilan});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -345,7 +344,6 @@
             this.dtgv_donthuoc.DefaultCellStyle = dataGridViewCellStyle2;
             this.dtgv_donthuoc.Location = new System.Drawing.Point(7, 19);
             this.dtgv_donthuoc.Name = "dtgv_donthuoc";
-            this.dtgv_donthuoc.ReadOnly = true;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -358,61 +356,7 @@
             this.dtgv_donthuoc.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtgv_donthuoc.Size = new System.Drawing.Size(468, 200);
             this.dtgv_donthuoc.TabIndex = 0;
-            // 
-            // idthuoc
-            // 
-            this.idthuoc.HeaderText = "ID";
-            this.idthuoc.Name = "idthuoc";
-            this.idthuoc.ReadOnly = true;
-            this.idthuoc.Visible = false;
-            // 
-            // tenthuoc
-            // 
-            this.tenthuoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.tenthuoc.HeaderText = "Tên thuốc";
-            this.tenthuoc.Name = "tenthuoc";
-            this.tenthuoc.ReadOnly = true;
-            this.tenthuoc.Width = 75;
-            // 
-            // sl
-            // 
-            this.sl.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.sl.HeaderText = "Số lượng";
-            this.sl.Name = "sl";
-            this.sl.ReadOnly = true;
-            this.sl.Width = 69;
-            // 
-            // dongia
-            // 
-            this.dongia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dongia.HeaderText = "Đơn giá";
-            this.dongia.Name = "dongia";
-            this.dongia.ReadOnly = true;
-            this.dongia.Width = 64;
-            // 
-            // solan
-            // 
-            this.solan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.solan.HeaderText = "Số lần trong ngày";
-            this.solan.Name = "solan";
-            this.solan.ReadOnly = true;
-            this.solan.Width = 85;
-            // 
-            // moilan
-            // 
-            this.moilan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.moilan.HeaderText = "Mỗi lần dùng";
-            this.moilan.Name = "moilan";
-            this.moilan.ReadOnly = true;
-            this.moilan.Width = 86;
-            // 
-            // tong
-            // 
-            this.tong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.tong.HeaderText = "Tổng";
-            this.tong.Name = "tong";
-            this.tong.ReadOnly = true;
-            this.tong.Width = 57;
+            this.dtgv_donthuoc.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_donthuoc_CellEndEdit);
             // 
             // btn_del
             // 
@@ -627,6 +571,56 @@
             this.lbl_idpk.TabIndex = 3;
             this.lbl_idpk.Text = "idphieukham";
             // 
+            // idthuoc
+            // 
+            this.idthuoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.idthuoc.HeaderText = "ID";
+            this.idthuoc.Name = "idthuoc";
+            this.idthuoc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.idthuoc.Width = 43;
+            // 
+            // tenthuoc
+            // 
+            this.tenthuoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.tenthuoc.HeaderText = "Tên thuốc";
+            this.tenthuoc.Name = "tenthuoc";
+            this.tenthuoc.ReadOnly = true;
+            this.tenthuoc.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.tenthuoc.Width = 81;
+            // 
+            // sl
+            // 
+            this.sl.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.sl.HeaderText = "Số lượng";
+            this.sl.Name = "sl";
+            this.sl.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.sl.Width = 74;
+            // 
+            // dongia
+            // 
+            this.dongia.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dongia.HeaderText = "Đơn giá";
+            this.dongia.Name = "dongia";
+            this.dongia.ReadOnly = true;
+            this.dongia.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.dongia.Width = 69;
+            // 
+            // solan
+            // 
+            this.solan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.solan.HeaderText = "Số lần trong ngày";
+            this.solan.Name = "solan";
+            this.solan.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.solan.Width = 85;
+            // 
+            // moilan
+            // 
+            this.moilan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.moilan.HeaderText = "Mỗi lần dùng";
+            this.moilan.Name = "moilan";
+            this.moilan.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.moilan.Width = 86;
+            // 
             // Gd_kedonthuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -694,15 +688,14 @@
         private System.Windows.Forms.Button btn_exit;
         private System.Windows.Forms.Label lbl_digitalclock;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox txt_songay;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lbl_idpk;
         private System.Windows.Forms.DataGridViewTextBoxColumn idthuoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenthuoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn sl;
         private System.Windows.Forms.DataGridViewTextBoxColumn dongia;
         private System.Windows.Forms.DataGridViewTextBoxColumn solan;
         private System.Windows.Forms.DataGridViewTextBoxColumn moilan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tong;
-        private System.Windows.Forms.TextBox txt_songay;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Label lbl_idpk;
     }
 }

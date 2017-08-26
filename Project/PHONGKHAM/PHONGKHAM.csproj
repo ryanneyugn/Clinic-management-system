@@ -113,6 +113,12 @@
     <Compile Include="GIAODIEN\gd_khambenh.Designer.cs">
       <DependentUpon>gd_khambenh.cs</DependentUpon>
     </Compile>
+    <Compile Include="GIAODIEN\gd_nhanbenh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GIAODIEN\gd_nhanbenh.Designer.cs">
+      <DependentUpon>gd_nhanbenh.cs</DependentUpon>
+    </Compile>
     <Compile Include="GIAODIEN\gd_quanlykho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +168,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GIAODIEN\gd_khambenh.resx">
       <DependentUpon>gd_khambenh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GIAODIEN\gd_nhanbenh.resx">
+      <DependentUpon>gd_nhanbenh.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GIAODIEN\gd_quanlykho.resx">
       <DependentUpon>gd_quanlykho.cs</DependentUpon>

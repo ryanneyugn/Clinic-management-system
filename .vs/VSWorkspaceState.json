@@ -3,11 +3,8 @@
     "",
     "\\database",
     "\\database\\queries",
-    "\\model",
-    "\\Project",
-    "\\Project\\NHANBENH",
-    "\\Project\\NHANBENH\\GIAODIEN"
+    "\\documentation",
+    "\\model"
   ],
-  "SelectedNode": "\\Project\\NHANBENH\\GIAODIEN\\gd_nhanbenh.cs",
   "PreviewInSolutionExplorer": false
 }

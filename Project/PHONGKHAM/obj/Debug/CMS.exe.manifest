@@ -44,14 +44,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CMS.exe" size="3990424">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CMS.exe" size="4426648">
       <assemblyIdentity name="CMS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Bh4xgSt6jn+1+IT/sYbbbDYzCI1d7kxnbgzwmnPzp5w=</dsig:DigestValue>
+        <dsig:DigestValue>OJ5DTubrK4mBUO1hYJwKlBh8eOL7j+7fxp0zq5fhe6U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -63,7 +63,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AFLdZNhjiguSB5Ez3vOyENEuHK/xS5GNP1DBnOAGXss=</dsig:DigestValue>
+        <dsig:DigestValue>d8l0onYvJv3i5fNEfnLyZC5urPjGPEcdPiRMu40csvw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

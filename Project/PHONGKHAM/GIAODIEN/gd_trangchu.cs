@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CMS.GIAODIEN;
+using System;
 using System.Windows.Forms;
 
 namespace PHONGKHAM.GIAODIEN
@@ -44,6 +45,13 @@ namespace PHONGKHAM.GIAODIEN
         private void btn_sieuam_Click(object sender, EventArgs e)
         {
             Form f = new gd_sieuam(this);
+            f.Show();
+            Hide();
+        }
+
+        private void btn_nhanbenh_Click(object sender, EventArgs e)
+        {
+            Form f = new gd_nhanbenh(this);
             f.Show();
             Hide();
         }

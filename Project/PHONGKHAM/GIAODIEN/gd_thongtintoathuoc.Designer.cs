@@ -30,19 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gd_thongtintoathuoc));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idctthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.idthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.giaban = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.duongdung = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.quycach = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_tongtien = new System.Windows.Forms.Label();
             this.lbl_songay = new System.Windows.Forms.Label();
             this.lbl_idtoathuoc = new System.Windows.Forms.Label();
             this.lbl_ngaylap = new System.Windows.Forms.Label();
             this.txt_loidan = new System.Windows.Forms.TextBox();
+            this.idctthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.idthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tenthuoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.soluong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.giaban = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.solan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.moilan = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,8 +60,8 @@
             this.tenthuoc,
             this.soluong,
             this.giaban,
-            this.duongdung,
-            this.quycach});
+            this.solan,
+            this.moilan});
             this.dataGridView1.GridColor = System.Drawing.SystemColors.Control;
             this.dataGridView1.Location = new System.Drawing.Point(12, 87);
             this.dataGridView1.Name = "dataGridView1";
@@ -70,63 +70,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(664, 209);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // idctthuoc
-            // 
-            this.idctthuoc.HeaderText = "IDCTHUOC";
-            this.idctthuoc.Name = "idctthuoc";
-            this.idctthuoc.ReadOnly = true;
-            this.idctthuoc.Visible = false;
-            // 
-            // idthuoc
-            // 
-            this.idthuoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.idthuoc.HeaderText = "ID";
-            this.idthuoc.Name = "idthuoc";
-            this.idthuoc.ReadOnly = true;
-            this.idthuoc.Width = 43;
-            // 
-            // tenthuoc
-            // 
-            this.tenthuoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.tenthuoc.HeaderText = "Tên thuốc";
-            this.tenthuoc.MinimumWidth = 150;
-            this.tenthuoc.Name = "tenthuoc";
-            this.tenthuoc.ReadOnly = true;
-            this.tenthuoc.Width = 150;
-            // 
-            // soluong
-            // 
-            this.soluong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.soluong.HeaderText = "Số lượng";
-            this.soluong.Name = "soluong";
-            this.soluong.ReadOnly = true;
-            this.soluong.Width = 74;
-            // 
-            // giaban
-            // 
-            this.giaban.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
-            this.giaban.HeaderText = "Giá bán";
-            this.giaban.Name = "giaban";
-            this.giaban.ReadOnly = true;
-            this.giaban.Width = 69;
-            // 
-            // duongdung
-            // 
-            this.duongdung.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.duongdung.HeaderText = "Đường dùng";
-            this.duongdung.Name = "duongdung";
-            this.duongdung.ReadOnly = true;
-            this.duongdung.Width = 91;
-            // 
-            // quycach
-            // 
-            this.quycach.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.quycach.HeaderText = "Quy cách";
-            this.quycach.MinimumWidth = 250;
-            this.quycach.Name = "quycach";
-            this.quycach.ReadOnly = true;
-            this.quycach.Width = 250;
             // 
             // label1
             // 
@@ -182,6 +125,63 @@
             this.txt_loidan.Size = new System.Drawing.Size(366, 72);
             this.txt_loidan.TabIndex = 6;
             // 
+            // idctthuoc
+            // 
+            this.idctthuoc.HeaderText = "IDCTHUOC";
+            this.idctthuoc.Name = "idctthuoc";
+            this.idctthuoc.ReadOnly = true;
+            this.idctthuoc.Visible = false;
+            // 
+            // idthuoc
+            // 
+            this.idthuoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.idthuoc.HeaderText = "ID";
+            this.idthuoc.Name = "idthuoc";
+            this.idthuoc.ReadOnly = true;
+            this.idthuoc.Width = 43;
+            // 
+            // tenthuoc
+            // 
+            this.tenthuoc.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.tenthuoc.HeaderText = "Tên thuốc";
+            this.tenthuoc.MinimumWidth = 150;
+            this.tenthuoc.Name = "tenthuoc";
+            this.tenthuoc.ReadOnly = true;
+            this.tenthuoc.Width = 150;
+            // 
+            // soluong
+            // 
+            this.soluong.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.soluong.HeaderText = "Số lượng";
+            this.soluong.Name = "soluong";
+            this.soluong.ReadOnly = true;
+            this.soluong.Width = 74;
+            // 
+            // giaban
+            // 
+            this.giaban.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.DisplayedCells;
+            this.giaban.HeaderText = "Giá bán";
+            this.giaban.Name = "giaban";
+            this.giaban.ReadOnly = true;
+            this.giaban.Width = 69;
+            // 
+            // solan
+            // 
+            this.solan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.solan.HeaderText = "Số lần trong ngày";
+            this.solan.Name = "solan";
+            this.solan.ReadOnly = true;
+            this.solan.Width = 115;
+            // 
+            // moilan
+            // 
+            this.moilan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.moilan.HeaderText = "Mỗi lần";
+            this.moilan.MinimumWidth = 250;
+            this.moilan.Name = "moilan";
+            this.moilan.ReadOnly = true;
+            this.moilan.Width = 250;
+            // 
             // gd_thongtintoathuoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -218,7 +218,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tenthuoc;
         private System.Windows.Forms.DataGridViewTextBoxColumn soluong;
         private System.Windows.Forms.DataGridViewTextBoxColumn giaban;
-        private System.Windows.Forms.DataGridViewTextBoxColumn duongdung;
-        private System.Windows.Forms.DataGridViewTextBoxColumn quycach;
+        private System.Windows.Forms.DataGridViewTextBoxColumn solan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn moilan;
     }
 }

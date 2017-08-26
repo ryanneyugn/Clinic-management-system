@@ -38,3 +38,5 @@ F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\CMS.exe.manifest
 F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\CMS.application
 F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\CMS.exe
 F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\CMS.pdb
+F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\PHONGKHAM.csproj.CoreCompileInputs.cache
+F:\GIT\ryan-repository\Project\PHONGKHAM\obj\Debug\CMS.GIAODIEN.gd_nhanbenh.resources

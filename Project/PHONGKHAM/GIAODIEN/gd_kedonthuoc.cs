@@ -119,7 +119,7 @@ namespace PHONGKHAM.GIAODIEN
         private void btn_print_Click(object sender, System.EventArgs e)
         {
             string sqldatetime = System.DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss");
-            string query = "insert into toathuoc (ngay_lap, so_ngay, loi_dan, tong_tien, idPhieuKham) values ('" + sqldatetime  + "', '" + txt_songay.Text + "', '" + txt_loidan.Text + "', '" + txt_tongtien.Text + "', '" + idpk + "')";
+            string query = "insert into toathuoc (ngay_lap, so_ngay, loi_dan, tong_tien, idPhieuKham) values ('" + sqldatetime  + "', '" + txt_songay.Text + "', '" + txt_loidan.Text + "', '" + txt_tongtien.Text + "', '" + idpk + "')";        
 
             try
             {
@@ -132,6 +132,27 @@ namespace PHONGKHAM.GIAODIEN
                 MessageBox.Show(ex.Message);
                 db.CloseConnection();
             }
+
+            string idtoathuoc;
+            try
+            {
+                db.OpenConnection();
+                DataTable x = db.ExecuteReader("select idToaThuoc from toathuoc where ngay_lap='" + sqldatetime + "'");
+                db.CloseConnection();
+                idtoathuoc = x.Rows[0][0].ToString();
+
+                db.OpenConnection();
+                foreach(DataGridViewRow r in dtgv_donthuoc.Rows)
+                {
+                    db.ExecuteNonQuery("insert into chitietthuoc(idThuoc, tenthuoc, so_vien, gia_ban, sl_trong_ngay, moi_lan, idToaThuoc) values(" + r.Cells["idthuoc"].Value.ToString() + ", '" + r.Cells["tenthuoc"].Value.ToString() + "', " + r.Cells["sl"].Value.ToString() + ", " + r.Cells["dongia"].Value.ToString() + ", " + r.Cells["solan"].Value.ToString() + ", " + r.Cells["moilan"].Value.ToString() + ", " + idtoathuoc + ")");
+                }
+                db.CloseConnection();
+
+            } catch(System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
 
         }        
         
@@ -161,6 +182,23 @@ namespace PHONGKHAM.GIAODIEN
         private void timer1_Tick(object sender, System.EventArgs e)
         {
             lbl_digitalclock.Text = System.DateTime.Now.ToString();
+        }
+
+        private void dtgv_donthuoc_CellEndEdit(object sender, DataGridViewCellEventArgs e)
+        {
+            int m = 0;
+            foreach(DataGridViewRow r in dtgv_donthuoc.Rows)
+            {
+                try
+                {
+                    m += System.Convert.ToInt32(r.Cells["sl"].Value.ToString()) * System.Convert.ToInt32(r.Cells["dongia"].Value.ToString());
+                } catch (System.Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            txt_tongtien.Text = m.ToString();
         }
     }
 }

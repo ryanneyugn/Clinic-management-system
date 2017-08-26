@@ -48,7 +48,7 @@ namespace PHONGKHAM.GIAODIEN
             try
             {
                 db.OpenConnection();
-                string sql = "select * from danhsachcho where khambenh=\"true\"";
+                string sql = "select * from danhsachcho where khambenh=\"y\"";
                 dt_dscho = db.ExecuteReader(sql);
                 foreach (DataRow row in dt_dscho.Rows)
                 {
@@ -334,7 +334,7 @@ namespace PHONGKHAM.GIAODIEN
 
                     db.ExecuteNonQuery(query);
                     db.CloseConnection();
-                    updateGridView_dscho();
+                    updateGridView_dscho();                    
                 }
                 catch (System.Exception ex)
                 {

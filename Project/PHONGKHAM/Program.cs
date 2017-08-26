@@ -1,4 +1,5 @@
-﻿using PHONGKHAM.GIAODIEN;
+﻿using CMS.GIAODIEN;
+using PHONGKHAM.GIAODIEN;
 using System;
 using System.Windows.Forms;
 
