@@ -48,7 +48,7 @@ namespace PHONGKHAM.GIAODIEN
             try
             {
                 db.OpenConnection();
-                string sql = "select * from danhsachcho where khambenh=\"y\"";
+                string sql = "select * from danhsachcho where khambenh='.'";
                 dt_dscho = db.ExecuteReader(sql);
                 foreach (DataRow row in dt_dscho.Rows)
                 {

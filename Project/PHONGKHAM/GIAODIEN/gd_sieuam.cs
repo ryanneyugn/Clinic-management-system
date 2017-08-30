@@ -36,7 +36,7 @@ namespace PHONGKHAM.GIAODIEN
             try
             {
                 db.OpenConnection();
-                string sql = "select * from danhsachcho where sieuam like '%'";
+                string sql = "select * from danhsachcho where sieuam like '.%'";
                 dt_dscho = db.ExecuteReader(sql);
                 foreach (System.Data.DataRow row in dt_dscho.Rows)
                 {
@@ -72,6 +72,39 @@ namespace PHONGKHAM.GIAODIEN
                     txt_tiencanbn.Text = dt_temp.Rows[0]["tiencan_bt"].ToString();
                     txt_tiencangd.Text = dt_temp.Rows[0]["tiencan_gd"].ToString();
                     btn_editphieukham.Visible = true;
+
+                    try
+                    {
+                        chb_sa2d.Checked = false;
+                        chb_sahth.Checked = false;
+                        chb_sam.Checked = false;
+                        chb_sanad.Checked = false;
+
+                        db.OpenConnection();
+                        System.Data.DataTable t = db.ExecuteReader("select sieuam from danhsachcho where stt=" + dtgv_dsbn.Rows[dtgv_dsbn.SelectedRows[0].Index].Cells["stt"].Value.ToString());
+                        db.CloseConnection();
+
+                        string d = t.Rows[0][0].ToString();
+                        string v = d.Trim('.');
+
+                        string[] r = v.Split('-');
+
+                        foreach (string s in r)
+                        {
+                            if (s == "Thai 2D")
+                                chb_sa2d.Checked = true;
+                            if (s == "Ngã âm đạo")
+                                chb_sanad.Checked = true;
+                            if (s == "Hình thái học")
+                                chb_sahth.Checked = true;
+                            if (s == "Màu")
+                                chb_sam.Checked = true;
+                        }
+                    }
+                    catch (System.Exception ex)
+                    {
+                        MessageBox.Show(ex.Message);
+                    }
                 }
                 catch
                 {
@@ -85,6 +118,7 @@ namespace PHONGKHAM.GIAODIEN
                 MessageBox.Show(ex.Message);
                 return false;
             }
+
 
         }
         //
@@ -162,6 +196,39 @@ namespace PHONGKHAM.GIAODIEN
             {
                 return;
             }
+            
+            try
+            {
+                chb_sa2d.Checked = false;
+                chb_sahth.Checked = false;
+                chb_sam.Checked = false;
+                chb_sanad.Checked = false;
+
+                db.OpenConnection();
+                System.Data.DataTable t = db.ExecuteReader("select sieuam from danhsachcho where stt=" + dtgv_dsbn.Rows[e.RowIndex].Cells["stt"].Value.ToString());
+                db.CloseConnection();
+
+                string d = t.Rows[0][0].ToString();
+                string v = d.Trim('.');
+
+                string[] r = v.Split('-');
+
+                foreach(string s in r)
+                {
+                    if(s == "Thai 2D")
+                        chb_sa2d.Checked = true;
+                    if (s == "Ngã âm đạo")
+                        chb_sanad.Checked = true;
+                    if (s == "Hình thái học")
+                        chb_sahth.Checked = true;
+                    if (s == "Màu")
+                        chb_sam.Checked = true;
+                }
+            } catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
 
         private void btn_editphieukham_Click(object sender, System.EventArgs e)
@@ -229,6 +296,59 @@ namespace PHONGKHAM.GIAODIEN
             txt_tiencanbn.Text = temp_tiencanbt;
 
             groupbox_dsbn.Enabled = true;
+        }
+
+        private void chb_sa2d_CheckedChanged(object sender, System.EventArgs e)
+        {
+            
+        }
+
+        private void chb_sa2d_Click(object sender, System.EventArgs e)
+        {
+            if (chb_sa2d.Checked)
+                chb_sa2d.Checked = false;
+            else chb_sa2d.Checked = true;
+        }
+
+        private void chb_sanad_Click(object sender, System.EventArgs e)
+        {
+            if (chb_sanad.Checked)
+                chb_sanad.Checked = false;
+            else chb_sanad.Checked = true;
+        }
+
+        private void chb_sahth_Click(object sender, System.EventArgs e)
+        {
+            if (chb_sahth.Checked)
+                chb_sahth.Checked = false;
+            else chb_sahth.Checked = true;
+        }
+
+        private void chb_sam_Click(object sender, System.EventArgs e)
+        {
+            if (chb_sam.Checked)
+                chb_sam.Checked = false;
+            else chb_sam.Checked = true;
+        }
+
+        private void btn_del_Click(object sender, System.EventArgs e)
+        {
+            try
+            {
+                string query = "delete from danhsachcho where stt=" + dtgv_dsbn.SelectedRows[0].Cells["stt"].Value.ToString();
+
+                db.OpenConnection();
+                db.ExecuteNonQuery(query);
+                db.CloseConnection();
+
+                updateGridView_dscho();
+            }
+            catch (System.Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                db.CloseConnection();
+                return;
+            }
         }
     }
 }

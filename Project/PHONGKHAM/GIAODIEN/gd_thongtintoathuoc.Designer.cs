@@ -70,6 +70,7 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(664, 209);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label1
             // 
@@ -138,6 +139,7 @@
             this.idthuoc.HeaderText = "ID";
             this.idthuoc.Name = "idthuoc";
             this.idthuoc.ReadOnly = true;
+            this.idthuoc.Visible = false;
             this.idthuoc.Width = 43;
             // 
             // tenthuoc

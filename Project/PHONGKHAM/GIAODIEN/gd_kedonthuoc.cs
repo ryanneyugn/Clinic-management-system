@@ -125,8 +125,7 @@ namespace PHONGKHAM.GIAODIEN
             {
                 db.OpenConnection();
                 db.ExecuteNonQuery(query);
-                db.CloseConnection();
-                Close();
+                db.CloseConnection();                
             } catch(System.Exception ex)
             {
                 MessageBox.Show(ex.Message);
@@ -144,9 +143,22 @@ namespace PHONGKHAM.GIAODIEN
                 db.OpenConnection();
                 foreach(DataGridViewRow r in dtgv_donthuoc.Rows)
                 {
-                    db.ExecuteNonQuery("insert into chitietthuoc(idThuoc, tenthuoc, so_vien, gia_ban, sl_trong_ngay, moi_lan, idToaThuoc) values(" + r.Cells["idthuoc"].Value.ToString() + ", '" + r.Cells["tenthuoc"].Value.ToString() + "', " + r.Cells["sl"].Value.ToString() + ", " + r.Cells["dongia"].Value.ToString() + ", " + r.Cells["solan"].Value.ToString() + ", " + r.Cells["moilan"].Value.ToString() + ", " + idtoathuoc + ")");
+                    string solan;
+                    string moilan;
+                    if (r.Cells["solan"].Value.ToString() == "")
+                        solan = "0";
+                    else
+                        solan = r.Cells["solan"].Value.ToString();
+
+                    if (r.Cells["moilan"].Value.ToString() == "")
+                        moilan = "0";
+                    else
+                        moilan = r.Cells["moilan"].Value.ToString();
+
+                    db.ExecuteNonQuery("insert into chitietthuoc(idThuoc, tenthuoc, so_vien, gia_ban, sl_trong_ngay, moi_lan, idToaThuoc) values(" + r.Cells["idthuoc"].Value.ToString() + ", '" + r.Cells["tenthuoc"].Value.ToString() + "', " + r.Cells["sl"].Value.ToString() + ", " + r.Cells["dongia"].Value.ToString() + ", " + solan + ", " + moilan + ", " + idtoathuoc + ")");
                 }
                 db.CloseConnection();
+                Close();
 
             } catch(System.Exception ex)
             {
@@ -192,9 +204,8 @@ namespace PHONGKHAM.GIAODIEN
                 try
                 {
                     m += System.Convert.ToInt32(r.Cells["sl"].Value.ToString()) * System.Convert.ToInt32(r.Cells["dongia"].Value.ToString());
-                } catch (System.Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
+                } catch
+                {                    
                 }
             }
 

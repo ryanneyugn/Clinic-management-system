@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gd_sieuam));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupbox_dsbn = new System.Windows.Forms.GroupBox();
             this.btn_refreshdsbn = new System.Windows.Forms.Button();
             this.dtgv_dsbn = new System.Windows.Forms.DataGridView();
@@ -65,17 +65,26 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.chb_sam = new System.Windows.Forms.CheckBox();
+            this.chb_sahth = new System.Windows.Forms.CheckBox();
+            this.chb_sanad = new System.Windows.Forms.CheckBox();
+            this.chb_sa2d = new System.Windows.Forms.CheckBox();
+            this.btn_del = new System.Windows.Forms.Button();
             this.groupbox_dsbn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_dsbn)).BeginInit();
             this.groupbox_ttpk.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupbox_dsbn
             // 
             this.groupbox_dsbn.BackColor = System.Drawing.SystemColors.ControlLight;
+            this.groupbox_dsbn.Controls.Add(this.btn_del);
             this.groupbox_dsbn.Controls.Add(this.btn_refreshdsbn);
             this.groupbox_dsbn.Controls.Add(this.dtgv_dsbn);
             this.groupbox_dsbn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.groupbox_dsbn.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupbox_dsbn.Location = new System.Drawing.Point(12, 12);
             this.groupbox_dsbn.Name = "groupbox_dsbn";
             this.groupbox_dsbn.Size = new System.Drawing.Size(393, 217);
@@ -103,14 +112,14 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dtgv_dsbn.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgv_dsbn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgv_dsbn.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dtgv_dsbn.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgv_dsbn.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.stt,
@@ -139,7 +148,7 @@
             this.stt.ReadOnly = true;
             this.stt.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.stt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.stt.Width = 34;
+            this.stt.Width = 37;
             // 
             // id
             // 
@@ -154,8 +163,8 @@
             // hoten
             // 
             this.hoten.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.hoten.DefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.hoten.DefaultCellStyle = dataGridViewCellStyle2;
             this.hoten.HeaderText = "Họ tên";
             this.hoten.MinimumWidth = 100;
             this.hoten.Name = "hoten";
@@ -171,7 +180,7 @@
             this.diachi.ReadOnly = true;
             this.diachi.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.diachi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.diachi.Width = 46;
+            this.diachi.Width = 32;
             // 
             // sdt
             // 
@@ -181,7 +190,7 @@
             this.sdt.ReadOnly = true;
             this.sdt.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.sdt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.sdt.Width = 76;
+            this.sdt.Width = 80;
             // 
             // tuoi
             // 
@@ -191,7 +200,7 @@
             this.tuoi.ReadOnly = true;
             this.tuoi.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.tuoi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.tuoi.Width = 34;
+            this.tuoi.Width = 38;
             // 
             // para
             // 
@@ -201,7 +210,7 @@
             this.para.ReadOnly = true;
             this.para.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.para.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para.Width = 42;
+            this.para.Width = 46;
             // 
             // nghenghiep
             // 
@@ -211,7 +220,7 @@
             this.nghenghiep.ReadOnly = true;
             this.nghenghiep.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.nghenghiep.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.nghenghiep.Width = 74;
+            this.nghenghiep.Width = 77;
             // 
             // groupbox_ttpk
             // 
@@ -515,11 +524,94 @@
             this.label1.TabIndex = 36;
             this.label1.Text = "Họ tên bệnh nhân:";
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.chb_sam);
+            this.groupBox1.Controls.Add(this.chb_sahth);
+            this.groupBox1.Controls.Add(this.chb_sanad);
+            this.groupBox1.Controls.Add(this.chb_sa2d);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(12, 235);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(806, 100);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Loại siêu âm";
+            // 
+            // chb_sam
+            // 
+            this.chb_sam.AutoSize = true;
+            this.chb_sam.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.chb_sam.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chb_sam.ForeColor = System.Drawing.Color.Maroon;
+            this.chb_sam.Location = new System.Drawing.Point(638, 43);
+            this.chb_sam.Name = "chb_sam";
+            this.chb_sam.Size = new System.Drawing.Size(117, 38);
+            this.chb_sam.TabIndex = 3;
+            this.chb_sam.Text = "Siêu âm màu";
+            this.chb_sam.UseVisualStyleBackColor = true;
+            this.chb_sam.Click += new System.EventHandler(this.chb_sam_Click);
+            // 
+            // chb_sahth
+            // 
+            this.chb_sahth.AutoSize = true;
+            this.chb_sahth.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.chb_sahth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chb_sahth.ForeColor = System.Drawing.Color.Maroon;
+            this.chb_sahth.Location = new System.Drawing.Point(408, 43);
+            this.chb_sahth.Name = "chb_sahth";
+            this.chb_sahth.Size = new System.Drawing.Size(186, 38);
+            this.chb_sahth.TabIndex = 2;
+            this.chb_sahth.Text = "Siêu âm hình thái học";
+            this.chb_sahth.UseVisualStyleBackColor = true;
+            this.chb_sahth.Click += new System.EventHandler(this.chb_sahth_Click);
+            // 
+            // chb_sanad
+            // 
+            this.chb_sanad.AutoSize = true;
+            this.chb_sanad.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.chb_sanad.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chb_sanad.ForeColor = System.Drawing.Color.Maroon;
+            this.chb_sanad.Location = new System.Drawing.Point(183, 43);
+            this.chb_sanad.Name = "chb_sanad";
+            this.chb_sanad.Size = new System.Drawing.Size(177, 38);
+            this.chb_sanad.TabIndex = 1;
+            this.chb_sanad.Text = "Siêu âm ngã âm đạo";
+            this.chb_sanad.UseVisualStyleBackColor = true;
+            this.chb_sanad.Click += new System.EventHandler(this.chb_sanad_Click);
+            // 
+            // chb_sa2d
+            // 
+            this.chb_sa2d.AutoSize = true;
+            this.chb_sa2d.CheckAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.chb_sa2d.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chb_sa2d.ForeColor = System.Drawing.Color.Maroon;
+            this.chb_sa2d.Location = new System.Drawing.Point(35, 43);
+            this.chb_sa2d.Name = "chb_sa2d";
+            this.chb_sa2d.Size = new System.Drawing.Size(106, 38);
+            this.chb_sa2d.TabIndex = 0;
+            this.chb_sa2d.Text = "Siêu âm 2D";
+            this.chb_sa2d.UseVisualStyleBackColor = true;
+            this.chb_sa2d.CheckedChanged += new System.EventHandler(this.chb_sa2d_CheckedChanged);
+            this.chb_sa2d.Click += new System.EventHandler(this.chb_sa2d_Click);
+            // 
+            // btn_del
+            // 
+            this.btn_del.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            this.btn_del.Image = ((System.Drawing.Image)(resources.GetObject("btn_del.Image")));
+            this.btn_del.Location = new System.Drawing.Point(6, 178);
+            this.btn_del.Name = "btn_del";
+            this.btn_del.Size = new System.Drawing.Size(33, 33);
+            this.btn_del.TabIndex = 3;
+            this.btn_del.UseVisualStyleBackColor = true;
+            this.btn_del.Click += new System.EventHandler(this.btn_del_Click);
+            // 
             // gd_sieuam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(824, 241);
+            this.ClientSize = new System.Drawing.Size(824, 344);
+            this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupbox_ttpk);
             this.Controls.Add(this.groupbox_dsbn);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -532,6 +624,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_dsbn)).EndInit();
             this.groupbox_ttpk.ResumeLayout(false);
             this.groupbox_ttpk.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -551,9 +645,6 @@
         private System.Windows.Forms.GroupBox groupbox_ttpk;
         private System.Windows.Forms.TextBox txt_nghenghiep;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button btn_cancel;
-        private System.Windows.Forms.Button btn_accept;
-        private System.Windows.Forms.Button btn_editphieukham;
         private System.Windows.Forms.TextBox txt_tiencanbn;
         private System.Windows.Forms.TextBox txt_tiencangd;
         private System.Windows.Forms.TextBox txt_idbn;
@@ -572,5 +663,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_refreshdsbn;
+        private System.Windows.Forms.Button btn_cancel;
+        private System.Windows.Forms.Button btn_accept;
+        private System.Windows.Forms.Button btn_editphieukham;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.CheckBox chb_sa2d;
+        private System.Windows.Forms.CheckBox chb_sam;
+        private System.Windows.Forms.CheckBox chb_sahth;
+        private System.Windows.Forms.CheckBox chb_sanad;
+        private System.Windows.Forms.Button btn_del;
     }
 }

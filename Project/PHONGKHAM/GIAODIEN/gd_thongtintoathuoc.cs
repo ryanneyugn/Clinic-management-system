@@ -64,5 +64,10 @@ namespace PHONGKHAM.GIAODIEN
                 }
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

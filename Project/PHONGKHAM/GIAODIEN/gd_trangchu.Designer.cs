@@ -84,7 +84,6 @@
             // 
             // btn_sieuam
             // 
-            this.btn_sieuam.Enabled = false;
             this.btn_sieuam.FlatAppearance.BorderSize = 0;
             this.btn_sieuam.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_sieuam.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
