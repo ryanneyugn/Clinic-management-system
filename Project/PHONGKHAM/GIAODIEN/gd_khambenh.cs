@@ -111,7 +111,7 @@ namespace PHONGKHAM.GIAODIEN
             {
                 dtgv_lskb.Rows.Clear();
                 db.OpenConnection();
-                string sql = "select * from phieukham where idBN=" + idbn;
+                string sql = "select * from phieukham where idBN=" + idbn + " order by idPhieuKham desc";
                 dt_temp = db.ExecuteReader(sql);
                 db.CloseConnection();
 

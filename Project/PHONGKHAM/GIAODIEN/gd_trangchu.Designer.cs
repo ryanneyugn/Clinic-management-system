@@ -53,7 +53,6 @@
             // 
             // btn_thongke
             // 
-            this.btn_thongke.Enabled = false;
             this.btn_thongke.FlatAppearance.BorderSize = 0;
             this.btn_thongke.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_thongke.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold);

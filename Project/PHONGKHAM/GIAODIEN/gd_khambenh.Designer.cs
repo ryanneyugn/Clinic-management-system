@@ -33,7 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupbox_dsbn = new System.Windows.Forms.GroupBox();
             this.btn_refreshdsbn = new System.Windows.Forms.Button();
             this.dtgv_dsbn = new System.Windows.Forms.DataGridView();
@@ -74,15 +73,15 @@
             this.groupbox_lskb = new System.Windows.Forms.GroupBox();
             this.btn_xemdonthuoccu = new System.Windows.Forms.Button();
             this.dtgv_lskb = new System.Windows.Forms.DataGridView();
-            this.maso = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ngaylap = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.chandoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.bs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupbox_control = new System.Windows.Forms.GroupBox();
             this.groupbox_chandoan = new System.Windows.Forms.GroupBox();
             this.txt_chandoan = new System.Windows.Forms.RichTextBox();
             this.lbl_currentdate = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.maso = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ngaylap = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.chandoan = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.bs = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupbox_dsbn.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtgv_dsbn)).BeginInit();
             this.groupbox_ttpk.SuspendLayout();
@@ -127,7 +126,7 @@
             this.dtgv_dsbn.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -161,7 +160,7 @@
             this.stt.ReadOnly = true;
             this.stt.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.stt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.stt.Width = 34;
+            this.stt.Width = 37;
             // 
             // id
             // 
@@ -193,7 +192,7 @@
             this.diachi.ReadOnly = true;
             this.diachi.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.diachi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.diachi.Width = 46;
+            this.diachi.Width = 32;
             // 
             // sdt
             // 
@@ -203,7 +202,7 @@
             this.sdt.ReadOnly = true;
             this.sdt.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.sdt.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.sdt.Width = 76;
+            this.sdt.Width = 80;
             // 
             // tuoi
             // 
@@ -213,7 +212,7 @@
             this.tuoi.ReadOnly = true;
             this.tuoi.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.tuoi.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.tuoi.Width = 34;
+            this.tuoi.Width = 38;
             // 
             // para
             // 
@@ -223,7 +222,7 @@
             this.para.ReadOnly = true;
             this.para.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.para.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.para.Width = 42;
+            this.para.Width = 46;
             // 
             // nghenghiep
             // 
@@ -233,7 +232,7 @@
             this.nghenghiep.ReadOnly = true;
             this.nghenghiep.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.nghenghiep.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.nghenghiep.Width = 74;
+            this.nghenghiep.Width = 77;
             // 
             // lbl_tenbs
             // 
@@ -608,14 +607,6 @@
             this.dtgv_lskb.AllowUserToAddRows = false;
             this.dtgv_lskb.AllowUserToDeleteRows = false;
             this.dtgv_lskb.AllowUserToResizeRows = false;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgv_lskb.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dtgv_lskb.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgv_lskb.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.maso,
@@ -631,49 +622,6 @@
             this.dtgv_lskb.Size = new System.Drawing.Size(636, 156);
             this.dtgv_lskb.TabIndex = 0;
             this.dtgv_lskb.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtgv_lskb_CellClick);
-            // 
-            // maso
-            // 
-            this.maso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maso.DefaultCellStyle = dataGridViewCellStyle4;
-            this.maso.HeaderText = "Mã số";
-            this.maso.MinimumWidth = 30;
-            this.maso.Name = "maso";
-            this.maso.ReadOnly = true;
-            this.maso.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.maso.Width = 42;
-            // 
-            // ngaylap
-            // 
-            this.ngaylap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.ngaylap.HeaderText = "Ngày lập";
-            this.ngaylap.Name = "ngaylap";
-            this.ngaylap.ReadOnly = true;
-            this.ngaylap.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.ngaylap.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.ngaylap.Width = 55;
-            // 
-            // chandoan
-            // 
-            this.chandoan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.chandoan.HeaderText = "Chẩn đoán";
-            this.chandoan.MinimumWidth = 350;
-            this.chandoan.Name = "chandoan";
-            this.chandoan.ReadOnly = true;
-            this.chandoan.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.chandoan.Width = 350;
-            // 
-            // bs
-            // 
-            this.bs.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.bs.HeaderText = "Bác sĩ phụ trách";
-            this.bs.MinimumWidth = 200;
-            this.bs.Name = "bs";
-            this.bs.ReadOnly = true;
-            this.bs.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.bs.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.bs.Width = 200;
             // 
             // groupbox_control
             // 
@@ -724,6 +672,49 @@
             this.timer1.Enabled = true;
             this.timer1.Interval = 1;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // maso
+            // 
+            this.maso.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.maso.DefaultCellStyle = dataGridViewCellStyle3;
+            this.maso.HeaderText = "Mã số";
+            this.maso.MinimumWidth = 30;
+            this.maso.Name = "maso";
+            this.maso.ReadOnly = true;
+            this.maso.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.maso.Width = 47;
+            // 
+            // ngaylap
+            // 
+            this.ngaylap.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.ngaylap.HeaderText = "Ngày lập";
+            this.ngaylap.Name = "ngaylap";
+            this.ngaylap.ReadOnly = true;
+            this.ngaylap.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.ngaylap.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.ngaylap.Width = 63;
+            // 
+            // chandoan
+            // 
+            this.chandoan.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.chandoan.HeaderText = "Chẩn đoán";
+            this.chandoan.MinimumWidth = 350;
+            this.chandoan.Name = "chandoan";
+            this.chandoan.ReadOnly = true;
+            this.chandoan.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.chandoan.Width = 350;
+            // 
+            // bs
+            // 
+            this.bs.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.bs.HeaderText = "Bác sĩ phụ trách";
+            this.bs.MinimumWidth = 200;
+            this.bs.Name = "bs";
+            this.bs.ReadOnly = true;
+            this.bs.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.bs.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.bs.Width = 200;
             // 
             // gd_khambenh
             // 
@@ -800,10 +791,6 @@
         private System.Windows.Forms.TextBox txt_nghenghiep;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Timer timer1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn maso;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ngaylap;
-        private System.Windows.Forms.DataGridViewTextBoxColumn chandoan;
-        private System.Windows.Forms.DataGridViewTextBoxColumn bs;
         private System.Windows.Forms.DataGridViewTextBoxColumn stt;
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn hoten;
@@ -812,5 +799,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tuoi;
         private System.Windows.Forms.DataGridViewTextBoxColumn para;
         private System.Windows.Forms.DataGridViewTextBoxColumn nghenghiep;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maso;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ngaylap;
+        private System.Windows.Forms.DataGridViewTextBoxColumn chandoan;
+        private System.Windows.Forms.DataGridViewTextBoxColumn bs;
     }
 }
