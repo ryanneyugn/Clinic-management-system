@@ -26,7 +26,7 @@ namespace PHONGKHAM.GIAODIEN
         public gd_khambenh(Form parent, string tendangnhap)
         {
             InitializeComponent();            
-            string text = "Bác sĩ ";            
+            string text = "Bác sĩ khám bệnh: ";            
             this.tendangnhap = tendangnhap;
             string tenbs = tendangnhap;
             lbl_tenbs.Text = text + tenbs;                        
@@ -122,8 +122,16 @@ namespace PHONGKHAM.GIAODIEN
                 }
 
                 btn_xemdonthuoccu.Enabled = false;
-                string idpk = dtgv_lskb.Rows[dtgv_lskb.SelectedRows[0].Index].Cells[0].Value.ToString();
-
+                string idpk = null;
+                if (dtgv_lskb.Rows.Count > 0)
+                {
+                    idpk = dtgv_lskb.Rows[dtgv_lskb.SelectedRows[0].Index].Cells[0].Value.ToString();
+                }
+                else
+                {
+                    return false;
+                }
+                
                 try
                 {
                     db.OpenConnection();

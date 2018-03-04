@@ -4,7 +4,13 @@
     "\\database",
     "\\database\\queries",
     "\\documentation",
-    "\\model"
+    "\\model",
+    "\\Project",
+    "\\Project\\ConnDb",
+    "\\Project\\ConnDb\\bin",
+    "\\Project\\PHONGKHAM",
+    "\\Project\\PHONGKHAM\\bin"
   ],
+  "SelectedNode": "\\Project\\PHONGKHAM\\bin\\Debug",
   "PreviewInSolutionExplorer": false
 }

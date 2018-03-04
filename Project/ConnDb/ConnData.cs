@@ -26,7 +26,7 @@ namespace ConnDb
             this.database = database;
             this.uid = uid;
             this.password = password;
-            string connectionString = "server=" + this.server + ";" + "database=" + this.database + ";" + "uid=" + this.uid + ";" + "password=" + this.password + ";";
+            string connectionString = "server=" + this.server + ";" + "database=" + this.database + ";" + "uid=" + this.uid + ";" + "password=" + this.password + ";charset=utf8";
 
             Connection = new MySqlConnection(connectionString);
         }
