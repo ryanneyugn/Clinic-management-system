@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="CMS.exe" version="1.0.0.0" publicKeyToken="80dfda0e30744af3" language="en" processorArchitecture="msil" type="win32" />
+  <description asmv2:iconFile="clinic-icon.ico" asmv2:publisher="Ryan" co.v1:suiteName="TCH" asmv2:product="Clinic CS" xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <application />
+  <entryPoint>
+    <assemblyIdentity name="CMS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <commandLine file="CMS.exe" parameters="" />
+  </entryPoint>
+  <co.v1:useManifestForTrust xmlns="urn:schemas-microsoft-com:asm.v1" />
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="CMS.exe" size="4801432">
+      <assemblyIdentity name="CMS" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>yFaeHrp6wouf79jQWnss8qnQUAANNGyZPItu7/FtLlI=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ConnDb.dll" size="6144">
+      <assemblyIdentity name="ConnDb" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>72x2iiUK+3RQxR3yAR8qd/SqJjPPMcYtzlPCz5o1PPs=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MySql.Data.dll" size="424448">
+      <assemblyIdentity name="MySql.Data" version="6.9.9.0" publicKeyToken="C5687FC88969C44D" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>z1JCyodj5/UiC37FF0m11VPrQRt8tszqKfa8jk+yNYc=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <file name="clinic-icon.ico" size="370070">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>ZakBpsbrtpskahNBuKOgpbM1N3U751B+4RmBATKXg+w=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="CMS.exe.config" size="190">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>/i5oWRXDPHGI2Dvp3vMp1pIkUEBmjzJ3524Mw+1/qnA=</dsig:DigestValue>
+    </hash>
+  </file>
+  <file name="config\connection_info.cfg" size="27">
+    <hash>
+      <dsig:Transforms>
+        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+      </dsig:Transforms>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>cUxrVT5ywgJUN8rvRsEJHx1lE4nDwm3OuTilHf0b4NQ=</dsig:DigestValue>
+    </hash>
+  </file>
+<publisherIdentity name="CN=RYAN\Ryan" issuerKeyHash="b88ca1284b66649b1899eb8c93d0e56e0f0d62b9" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>8iRoTuaFQrEXMzXtln7lYdvcLHEW1iKy2n7b1Kcm+ek=</DigestValue></Reference></SignedInfo><SignatureValue>qte/UgyB/NhwOdy0+DuWR+hTqrrdMAHmThsv0PEwEoEXw+gWSiBkc8QNIkcHg3Q5hYDHFaFu2AwhOfNP1zXUcFbaex1uDKQwqHINC+w9S6rw7GZ/+7sOWeylxW539WAP4ePbxXJFZqq+wotAfjKzi37t0AfHqPB82XY/8VB5r8E=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>5dNgicFDpH989AS0L3XdMj4bzpkWB+PDTXzaBRBc4lJ301e90Jo8q5Y4OVokfrPDREOvk7/kk22g36NqqANSkFAmfPUE8Zz7vt/QbO6Ka2Bfr9nRXVHgoDwSMyN8R4eA79xl0wdEzZwYxPXfuBRSeBhXuVi8lmi9LwNDKNBsHIk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="e9f926a7d4db7edab222d616712cdcdb61e57e96ed353317b14285e64e6824f2" Description="" Url=""><as:assemblyIdentity name="CMS.exe" version="1.0.0.0" publicKeyToken="80dfda0e30744af3" language="en" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=RYAN\Ryan</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha256" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" /><DigestValue>hGv0y9/EauC13JDQpUuxpe+13BPGsS8TplyU4kwGQnY=</DigestValue></Reference></SignedInfo><SignatureValue>Em/ce9CqRV4yNTSF0ScVZNt86GANd2oHN3fb6Cv9FkcTHXN+3z86aqyUD2PQk7RBE7ZYH80Ta7TDCwPFTSYviX9N3VetDxQU71rO2+wsA0Nfcs05cR7BOuL3jKsmYBLVe7PaUJoeL9vx47l5yg/v+hFfTmD96StYV965Hl/NGzQ=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>5dNgicFDpH989AS0L3XdMj4bzpkWB+PDTXzaBRBc4lJ301e90Jo8q5Y4OVokfrPDREOvk7/kk22g36NqqANSkFAmfPUE8Zz7vt/QbO6Ka2Bfr9nRXVHgoDwSMyN8R4eA79xl0wdEzZwYxPXfuBRSeBhXuVi8lmi9LwNDKNBsHIk=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIBvTCCASagAwIBAgIQEnxFfSLx9KZJ6KFAnnQC9TANBgkqhkiG9w0BAQsFADAdMRswGQYDVQQDHhIAUgBZAEEATgBcAFIAeQBhAG4wHhcNMTcwODEzMTEzMDA1WhcNMTgwODEzMTczMDA1WjAdMRswGQYDVQQDHhIAUgBZAEEATgBcAFIAeQBhAG4wgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAOXTYInBQ6R/fPQEtC913TI+G86ZFgfjw0182gUQXOJSd9NXvdCaPKuWODlaJH6zw0RDr5O/5JNtoN+jaqgDUpBQJnz1BPGc+77f0GzuimtgX6/Z0V1R4KA8EjMjfEeHgO/cZdMHRM2cGMT137gUUngYV7lYvJZovS8DQyjQbByJAgMBAAEwDQYJKoZIhvcNAQELBQADgYEAx7j7K3uAuYU89B1/q+GE4QU1/OHD9+4n2fWkygd5KucSOUWnN2pW8rGUu7l5glmdkDtd68houvdB9ucFcyvuqiaD+34B84hkWQxyWoRF/QhWlwiOajEqSjqubsjLEFGa88eqO5X66B6vn4jHfaZuxfYFBCZtpjix5/KVBJL6kTw=</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
