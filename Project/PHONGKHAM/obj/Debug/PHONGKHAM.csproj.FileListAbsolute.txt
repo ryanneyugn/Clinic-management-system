@@ -76,7 +76,6 @@ D:\GIT\Clinic-management-system\Project\PHONGKHAM\bin\Debug\CMS.exe
 D:\GIT\Clinic-management-system\Project\PHONGKHAM\bin\Debug\CMS.pdb
 D:\GIT\Clinic-management-system\Project\PHONGKHAM\bin\Debug\ConnDb.dll
 D:\GIT\Clinic-management-system\Project\PHONGKHAM\bin\Debug\ConnDb.pdb
-D:\GIT\Clinic-management-system\Project\PHONGKHAM\bin\Debug\MySql.Data.xml
 D:\GIT\Clinic-management-system\Project\PHONGKHAM\obj\Debug\PHONGKHAM.csprojResolveAssemblyReference.cache
 D:\GIT\Clinic-management-system\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.Configure.resources
 D:\GIT\Clinic-management-system\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.gd_dangnhap.resources

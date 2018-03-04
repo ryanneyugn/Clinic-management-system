@@ -22,7 +22,6 @@ D:\GIT\ryan-repository\Project\ConnDb\obj\Debug\ConnDb.dll
 D:\GIT\ryan-repository\Project\ConnDb\obj\Debug\ConnDb.pdb
 D:\GIT\Clinic-management-system\Project\ConnDb\bin\Debug\ConnDb.dll
 D:\GIT\Clinic-management-system\Project\ConnDb\bin\Debug\ConnDb.pdb
-D:\GIT\Clinic-management-system\Project\ConnDb\bin\Debug\MySql.Data.xml
 D:\GIT\Clinic-management-system\Project\ConnDb\obj\Debug\ConnDb.csprojResolveAssemblyReference.cache
 D:\GIT\Clinic-management-system\Project\ConnDb\obj\Debug\ConnDb.csproj.CoreCompileInputs.cache
 D:\GIT\Clinic-management-system\Project\ConnDb\obj\Debug\ConnDb.dll
