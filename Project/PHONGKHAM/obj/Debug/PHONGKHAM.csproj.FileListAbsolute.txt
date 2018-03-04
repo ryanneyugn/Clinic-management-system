@@ -91,6 +91,7 @@ D:\GIT\Clinic-management-system\Project\PHONGKHAM\obj\Debug\PHONGKHAM.GIAODIEN.g
 D:\GIT\Clinic-management-system\Project\PHONGKHAM\obj\Debug\CMS.Properties.Resources.resources
 D:\GIT\Clinic-management-system\Project\PHONGKHAM\obj\Debug\PHONGKHAM.csproj.GenerateResource.Cache
 D:\GIT\Clinic-management-system\Project\PHONGKHAM\obj\Debug\PHONGKHAM.csproj.CoreCompileInputs.cache
+D:\GIT\Clinic-management-system\Project\PHONGKHAM\obj\Debug\CMS.TrustInfo.xml
 D:\GIT\Clinic-management-system\Project\PHONGKHAM\obj\Debug\CMS.exe.manifest
 D:\GIT\Clinic-management-system\Project\PHONGKHAM\obj\Debug\CMS.application
 D:\GIT\Clinic-management-system\Project\PHONGKHAM\obj\Debug\CMS.exe
