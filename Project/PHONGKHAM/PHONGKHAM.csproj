@@ -28,7 +28,7 @@
     <PublisherName>Ryan</PublisherName>
     <SuiteName>TCH</SuiteName>
     <AutorunEnabled>true</AutorunEnabled>
-    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationRevision>4</ApplicationRevision>
     <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
     <UseApplicationTrust>true</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -55,7 +55,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>B98F14BF92A09442D1C7BD25863B3418D675EC7E</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>D180B14B58ACB5C0A6635325AB2B0CB8E5E9524B</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>PHONGKHAM_TemporaryKey.pfx</ManifestKeyFile>
@@ -201,6 +201,7 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="PHONGKHAM_TemporaryKey.pfx" />
     <None Include="Properties\app.manifest" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
